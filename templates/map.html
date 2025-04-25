@@ -12,6 +12,9 @@
     <!-- Socket.IO Client -->
     <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
 
+    <!-- Chart.js for mini-graphs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <style>
         body {
             margin: 0;
@@ -27,6 +30,10 @@
             font-size: 14px;
             line-height: 1.4;
         }
+        canvas {
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 
@@ -35,26 +42,30 @@
 <div id="map"></div>
 
 <script>
-var map = L.map('map').setView([36.1699, -115.1398], 11); // Las Vegas
+// Initialize Map
+var map = L.map('map').setView([36.1699, -115.1398], 11); // Center Las Vegas
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
 }).addTo(map);
 
+// Initialize Variables
 var markers = {};        // Markers by stationId
-var markerMetadata = {}; // Store lat, lon, and location description
+var markerMetadata = {}; // {detectorId: {lat, lon, locationText}}
 var liveData = {};       // Current live detector data
+var historyData = {};    // {stationId: {laneId: [ {timestamp, speed, vehicles, occupancy}, ... ]}}
 
+// Connect Socket.IO
 var socket = io();
 
-// Load sensor metadata
+// Load Metadata
 fetch('/metadata')
 .then(response => response.json())
 .then(metadata => {
     metadata.forEach(sensor => {
         var circle = L.circleMarker([sensor.latitude, sensor.longitude], {
             radius: 6,
-            fillColor: "#a0a0a0", // Grey initially
+            fillColor: "#a0a0a0", // grey if no data yet
             color: "#808080",
             weight: 1,
             opacity: 1,
@@ -68,19 +79,47 @@ fetch('/metadata')
         markerMetadata[sensor.detector_id] = {
             lat: sensor.latitude,
             lon: sensor.longitude,
-            locationText: sensor.location  // <-- Save the text description
+            locationText: sensor.location
         };
     });
 });
 
-// When new live data is pushed
+// Handle New Live Data
 socket.on('new_data', function(responseData) {
     liveData = responseData.data;
+    saveHistoryData(responseData.timestamp, responseData.data);
     updateMarkers();
     console.log("Received live data at", responseData.timestamp);
 });
 
-// Update marker popups
+// Save Historical Data
+function saveHistoryData(timestamp, data) {
+    data.forEach(det => {
+        var stationId = det.stationId;
+        var laneId = det.detectorId;
+
+        if (!historyData[stationId]) {
+            historyData[stationId] = {};
+        }
+        if (!historyData[stationId][laneId]) {
+            historyData[stationId][laneId] = [];
+        }
+
+        historyData[stationId][laneId].push({
+            timestamp: timestamp,
+            speed: det.vehicleSpeed,
+            vehicles: det.vehicleCount,
+            occupancy: det.vehicleOccupancy
+        });
+
+        // Only keep the last 10 points
+        if (historyData[stationId][laneId].length > 10) {
+            historyData[stationId][laneId].shift();
+        }
+    });
+}
+
+// Update Markers and Popups
 function updateMarkers() {
     for (var stationId in markers) {
         var marker = markers[stationId];
@@ -90,7 +129,6 @@ function updateMarkers() {
         var popupContent = `<b>Station:</b> ${stationId}<br><b>Lat, Lon:</b> ${meta.lat.toFixed(5)}, ${meta.lon.toFixed(5)}<br><b>Location:</b> ${meta.locationText}<br><br>`;
 
         if (stationDetectors.length > 0) {
-            // Live data available - turn blue
             marker.setStyle({
                 fillColor: "#007bff",
                 color: "#0056b3"
@@ -98,19 +136,68 @@ function updateMarkers() {
 
             stationDetectors.forEach(det => {
                 var laneNum = det.detectorId.split("_").pop();
-                popupContent += `Lane ${laneNum}: Speed <b>${det.vehicleSpeed ?? 'N/A'}</b> mph, Vehicles <b>${det.vehicleCount ?? 'N/A'}</b>, Occupancy <b>${det.vehicleOccupancy ?? 'N/A'}</b><br>`;
+                popupContent += `
+                    <b>Lane ${laneNum}</b><br>
+                    Speed: <b>${det.vehicleSpeed ?? 'N/A'}</b> mph<br>
+                    Vehicles: <b>${det.vehicleCount ?? 'N/A'}</b><br>
+                    Occupancy: <b>${det.vehicleOccupancy ?? 'N/A'}</b><br>
+                    <div style="font-size:12px;margin-top:5px;color:gray;">Speed Trend - Last 5 Minutes</div>
+                    <canvas id="chart_${det.detectorId}" width="200" height="100"></canvas><br>
+                `;
             });
         } else {
-            // No live data - stay grey
             marker.setStyle({
                 fillColor: "#a0a0a0",
                 color: "#808080"
             });
-
             popupContent += `<i>No live data available.</i>`;
         }
 
         marker.bindPopup(popupContent);
+
+        // When popup opens, draw charts
+        marker.on('popupopen', function() {
+            drawMiniGraphs(stationId);
+        });
+    }
+}
+
+// Draw Mini-Graphs
+function drawMiniGraphs(stationId) {
+    if (!historyData[stationId]) return;
+
+    for (var laneId in historyData[stationId]) {
+        var ctx = document.getElementById(`chart_${laneId}`);
+        if (!ctx) continue;
+
+        var laneHistory = historyData[stationId][laneId];
+        var speedPoints = laneHistory.map(p => p.speed);
+        var labels = laneHistory.map((_, idx) => idx + 1);
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Speed (mph)',
+                    data: speedPoints,
+                    fill: false,
+                    borderColor: 'blue',
+                    tension: 0.2
+                }]
+            },
+            options: {
+                responsive: false,
+                maintainAspectRatio: false,
+                scales: {
+                    x: { display: false },
+                    y: { display: true }
+                },
+                plugins: {
+                    legend: { display: false }
+                }
+            }
+        });
     }
 }
 </script>
