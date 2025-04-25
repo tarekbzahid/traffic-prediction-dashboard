@@ -1,24 +1,129 @@
 from flask import Flask, render_template, jsonify
-import random
+from flask_socketio import SocketIO, emit
+from zeep import Client, Settings
+from zeep.exceptions import Fault
+import os
+import time
+import threading
+import json
+from datetime import datetime
+import pytz
 
 app = Flask(__name__)
+socketio = SocketIO(app, cors_allowed_origins="*")
 
-# Bellagio starting position
-bellagio_coords = [36.1126, -115.1767]
+# ----------------------------
+# 📍 Configuration
+# ----------------------------
+
+local_timezone = pytz.timezone("America/Los_Angeles")
+wsdl_url = "https://colondexsrv.its.nv.gov/tmddws/TmddWS.svc?singleWsdl"
+metadata_path = "data/sensor_metadata.json"
+
+TIME_STEP_MINUTES = 0.5  # 🚀 Every 30 seconds
+
+latest_live_data = {
+    "timestamp": None,
+    "data": []
+}
+
+# SOAP Authentication
+auth_params = {
+    "user-id": "UNLV_TRC_RTIS",
+    "password": "+r@^~Tr&lt;R?|$"
+}
+organization_info = {
+    "organization-id": "unlv.edu",
+    "center-contact-list": {
+        "center-contact-details": {"center-id": "UNLV_TRC"}
+    }
+}
+requesting_organization_info = {
+    "organization-id": "its.nv.gov",
+    "center-contact-list": {
+        "center-contact-details": {"center-id": "FAST"}
+    }
+}
+device_type = "detector"
+device_info = "device data"
+
+soap_parameters = {
+    "device-information-request-header": {
+        "authentication": auth_params,
+        "organization-information": organization_info,
+        "organization-requesting": requesting_organization_info,
+        "device-type": device_type,
+        "device-information-type": device_info
+    }
+}
+
+# ----------------------------
+# 📍 Fetch Live Data
+# ----------------------------
+
+def fetch_live_data():
+    """Background thread to fetch live data from SOAP."""
+    global latest_live_data
+
+    settings = Settings(strict=False, xml_huge_tree=True)
+    try:
+        client = Client(wsdl=wsdl_url, settings=settings)
+    except Exception as e:
+        print(f"Failed to connect to SOAP service: {e}")
+        return
+
+    while True:
+        try:
+            response = client.service.dlDetectorDataRequest(**soap_parameters)
+            if response:
+                data = []
+                for item in response:
+                    detector_list = getattr(item, 'detector-list', None)
+                    if not detector_list:
+                        continue
+
+                    detector_details = getattr(detector_list, 'detector-data-detail', [])
+                    for detector in detector_details:
+                        data.append({
+                            "stationId": getattr(detector, "station-id", None),
+                            "detectorId": getattr(detector, "detector-id", None),
+                            "vehicleOccupancy": getattr(detector, "vehicle-occupancy", None),
+                            "vehicleSpeed": getattr(detector, "vehicle-speed", None),
+                            "vehicleCount": getattr(detector, "vehicle-count", None)
+                        })
+
+                latest_live_data = {
+                    "timestamp": datetime.now(local_timezone).strftime('%Y-%m-%d %H:%M:%S'),
+                    "data": data
+                }
+                print(f"Fetched {len(data)} detectors at {latest_live_data['timestamp']}")
+                socketio.emit('new_data', latest_live_data)
+        except Fault as e:
+            print(f"SOAP request failed: {e}")
+
+        time.sleep(TIME_STEP_MINUTES * 60)
+
+# ----------------------------
+# 📍 Flask Routes
+# ----------------------------
 
 @app.route("/")
-def index():
+def map_page():
     return render_template("map.html")
 
-@app.route("/data")
-def data():
-    # Simulate slight movement
-    lat_variation = random.uniform(-0.0005, 0.0005)
-    lon_variation = random.uniform(-0.0005, 0.0005)
-    new_lat = bellagio_coords[0] + lat_variation
-    new_lon = bellagio_coords[1] + lon_variation
+@app.route("/metadata")
+def metadata():
+    with open(metadata_path) as f:
+        sensor_metadata = json.load(f)
+    return jsonify(sensor_metadata)
 
-    return jsonify({"lat": new_lat, "lon": new_lon})
+# ----------------------------
+# 📍 Main
+# ----------------------------
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    fetch_thread = threading.Thread(target=fetch_live_data)
+    fetch_thread.daemon = True
+    fetch_thread.start()
+
+    socketio.run(app, debug=True)

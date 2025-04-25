@@ -1,0 +1,6421 @@
+[
+    {
+        "detector_id": "101_1_35",
+        "location": "I-15 NB Sahara On-Ramp between Sahara Avenue and I-15 NB",
+        "latitude": 36.144341,
+        "longitude": -115.169617,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "103_1_40",
+        "location": "I-15 SB Sahara WB Off-Ramp between I-15 SB and Sahara Avenue",
+        "latitude": 36.147755,
+        "longitude": -115.169441,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "103_2_40",
+        "location": "I-15 SB Sahara WB Off-Ramp between I-15 SB and Sahara Avenue",
+        "latitude": 36.145626,
+        "longitude": -115.171677,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "109_1_37",
+        "location": "I-15 SB Boulder Off-Ramp between Sahara Avenue and I-15 SB",
+        "latitude": 36.142616,
+        "longitude": -115.174263,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "118_1_541",
+        "location": "I-15 SB MLK/Charleston Off-Ramp between I-15 SB and Martin Luther King Boulevard",
+        "latitude": 36.161842,
+        "longitude": -115.161362,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "125_2_49",
+        "location": "I-15 NB to US-95 NB Ramp between I-15 NB and US-95 NB",
+        "latitude": 36.169209,
+        "longitude": -115.157127,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "126_1_49",
+        "location": "I-15 NB MLK Blvd Off-Ramp between I-15 NB and Martin Luther King Boulevard",
+        "latitude": 36.173618,
+        "longitude": -115.156914,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "126_2_80",
+        "location": "I-15 NB MLK Blvd Off-Ramp between I-15 NB and Martin Luther King Boulevard",
+        "latitude": 36.17477,
+        "longitude": -115.155373,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "127_1_531",
+        "location": "I-15 NB to US-95 NB Ramp between I-15 NB and US-95 NB",
+        "latitude": 36.173687,
+        "longitude": -115.16571,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "138_2_55",
+        "location": "I-15 NB between I-15 NB Wash./D-Street Off-Ramp and I-15 NB Washington/D-St On-Ramp",
+        "latitude": 36.182571,
+        "longitude": -115.143311,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "141_2_55",
+        "location": "I-15 NB Washington/D-St On-Ramp between Washington Avenue and I-15 NB",
+        "latitude": 36.181763,
+        "longitude": -115.142799,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "142_1_55",
+        "location": "I-15 SB between I-15 SB Washington Off-Ramp and I-15 SB Washington On-Ramp",
+        "latitude": 36.182632,
+        "longitude": -115.145798,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "144_1_54",
+        "location": "I-15 SB Washington On-Ramp between D Street and I-15 SB",
+        "latitude": 36.180584,
+        "longitude": -115.147949,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "15_1_6",
+        "location": "I-215 EB to I-15 SB Ramp between CC-215 EB and I-15 SB",
+        "latitude": 36.064865,
+        "longitude": -115.18837,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "15_2_6",
+        "location": "I-215 EB to I-15 SB Ramp between CC-215 EB and I-15 SB",
+        "latitude": 36.063759,
+        "longitude": -115.185806,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "154_2_240",
+        "location": "I-15 NB  Lake Mead EB On-Ramp between Lake Mead Boulevard and I-15 NB",
+        "latitude": 36.197895,
+        "longitude": -115.135925,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "157_1_240",
+        "location": "I-15 SB  Lake Mead Off-Ramp between I-15 SB and Lake Mead Boulevard",
+        "latitude": 36.1982,
+        "longitude": -115.138496,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "158_2_74",
+        "location": "I-15 SB  Lake Mead WB On-Ramp between Lake Mead Boulevard and I-15 SB",
+        "latitude": 36.196987,
+        "longitude": -115.13945,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "160_1_241",
+        "location": "I-15 NB between I-15 NB  Lake Mead On-Ramp and Cartier Avenue",
+        "latitude": 36.204491,
+        "longitude": -115.132385,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "162_2_197",
+        "location": "US-95 SB between US-95 SB Rancho Off-Ramp and US-95 SB Rancho On-Ramp",
+        "latitude": 36.174603,
+        "longitude": -115.172432,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "167_1_531",
+        "location": "US-95 NB between I-15 NB to US-95 NB Ramp and US-95 NB Rancho Off-Ramp",
+        "latitude": 36.176277,
+        "longitude": -115.163689,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "167_2_210",
+        "location": "US-95 NB between I-15 NB to US-95 NB Ramp and US-95 NB Rancho Off-Ramp",
+        "latitude": 36.176769,
+        "longitude": -115.169472,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "169_3_210",
+        "location": "US-95 SB to I-15 SB Ramp between US-95 SB and I-15 SB",
+        "latitude": 36.173851,
+        "longitude": -115.16571,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "171_3_51",
+        "location": "US-95 SB to I-15 SB Ramp between US-95 SB and I-15 SB",
+        "latitude": 36.169277,
+        "longitude": -115.159813,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "196_2_69",
+        "location": "I-515 SB LV Blvd On-Ramp between Las Vegas Boulevard and I-515 SB",
+        "latitude": 36.171738,
+        "longitude": -115.137131,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "199_1_70",
+        "location": "I-515 NB LV Blvd On-Ramp between Las Vegas Boulevard and I-515 NB",
+        "latitude": 36.175346,
+        "longitude": -115.139046,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "201_1_39",
+        "location": "I-515 NB Casino Ctr On-Ramp between Casino Center Boulevard and I-515 NB",
+        "latitude": 36.176243,
+        "longitude": -115.142738,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "206_1_64",
+        "location": "I-515 SB Eastern On-Ramp between Eastern Avenue and I-515 SB",
+        "latitude": 36.166504,
+        "longitude": -115.114067,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "209_1_65",
+        "location": "I-515 NB Eastern On-Ramp between Eastern Avenue and I-515 NB",
+        "latitude": 36.169464,
+        "longitude": -115.118057,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "212_2_364",
+        "location": "I-515 SB between I-515 SB Charleston Off-Ramp and I-515 SB Charleston On-Ramp",
+        "latitude": 36.149048,
+        "longitude": -115.091827,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "212_4_363",
+        "location": "I-515 SB between I-515 SB Charleston Off-Ramp and I-515 SB Charleston On-Ramp",
+        "latitude": 36.139385,
+        "longitude": -115.091408,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "213_1_59",
+        "location": "I-515 SB Charleston Off-Ramp between I-515 SB and Charleston Boulevard",
+        "latitude": 36.161819,
+        "longitude": -115.092949,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "215_2_362",
+        "location": "I-515 NB between I-515 NB Charleston Off-Ramp and I-515 NB Charleston On-Ramp",
+        "latitude": 36.142105,
+        "longitude": -115.090027,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "215_4_366",
+        "location": "I-515 NB between I-515 NB Charleston Off-Ramp and I-515 NB Charleston On-Ramp",
+        "latitude": 36.155361,
+        "longitude": -115.090256,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "216_1_365",
+        "location": "I-515 NB Charleston Off-Ramp between I-515 NB and Charleston Boulevard",
+        "latitude": 36.156006,
+        "longitude": -115.089897,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "217_2_60",
+        "location": "I-515 NB Charleston On-Ramp between Charleston Boulevard and I-515 NB",
+        "latitude": 36.162399,
+        "longitude": -115.090721,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "218_2_360",
+        "location": "I-515 SB between I-515 SB Charleston On-Ramp and I-15 SB Boulder Off-Ramp",
+        "latitude": 36.127853,
+        "longitude": -115.088669,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "218_4_173",
+        "location": "I-515 SB between I-515 SB Charleston On-Ramp and I-15 SB Boulder Off-Ramp",
+        "latitude": 36.11861,
+        "longitude": -115.084091,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "219_3_360",
+        "location": "I-515 NB between I-515 NB Boulder Hwy Off-Ramp and I-515 NB Charleston Off-Ramp",
+        "latitude": 36.127701,
+        "longitude": -115.086197,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "219_4_361",
+        "location": "I-515 NB between I-515 NB Boulder Hwy Off-Ramp and I-515 NB Charleston Off-Ramp",
+        "latitude": 36.132233,
+        "longitude": -115.088356,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "220_2_286",
+        "location": "I-515 SB between I-15 SB Boulder Off-Ramp and I-515 SB Boulder Hwy Off-Ramp",
+        "latitude": 36.10397,
+        "longitude": -115.082916,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "221_1_279",
+        "location": "I-515 SB Boulder Hwy Off-Ramp between I-515 SB and Boulder Highway",
+        "latitude": 36.140057,
+        "longitude": -115.091942,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "221_2_279",
+        "location": "I-515 SB Boulder Hwy Off-Ramp between I-515 SB and Boulder Highway",
+        "latitude": 36.13858,
+        "longitude": -115.092308,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "222_1_172",
+        "location": "I-515 NB between Desert Inn Road and Boulder Highway",
+        "latitude": 36.103977,
+        "longitude": -115.081161,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "23_1_8",
+        "location": "I-215 WB/I-15 NB between CC-215 WB and I-15 NB",
+        "latitude": 36.06591,
+        "longitude": -115.179008,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "23_2_8",
+        "location": "I-215 WB/I-15 NB between CC-215 WB and I-15 NB",
+        "latitude": 36.067322,
+        "longitude": -115.179626,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "25_1_547",
+        "location": "CC-215 WB between Gilespie Street and Las Vegas Boulevard",
+        "latitude": 36.064232,
+        "longitude": -115.159561,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "30_2_8",
+        "location": "I-215 EB to I-15 NB Ramp between CC-215 EB and I-15 NB",
+        "latitude": 36.061832,
+        "longitude": -115.179199,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "360_1_171",
+        "location": "I-515 SB between Viking Road and Boulder Highway",
+        "latitude": 36.097572,
+        "longitude": -115.080788,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "360_2_288",
+        "location": "I-515 SB between Viking Road and Boulder Highway",
+        "latitude": 36.092979,
+        "longitude": -115.075981,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "360_3_165",
+        "location": "I-515 SB between Viking Road and Boulder Highway",
+        "latitude": 36.089886,
+        "longitude": -115.071121,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "361_1_166",
+        "location": "I-515 SB between Dell Santos Drive and Viking Road",
+        "latitude": 36.087826,
+        "longitude": -115.06662,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "361_2_293",
+        "location": "I-515 SB between Dell Santos Drive and Viking Road",
+        "latitude": 36.086498,
+        "longitude": -115.060921,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "361_3_290",
+        "location": "I-515 SB between Dell Santos Drive and Viking Road",
+        "latitude": 36.084278,
+        "longitude": -115.05442,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "362_1_132",
+        "location": "I-515 SB between Mountain Vista Street and Dell Santos Drive",
+        "latitude": 36.081184,
+        "longitude": -115.048042,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "362_2_131",
+        "location": "I-515 SB between Mountain Vista Street and Dell Santos Drive",
+        "latitude": 36.077934,
+        "longitude": -115.04303,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "362_3_129",
+        "location": "I-515 SB between Mountain Vista Street and Dell Santos Drive",
+        "latitude": 36.073479,
+        "longitude": -115.039276,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "363_2_161",
+        "location": "I-515 SB between Denning Street and Mountain Vista Street",
+        "latitude": 36.065548,
+        "longitude": -115.034241,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "363_3_292",
+        "location": "I-515 SB between Denning Street and Mountain Vista Street",
+        "latitude": 36.086418,
+        "longitude": -115.060532,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "364_2_127",
+        "location": "I-515 SB between Stephanie Street and Denning Street",
+        "latitude": 36.05344,
+        "longitude": -115.027077,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "364_3_126",
+        "location": "I-515 SB between Stephanie Street and Denning Street",
+        "latitude": 36.048111,
+        "longitude": -115.024529,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "365_1_107",
+        "location": "I-515 SB between Sunset Road and Stephanie Street",
+        "latitude": 36.076054,
+        "longitude": -115.041451,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "366_1_103",
+        "location": "I-515 SB between Warm Springs Road and Sunset Road",
+        "latitude": 36.032513,
+        "longitude": -115.015388,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "367_1_367",
+        "location": "I-515 SB between American Pacific Drive and Warm Springs Road",
+        "latitude": 36.028099,
+        "longitude": -115.010185,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "367_2_368",
+        "location": "I-515 SB between American Pacific Drive and Warm Springs Road",
+        "latitude": 36.025566,
+        "longitude": -115.007309,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "367_3_371",
+        "location": "I-515 SB between American Pacific Drive and Warm Springs Road",
+        "latitude": 36.022102,
+        "longitude": -115.00325,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "368_1_372",
+        "location": "I-515 SB between Waterwheel Falls Drive and American Pacific Drive",
+        "latitude": 36.019341,
+        "longitude": -115.000038,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "368_2_379",
+        "location": "I-515 SB between Waterwheel Falls Drive and American Pacific Drive",
+        "latitude": 36.016884,
+        "longitude": -114.996819,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "368_3_381",
+        "location": "I-515 SB between Waterwheel Falls Drive and American Pacific Drive",
+        "latitude": 36.013451,
+        "longitude": -114.992943,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "369_1_382",
+        "location": "I-515 SB between Long Acres Drive and Waterwheel Falls Drive",
+        "latitude": 36.024338,
+        "longitude": -115.006241,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "369_2_385",
+        "location": "I-515 SB between Long Acres Drive and Waterwheel Falls Drive",
+        "latitude": 36.021805,
+        "longitude": -115.003365,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "370_2_388",
+        "location": "I-515 SB between Appian Drive and Long Acres Drive",
+        "latitude": 36.004002,
+        "longitude": -114.984612,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "370_3_391",
+        "location": "I-515 SB between Appian Drive and Long Acres Drive",
+        "latitude": 36.001171,
+        "longitude": -114.979691,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "371_1_392",
+        "location": "I-515 SB between College Drive and Appian Drive",
+        "latitude": 35.999531,
+        "longitude": -114.973412,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "371_2_393",
+        "location": "I-515 SB between College Drive and Appian Drive",
+        "latitude": 35.999123,
+        "longitude": -114.964691,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "371_3_397",
+        "location": "I-515 SB between College Drive and Appian Drive",
+        "latitude": 35.999153,
+        "longitude": -114.954269,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "371_4_402",
+        "location": "I-515 SB between College Drive and Appian Drive",
+        "latitude": 35.998596,
+        "longitude": -114.946289,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "372_1_404",
+        "location": "I-515 SB between Bitterroot Street and College Drive",
+        "latitude": 35.996883,
+        "longitude": -114.940163,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "372_2_405",
+        "location": "I-515 SB between Bitterroot Street and College Drive",
+        "latitude": 35.994881,
+        "longitude": -114.93515,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "372_3_408",
+        "location": "I-515 SB between Bitterroot Street and College Drive",
+        "latitude": 35.992817,
+        "longitude": -114.931015,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "374_2_169",
+        "location": "I-515 NB between Boulder Highway and Viking Road",
+        "latitude": 36.094456,
+        "longitude": -115.075203,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "374_3_287",
+        "location": "I-515 NB between Boulder Highway and Viking Road",
+        "latitude": 36.098076,
+        "longitude": -115.079071,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "375_2_164",
+        "location": "I-515 NB between Viking Road and Dell Santos Drive",
+        "latitude": 36.088257,
+        "longitude": -115.059525,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "375_3_166",
+        "location": "I-515 NB between Viking Road and Dell Santos Drive",
+        "latitude": 36.089645,
+        "longitude": -115.066162,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "376_1_134",
+        "location": "I-515 NB between Dell Santos Drive and Mountain Vista Street",
+        "latitude": 36.074402,
+        "longitude": -115.037216,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "376_3_291",
+        "location": "I-515 NB between Dell Santos Drive and Mountain Vista Street",
+        "latitude": 36.083057,
+        "longitude": -115.047173,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "377_1_162",
+        "location": "I-515 NB between Mountain Vista Street and Denning Street",
+        "latitude": 36.065586,
+        "longitude": -115.031738,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "378_1_301",
+        "location": "I-515 NB between Denning Street and Stephanie Street",
+        "latitude": 36.048882,
+        "longitude": -115.022644,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "378_2_299",
+        "location": "I-515 NB between Denning Street and Stephanie Street",
+        "latitude": 36.054028,
+        "longitude": -115.024994,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "378_3_298",
+        "location": "I-515 NB between Denning Street and Stephanie Street",
+        "latitude": 36.058208,
+        "longitude": -115.027351,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "378_4_130",
+        "location": "I-515 NB between Denning Street and Stephanie Street",
+        "latitude": 36.061897,
+        "longitude": -115.029564,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "379_1_109",
+        "location": "I-515 NB between Stephanie Street and Sunset Road",
+        "latitude": 36.040874,
+        "longitude": -115.019302,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "379_2_302",
+        "location": "I-515 NB between Stephanie Street and Sunset Road",
+        "latitude": 36.044582,
+        "longitude": -115.020988,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "38_1_91",
+        "location": "I-15 NB to I-215 WB Ramp between I-15 NB and CC-215 WB",
+        "latitude": 36.059437,
+        "longitude": -115.178856,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "380_2_105",
+        "location": "I-515 NB between Sunset Road and Warm Springs Road",
+        "latitude": 36.037346,
+        "longitude": -115.016899,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "381_3_102",
+        "location": "I-515 NB between Warm Springs Road and American Pacific Drive",
+        "latitude": 36.032516,
+        "longitude": -115.01165,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "382_1_373",
+        "location": "I-515 NB between American Pacific Drive and Waterwheel Falls Drive",
+        "latitude": 36.023708,
+        "longitude": -115.001656,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "382_2_370",
+        "location": "I-515 NB between American Pacific Drive and Waterwheel Falls Drive",
+        "latitude": 36.02631,
+        "longitude": -115.004547,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "382_3_369",
+        "location": "I-515 NB between American Pacific Drive and Waterwheel Falls Drive",
+        "latitude": 36.028038,
+        "longitude": -115.006569,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "384_1_384",
+        "location": "I-515 NB between Long Acres Drive and Appian Drive",
+        "latitude": 36.002712,
+        "longitude": -114.978539,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "384_2_383",
+        "location": "I-515 NB between Long Acres Drive and Appian Drive",
+        "latitude": 36.004982,
+        "longitude": -114.982529,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "385_1_390",
+        "location": "I-515 NB between Appian Drive and College Drive",
+        "latitude": 36.000961,
+        "longitude": -114.963165,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "385_2_389",
+        "location": "I-515 NB between Appian Drive and College Drive",
+        "latitude": 36.0009,
+        "longitude": -114.967476,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "385_3_387",
+        "location": "I-515 NB between Appian Drive and College Drive",
+        "latitude": 36.001297,
+        "longitude": -114.9729,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "386_1_399",
+        "location": "I-515 NB between College Drive and Bitterroot Street",
+        "latitude": 35.999386,
+        "longitude": -114.94239,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "386_2_398",
+        "location": "I-515 NB between College Drive and Bitterroot Street",
+        "latitude": 36.000839,
+        "longitude": -114.949318,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "386_3_396",
+        "location": "I-515 NB between College Drive and Bitterroot Street",
+        "latitude": 36.000996,
+        "longitude": -114.954262,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "386_4_395",
+        "location": "I-515 NB between College Drive and Bitterroot Street",
+        "latitude": 36.000988,
+        "longitude": -114.95845,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "387_1_407",
+        "location": "I-515 NB between Bitterroot Street and Wagon Wheel Drive",
+        "latitude": 35.991123,
+        "longitude": -114.926819,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "387_2_406",
+        "location": "I-515 NB between Bitterroot Street and Wagon Wheel Drive",
+        "latitude": 35.993885,
+        "longitude": -114.930038,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "387_4_400",
+        "location": "I-515 NB between Bitterroot Street and Wagon Wheel Drive",
+        "latitude": 35.997265,
+        "longitude": -114.936111,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "389_1_248",
+        "location": "I-15 SB between Alexander Road and Colton Avenue",
+        "latitude": 36.231594,
+        "longitude": -115.113953,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "39_1_8",
+        "location": "I-15 NB between I-215 EB to I-15 NB Ramp and I-215 WB to I-15 NB Ramp",
+        "latitude": 36.063324,
+        "longitude": -115.17981,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "391_1_415",
+        "location": "I-15 SB between Smiley Road and Craig Road",
+        "latitude": 36.24913,
+        "longitude": -115.092682,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "391_3_410",
+        "location": "I-15 SB between Smiley Road and Craig Road",
+        "latitude": 36.242081,
+        "longitude": -115.101257,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "392_1_421",
+        "location": "I-15 SB between Ann Road and Smiley Road",
+        "latitude": 36.257927,
+        "longitude": -115.08165,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "392_2_420",
+        "location": "I-15 SB between Ann Road and Smiley Road",
+        "latitude": 36.255314,
+        "longitude": -115.084908,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "392_3_416",
+        "location": "I-15 SB between Ann Road and Smiley Road",
+        "latitude": 36.252354,
+        "longitude": -115.088608,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "393_1_432",
+        "location": "I-15 SB between Clark County 215 and Ann Road",
+        "latitude": 36.269493,
+        "longitude": -115.064095,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "393_2_429",
+        "location": "I-15 SB between Clark County 215 and Ann Road",
+        "latitude": 36.267639,
+        "longitude": -115.068398,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "393_3_428",
+        "location": "I-15 SB between Clark County 215 and Ann Road",
+        "latitude": 36.264824,
+        "longitude": -115.073067,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "393_4_426",
+        "location": "I-15 SB between Clark County 215 and Ann Road",
+        "latitude": 36.261211,
+        "longitude": -115.077705,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "394_1_434",
+        "location": "I-15 SB between Centennial Parkway and Clark County 215",
+        "latitude": 36.275742,
+        "longitude": -115.047493,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "394_2_433",
+        "location": "I-15 SB between Centennial Parkway and Clark County 215",
+        "latitude": 36.272144,
+        "longitude": -115.057076,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "395_1_445",
+        "location": "I-15 SB between Speedway Boulevard and Centennial Parkway",
+        "latitude": 36.283051,
+        "longitude": -115.027939,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "395_2_442",
+        "location": "I-15 SB between Speedway Boulevard and Centennial Parkway",
+        "latitude": 36.2817,
+        "longitude": -115.031487,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "395_3_441",
+        "location": "I-15 SB between Speedway Boulevard and Centennial Parkway",
+        "latitude": 36.280075,
+        "longitude": -115.035942,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "395_4_440",
+        "location": "I-15 SB between Speedway Boulevard and Centennial Parkway",
+        "latitude": 36.278439,
+        "longitude": -115.040359,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "398_3_411",
+        "location": "I-15 NB between Alexander Road and Craig Road",
+        "latitude": 36.240891,
+        "longitude": -115.099449,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "399_1_413",
+        "location": "I-15 NB between Craig Road and Smiley Road",
+        "latitude": 36.244354,
+        "longitude": -115.095238,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "399_2_414",
+        "location": "I-15 NB between Craig Road and Smiley Road",
+        "latitude": 36.247791,
+        "longitude": -115.091049,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "399_3_417",
+        "location": "I-15 NB between Craig Road and Smiley Road",
+        "latitude": 36.251041,
+        "longitude": -115.087006,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "399_4_418",
+        "location": "I-15 NB between Craig Road and Smiley Road",
+        "latitude": 36.254612,
+        "longitude": -115.082558,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "400_1_423",
+        "location": "I-15 NB between Smiley Road and Ann Road",
+        "latitude": 36.258663,
+        "longitude": -115.077408,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "400_2_425",
+        "location": "I-15 NB between Smiley Road and Ann Road",
+        "latitude": 36.262596,
+        "longitude": -115.072289,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "400_3_430",
+        "location": "I-15 NB between Smiley Road and Ann Road",
+        "latitude": 36.265778,
+        "longitude": -115.067024,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "400_4_431",
+        "location": "I-15 NB between Smiley Road and Ann Road",
+        "latitude": 36.267986,
+        "longitude": -115.062225,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "401_1_435",
+        "location": "I-15 NB between Ann Road and Clark County 215",
+        "latitude": 36.269333,
+        "longitude": -115.058411,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "401_2_437",
+        "location": "I-15 NB between Ann Road and Clark County 215",
+        "latitude": 36.270817,
+        "longitude": -115.054756,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "402_1_438",
+        "location": "I-15 NB between Clark County 215 and Centennial Parkway",
+        "latitude": 36.273136,
+        "longitude": -115.048553,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "402_2_439",
+        "location": "I-15 NB between Clark County 215 and Centennial Parkway",
+        "latitude": 36.275883,
+        "longitude": -115.040825,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "402_3_443",
+        "location": "I-15 NB between Clark County 215 and Centennial Parkway",
+        "latitude": 36.278515,
+        "longitude": -115.033981,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "402_4_444",
+        "location": "I-15 NB between Clark County 215 and Centennial Parkway",
+        "latitude": 36.28088,
+        "longitude": -115.027916,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "403_1_447",
+        "location": "I-15 NB between Centennial Parkway and Speedway Boulevard",
+        "latitude": 36.283272,
+        "longitude": -115.021881,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "403_2_533",
+        "location": "I-15 NB between Centennial Parkway and Speedway Boulevard",
+        "latitude": 36.285534,
+        "longitude": -115.015923,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "403_4_535",
+        "location": "I-15 NB between Centennial Parkway and Speedway Boulevard",
+        "latitude": 36.302502,
+        "longitude": -114.972603,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "403_5_536",
+        "location": "I-15 NB between Centennial Parkway and Speedway Boulevard",
+        "latitude": 36.309502,
+        "longitude": -114.954399,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "407_2_233",
+        "location": "US-95 SB between Lake Mead Boulevard and Half Moon Bay",
+        "latitude": 36.200954,
+        "longitude": -115.24556,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "409_3_409",
+        "location": "US-95 SB between Cheyenne Avenue and Craig Road",
+        "latitude": 36.224815,
+        "longitude": -115.247787,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "412_1_518",
+        "location": "US-95 SB between Ann Road and Clark County 215",
+        "latitude": 36.273361,
+        "longitude": -115.264442,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "412_2_517",
+        "location": "US-95 SB between Ann Road and Clark County 215",
+        "latitude": 36.269363,
+        "longitude": -115.260788,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "412_3_515",
+        "location": "US-95 SB between Ann Road and Clark County 215",
+        "latitude": 36.265221,
+        "longitude": -115.257004,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "420_2_160",
+        "location": "US-95 NB between Ann Road and Rancho Drive",
+        "latitude": 36.25856,
+        "longitude": -115.2481,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "421_1_505",
+        "location": "US-95 NB between Clark County 215 and Ann Road",
+        "latitude": 36.266251,
+        "longitude": -115.254883,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "421_2_506",
+        "location": "US-95 NB between Clark County 215 and Ann Road",
+        "latitude": 36.270187,
+        "longitude": -115.258492,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "421_3_507",
+        "location": "US-95 NB between Clark County 215 and Ann Road",
+        "latitude": 36.273968,
+        "longitude": -115.261932,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "422_3_101",
+        "location": "I-15 SB between Roban Street and Saint Rose Parkway",
+        "latitude": 35.951103,
+        "longitude": -115.182327,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "429_2_100",
+        "location": "I-15 SB between 5.71 Miles south of Sloan Road and 4.71 Miles south of Sloan Road",
+        "latitude": 35.869686,
+        "longitude": -115.245781,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "43_1_86",
+        "location": "I-15 SB to I-215 WB/EB Ramp between I-15 SB and CC-215 WB",
+        "latitude": 36.068642,
+        "longitude": -115.182701,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "435_2_99",
+        "location": "I-15 SB between 11.71 Miles south of Sloan Road and 10.71 Miles south of Sloan Road",
+        "latitude": 35.802666,
+        "longitude": -115.313507,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "437_1_101",
+        "location": "I-15 NB between Saint Rose Parkway and Roban Street",
+        "latitude": 35.938343,
+        "longitude": -115.18679,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "437_2_328",
+        "location": "I-15 NB between Saint Rose Parkway and Roban Street",
+        "latitude": 35.954544,
+        "longitude": -115.18103,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "437_3_327",
+        "location": "I-15 NB between Saint Rose Parkway and Roban Street",
+        "latitude": 35.960361,
+        "longitude": -115.179787,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "44_1_86",
+        "location": "I-15 SB to I-215 EB/WB Ramp between I-15 SB and CC-215 EB",
+        "latitude": 36.067554,
+        "longitude": -115.182549,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "44_2_89",
+        "location": "I-15 SB to I-215 EB/WB Ramp between I-15 SB and CC-215 EB",
+        "latitude": 36.064659,
+        "longitude": -115.183319,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "444_2_100",
+        "location": "I-15 NB between 4.71 Miles south of Sloan Road and 5.71 Miles south of Sloan Road",
+        "latitude": 35.868797,
+        "longitude": -115.24379,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "452_1_508",
+        "location": "US-95 NB between 11.71 Miles south of Sloan Road and 12.71 Miles south of Sloan Road",
+        "latitude": 36.276402,
+        "longitude": -115.265198,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "453_1_509",
+        "location": "US-95 NB between CC-215 EB and Decatur Road",
+        "latitude": 36.2812,
+        "longitude": -115.2696,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "453_2_510",
+        "location": "US-95 NB between CC-215 EB and Decatur Road",
+        "latitude": 36.2854,
+        "longitude": -115.273598,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "453_3_511",
+        "location": "US-95 NB between CC-215 EB and Decatur Road",
+        "latitude": 36.289101,
+        "longitude": -115.276901,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "454_1_512",
+        "location": "US-95 NB between CC-215 EB and Decatur Road",
+        "latitude": 36.292801,
+        "longitude": -115.280403,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "454_2_513",
+        "location": "US-95 NB between CC-215 EB and Decatur Road",
+        "latitude": 36.2962,
+        "longitude": -115.283501,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "456_1_10",
+        "location": "I 15 Exp NB between CC-215 WB and Patrick Lane",
+        "latitude": 36.073364,
+        "longitude": -115.180061,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "456_2_11",
+        "location": "I 15 Exp NB between Patrick Lane and Oquendo",
+        "latitude": 36.080643,
+        "longitude": -115.18045,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "456_3_13",
+        "location": "I 15 Exp NB between Oquendo and Russell Road",
+        "latitude": 36.0844,
+        "longitude": -115.180534,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "457_1_14",
+        "location": "I 15 Exp NB between Russell Road and I-15 NB Russell On-Ramp",
+        "latitude": 36.089886,
+        "longitude": -115.180405,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "457_2_16",
+        "location": "I 15 Exp NB between I-15 NB Russell On-Ramp and Hacienda Avenue",
+        "latitude": 36.091362,
+        "longitude": -115.180428,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "457_3_52",
+        "location": "I 15 Exp NB between Hacienda Avenue and Tropicana Avenue",
+        "latitude": 36.097267,
+        "longitude": -115.180527,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "458_1_18",
+        "location": "I 15 Exp NB between Tropicana Avenue and Tompkins",
+        "latitude": 36.102844,
+        "longitude": -115.180237,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "458_2_21",
+        "location": "I 15 Exp NB between Tompkins and Harmon Ave",
+        "latitude": 36.106339,
+        "longitude": -115.180428,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "458_3_23",
+        "location": "I 15 Exp NB between Harmon Ave and Flamingo Road",
+        "latitude": 36.111126,
+        "longitude": -115.180397,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "459_1_22",
+        "location": "I 15 Exp NB between Flamingo Road and Twain",
+        "latitude": 36.117657,
+        "longitude": -115.180321,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "459_2_28",
+        "location": "I 15 Exp NB between Twain and Highland",
+        "latitude": 36.122204,
+        "longitude": -115.180405,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "459_3_28",
+        "location": "I 15 Exp NB between Highland and Spring Mountain Road",
+        "latitude": 36.124878,
+        "longitude": -115.18042,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "461_3_32",
+        "location": "I 15 Exp SB between Meade and Desert Inn Road",
+        "latitude": 36.133469,
+        "longitude": -115.180191,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "461_4_31",
+        "location": "I 15 Exp SB between Desert Inn Road and Spring Mountain Road",
+        "latitude": 36.127705,
+        "longitude": -115.180954,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "462_2_27",
+        "location": "I 15 Exp SB between Highland and Twain",
+        "latitude": 36.122009,
+        "longitude": -115.181068,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "462_3_26",
+        "location": "I 15 Exp SB between Twain and Flamingo Road",
+        "latitude": 36.116669,
+        "longitude": -115.181114,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "463_1_24",
+        "location": "I 15 Exp SB between Flamingo Road and Harmon Ave",
+        "latitude": 36.110958,
+        "longitude": -115.180923,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "463_2_20",
+        "location": "I 15 Exp SB between Harmon Ave and Tompkins",
+        "latitude": 36.106216,
+        "longitude": -115.180901,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "463_3_19",
+        "location": "I 15 Exp SB between Tompkins and Tropicana Avenue",
+        "latitude": 36.10257,
+        "longitude": -115.181007,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "464_1_18",
+        "location": "I 15 Exp SB between Tropicana Avenue and Hacienda Avenue",
+        "latitude": 36.098034,
+        "longitude": -115.18103,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "464_2_17",
+        "location": "I 15 Exp SB between Hacienda Avenue and I-15 SB Russell Off-Ramp",
+        "latitude": 36.091545,
+        "longitude": -115.181038,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "464_3_15",
+        "location": "I 15 Exp SB between I-15 SB Russell Off-Ramp and Russell Road",
+        "latitude": 36.087582,
+        "longitude": -115.181007,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "465_1_12",
+        "location": "I 15 Exp SB between Russell Road and Oquendo",
+        "latitude": 36.083778,
+        "longitude": -115.181114,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "465_2_82",
+        "location": "I 15 Exp SB between Oquendo and Patrick Lane",
+        "latitude": 36.080193,
+        "longitude": -115.181053,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "465_3_83",
+        "location": "I 15 Exp SB between Patrick Lane and CC-215 WB",
+        "latitude": 36.071934,
+        "longitude": -115.180962,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "465_4_88",
+        "location": "I 15 Exp SB between Patrick Lane and CC-215 WB",
+        "latitude": 36.077,
+        "longitude": -115.199997,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "47_1_92",
+        "location": "I-15 NB to I-215 EB Ramp between I-15 NB and CC-215 EB",
+        "latitude": 36.06197,
+        "longitude": -115.176407,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "470_2_244",
+        "location": "I-15 SB Cheyenne Ave On-Ramp between Cheyenne Avenue and I-15 SB",
+        "latitude": 36.217262,
+        "longitude": -115.125893,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "471_2_246",
+        "location": "I-15 NB Cheyenne Ave On-Ramp between Cheyenne Avenue and I-15 NB",
+        "latitude": 36.218109,
+        "longitude": -115.121925,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "472_2_250",
+        "location": "I-15 SB Craig EB On-Ramp between Craig Road and I-15 SB",
+        "latitude": 36.2384,
+        "longitude": -115.106155,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "473_1_252",
+        "location": "I-15 SB Craig WB On-Ramp between Craig Road and I-15 SB",
+        "latitude": 36.241184,
+        "longitude": -115.10273,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "494_1_544",
+        "location": "AC SB to 215 WB between AC SB and CC-215 WB",
+        "latitude": 36.06546,
+        "longitude": -115.159302,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "495_1_263",
+        "location": "215 WB to AC NB between CC-215 WB and AC NB",
+        "latitude": 36.06189,
+        "longitude": -115.143318,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "495_2_266",
+        "location": "215 WB to AC NB between AC SB and CC-215 WB",
+        "latitude": 35.650002,
+        "longitude": -115.650002,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "496_1_543",
+        "location": "215 EB to AC NB between CC-215 EB and AC NB",
+        "latitude": 36.063026,
+        "longitude": -115.158539,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "496_2_266",
+        "location": "215 EB to AC NB between CC-215 EB and AC NB",
+        "latitude": 35.759998,
+        "longitude": -115.760002,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "497_1_545",
+        "location": "AC SB to 215 EB between AC SB and CC-215 EB",
+        "latitude": 36.063725,
+        "longitude": -115.151222,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "499_2_542",
+        "location": "AC SB between Sunset Road and Pilot SB",
+        "latitude": 36.06884,
+        "longitude": -115.147896,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "50_2_12",
+        "location": "I-15 NB Russell Off-Ramp between I-15 NB and Russell Road",
+        "latitude": 36.082924,
+        "longitude": -115.179337,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "512_1_125",
+        "location": "I-215 EB to I-515 NB OnRamp between CC-215 EB and I-515 NB",
+        "latitude": 36.039043,
+        "longitude": -115.02079,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "513_1_106",
+        "location": "I-515 SB to I-215 WB OnRamp between I-515 SB and CC-215 WB",
+        "latitude": 36.037338,
+        "longitude": -115.025665,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "514_1_140",
+        "location": "I 15 Exp NB between Serene Avenue and Silverado Ranch",
+        "latitude": 36.0574,
+        "longitude": -115.181099,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "514_2_158",
+        "location": "I 15 Exp NB between Serene Avenue and Silverado Ranch",
+        "latitude": 36.016201,
+        "longitude": -115.182098,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "515_1_152",
+        "location": "I 15 Exp NB between Pebble and Serene Avenue",
+        "latitude": 36.027,
+        "longitude": -115.182198,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "515_2_154",
+        "location": "I 15 Exp NB between Wigwam Avenue and Pebble",
+        "latitude": 36.0299,
+        "longitude": -115.182297,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "515_3_150",
+        "location": "I 15 Exp NB between Blue Diamond Road and Wigwam Avenue",
+        "latitude": 36.048801,
+        "longitude": -115.1791,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "516_1_151",
+        "location": "I 15 Exp NB between Blue Diamond Road and Wigwam Avenue",
+        "latitude": 36.0429,
+        "longitude": -115.182404,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "516_2_149",
+        "location": "I 15 Exp NB between Robindale Road and Blue Diamond Road",
+        "latitude": 36.046902,
+        "longitude": -115.181099,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "516_3_141",
+        "location": "I 15 Exp NB between Warm Springs Road and Robindale Road",
+        "latitude": 36.052399,
+        "longitude": -115.181297,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "517_3_9",
+        "location": "I 15 Exp NB between Clark County 215 and Warm Springs Road",
+        "latitude": 36.061901,
+        "longitude": -115.181099,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "518_1_90",
+        "location": "I 15 Exp SB between Clark County 215 and Warm Springs Road",
+        "latitude": 36.060699,
+        "longitude": -115.180397,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "518_2_94",
+        "location": "I 15 Exp SB between Warm Springs Road and Robindale Road",
+        "latitude": 36.055698,
+        "longitude": -115.180397,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "518_3_142",
+        "location": "I 15 Exp SB between Warm Springs Road and Robindale Road",
+        "latitude": 36.051201,
+        "longitude": -115.180199,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "519_1_145",
+        "location": "I 15 Exp SB between Robindale Road and Blue Diamond Road",
+        "latitude": 36.045898,
+        "longitude": -115.180496,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "519_2_144",
+        "location": "I 15 Exp SB between Blue Diamond Road and Wigwam Avenue",
+        "latitude": 36.040798,
+        "longitude": -115.180199,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "520_1_79",
+        "location": "I 15 Exp SB between Blue Diamond Road and Wigwam Avenue",
+        "latitude": 36.0382,
+        "longitude": -115.179298,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "520_2_155",
+        "location": "I 15 Exp SB between Wigwam Avenue and Pebble",
+        "latitude": 36.029499,
+        "longitude": -115.179001,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "520_3_153",
+        "location": "I 15 Exp SB between Pebble and Serene Avenue",
+        "latitude": 36.022099,
+        "longitude": -115.179298,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "521_1_156",
+        "location": "I 15 Exp SB between Pebble and Serene Avenue",
+        "latitude": 36.0214,
+        "longitude": -115.179497,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "524_1_85",
+        "location": "I-15 NB CD between Oquendo and Sunset Road",
+        "latitude": 36.071602,
+        "longitude": -115.180397,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "524_3_8",
+        "location": "I-15 NB CD between Clark County 215 and Warm Springs Road",
+        "latitude": 36.061901,
+        "longitude": -115.180397,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "53_2_15",
+        "location": "I-15 NB Russell On-Ramp between Russell Road and I-15 NB",
+        "latitude": 36.089222,
+        "longitude": -115.17968,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "531_1_12",
+        "location": "Frank Sinatra Drive between I-15 SB and Frank Sinatra Drive",
+        "latitude": 36.082653,
+        "longitude": -115.179451,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "536_1_100",
+        "location": "I-15 NB Jean Off Ramp between I-15 NB and Jean",
+        "latitude": 35.779224,
+        "longitude": -115.327957,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "537_1_100",
+        "location": "I-15 NB Jean On Ramp between Jean and I-15 NB",
+        "latitude": 35.78154,
+        "longitude": -115.326256,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "538_1_101",
+        "location": "I-15 NB Solan On Ramp between Solan and I-15 NB",
+        "latitude": 35.931583,
+        "longitude": -115.191582,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "54_1_14",
+        "location": "I-15 SB Russell Off-Ramp between I-15 SB and Russell Road",
+        "latitude": 36.089275,
+        "longitude": -115.181717,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "54_2_14",
+        "location": "I-15 SB Russell Off-Ramp between I-15 SB and Russell Road",
+        "latitude": 36.087132,
+        "longitude": -115.182068,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "540_1_100",
+        "location": "I-15 SB Jean Off Ramp between I-15 SB and Jean",
+        "latitude": 35.782898,
+        "longitude": -115.328957,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "541_1_100",
+        "location": "I-15 SB Jean On Ramp between Jean and I-15 SB",
+        "latitude": 35.779949,
+        "longitude": -115.330933,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "542_1_99",
+        "location": "I-15 SB Primm Off Ramp between I-15 SB and Primm",
+        "latitude": 35.614304,
+        "longitude": -115.389191,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "543_1_99",
+        "location": "I-15 SB Primm On Ramp between Primm and I-15 SB",
+        "latitude": 35.610794,
+        "longitude": -115.39045,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "544_1_99",
+        "location": "I-15 NB Primm Off Ramp between I-15 NB and Primm",
+        "latitude": 35.610809,
+        "longitude": -115.389076,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "545_1_99",
+        "location": "I-15 NB Primm On Ramp between Primm and I-15 NB",
+        "latitude": 35.614708,
+        "longitude": -115.387756,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "546_1_406",
+        "location": "I-515 NB WagonWheel Off Ramp between I-515 NB and WagonWheel",
+        "latitude": 35.994858,
+        "longitude": -114.93161,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "547_1_400",
+        "location": "I-515 NB WagonWheel On Ramp between WagonWheel and I-515 NB",
+        "latitude": 35.996788,
+        "longitude": -114.935928,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "548_1_376",
+        "location": "I-515 NB Horizon Off Ramp between I-515 NB and Horizon",
+        "latitude": 36.012104,
+        "longitude": -114.98867,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "548_2_401",
+        "location": "I-515 NB Horizon Off Ramp between I-515 NB and Horizon",
+        "latitude": 35.997101,
+        "longitude": -114.935699,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "55_1_13",
+        "location": "I-15 SB Russell On-Ramp between Russell Road and I-15 SB",
+        "latitude": 36.084297,
+        "longitude": -115.181992,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "550_1_378",
+        "location": "I-515 SB Horizon Off Ramp between I-515 SB and Horizon",
+        "latitude": 36.010735,
+        "longitude": -114.990494,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "551_1_380",
+        "location": "I-515 SB Horizon On Ramp between Horizon and I-515 SB",
+        "latitude": 36.011917,
+        "longitude": -114.991295,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "552_1_402",
+        "location": "I-515 SB NV Stateline Off Ramp between I-515 SB and NVStateline",
+        "latitude": 35.997757,
+        "longitude": -114.940475,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "553_1_403",
+        "location": "I-515 SB Boulder Hwy On Ramp between Boulder Hwy and I-515 SB",
+        "latitude": 35.998161,
+        "longitude": -114.941338,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "555_1_405",
+        "location": "I-515 SB WagonWheel On Ramp between WagonWheel and I-515 SB",
+        "latitude": 35.99572,
+        "longitude": -114.935883,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "557_1_128",
+        "location": "I-515 NB Sunset Off Ramp between I-515 NB and Blue Diamond Road",
+        "latitude": 36.063099,
+        "longitude": -115.029602,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "562_1_170",
+        "location": "I-515 SB Tropicana Off Ramp between Blue Diamond Road and I-515 SB",
+        "latitude": 36.101601,
+        "longitude": -115.080597,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "563_1_133",
+        "location": "I-515 SB Galleria Off Ramp between I-515 SB and Blue Diamond Road",
+        "latitude": 36.078701,
+        "longitude": -115.044296,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "568_1_104",
+        "location": "I-215 WB to I-515 SB ramp between CC-215 WB and I-515 SB",
+        "latitude": 36.032001,
+        "longitude": -115.014297,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "570_1_108",
+        "location": "I-515 SB to Lake Mead Dr between I-515 SB and Frank Sinatra Drive",
+        "latitude": 36.039101,
+        "longitude": -115.021698,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "572_1_391",
+        "location": "I-515 SB College Off Ramp between I-515 SB and College Drive",
+        "latitude": 35.999699,
+        "longitude": -114.967598,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "574_1_394",
+        "location": "I-515 NB College Off Ramp between I-515 NB and College Drive",
+        "latitude": 36.000198,
+        "longitude": -114.959297,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "575_2_535",
+        "location": "I-15 SB between N LV Hwy and Craig Rd",
+        "latitude": 36.287144,
+        "longitude": -115.01741,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "575_3_540",
+        "location": "I-15 SB between N LV Hwy and Craig Rd",
+        "latitude": 36.284855,
+        "longitude": -115.023399,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "575_4_533",
+        "location": "I-15 SB between N LV Hwy and Craig Rd",
+        "latitude": 36.284855,
+        "longitude": -115.023399,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "575_5_446",
+        "location": "I-15 SB between N LV Hwy and Craig Rd",
+        "latitude": 36.284855,
+        "longitude": -115.023399,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "576_1_412",
+        "location": "I-15 NB Craig On Ramp between I-15 NB and Craig Rd",
+        "latitude": 36.241993,
+        "longitude": -115.099068,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "577_1_424",
+        "location": "I-15 NB Lamb On Ramp between Lamb and I-15 NB",
+        "latitude": 36.257263,
+        "longitude": -115.078896,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "578_1_419",
+        "location": "I-15 NB Lamb Off Ramp between I-15 NB and Lamb",
+        "latitude": 36.259975,
+        "longitude": -115.076813,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "579_1_437",
+        "location": "I-15 NB 215 CC On Ramp between 215 CC and I-15 NB",
+        "latitude": 36.270592,
+        "longitude": -115.054153,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "580_1_436",
+        "location": "I-15 NB 215 CC Off Ramp between I-15 NB and 215 CC",
+        "latitude": 36.269146,
+        "longitude": -115.057953,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "581_1_444",
+        "location": "I-15 NB Speedway On Ramp between Speedway and I-15 NB",
+        "latitude": 36.283501,
+        "longitude": -115.022186,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "582_1_447",
+        "location": "I-15 NB Speedway Off Ramp between I-15 NB and Speedway",
+        "latitude": 36.281265,
+        "longitude": -115.028099,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "583_1_446",
+        "location": "I-15 SB Speedway On Ramp between Speedway and I-15 SB",
+        "latitude": 36.281582,
+        "longitude": -115.030205,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "584_1_445",
+        "location": "I-15 SB Speedway Off Ramp between I-15 SB and Speedway",
+        "latitude": 36.284187,
+        "longitude": -115.023392,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "585_1_432",
+        "location": "I-15 SB 215 CC On Ramp between 215 CC and I-15 SB",
+        "latitude": 36.272083,
+        "longitude": -115.058853,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "586_1_434",
+        "location": "I-15 SB 215 CC Off Ramp between I-15 SB and 215 CC",
+        "latitude": 36.273685,
+        "longitude": -115.054695,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "587_1_427",
+        "location": "I-15 SB Lamb On Ramp between Lamb and I-15 SB",
+        "latitude": 36.262436,
+        "longitude": -115.075394,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "588_1_422",
+        "location": "I-15 SB Lamb Off Ramp between I-15 SB and Lamb",
+        "latitude": 36.26054,
+        "longitude": -115.07785,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "589_1_410",
+        "location": "I-15 SB Craig Off Ramp between I-15 SB and Craig Rd",
+        "latitude": 36.242443,
+        "longitude": -115.100624,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "61_1_18",
+        "location": "I-15 NB Tropicana On-Ramp between I-15 NB and Tropicana Avenue",
+        "latitude": 36.099812,
+        "longitude": -115.17955,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "61_2_18",
+        "location": "I-15 NB Tropicana On-Ramp between I-15 NB and Tropicana Avenue",
+        "latitude": 36.099487,
+        "longitude": -115.179504,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "61_3_18",
+        "location": "I-15 NB Tropicana On-Ramp between I-15 NB and Tropicana Avenue",
+        "latitude": 36.100708,
+        "longitude": -115.179634,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "615_1_465",
+        "location": "I-215 SB Sunset OffRamp between Cheyenne Avenue and Alexander Road",
+        "latitude": 36.071682,
+        "longitude": -115.290337,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "616_1_467",
+        "location": "I-215 SB Russell OnRamp between Alexander Road and Cheyenne Avenue",
+        "latitude": 36.08395,
+        "longitude": -115.290733,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "617_1_469",
+        "location": "I-215 SB Russel OffRamp between Cheyenne Avenue and Lake Mead Boulevard",
+        "latitude": 36.086491,
+        "longitude": -115.290779,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "618_1_471",
+        "location": "I-215 SB Tropicana OnRamp between Lake Mead Boulevard and I-515 SB College Off Ramp",
+        "latitude": 36.098869,
+        "longitude": -115.293922,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "619_1_473",
+        "location": "I-215 SB Tropicana OffRamp between I-515 SB College Off Ramp and I-515 SB College On Ramp",
+        "latitude": 36.101479,
+        "longitude": -115.295311,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "620_1_475",
+        "location": "I-215 SB Flamingo OnRamp between I-515 SB College On Ramp and Charleston Boulevard",
+        "latitude": 36.114391,
+        "longitude": -115.303848,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "621_1_477",
+        "location": "I-215 SB Flamingo OffRamp between Charleston Boulevard and Sahara Avenue",
+        "latitude": 36.115776,
+        "longitude": -115.306526,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "622_1_479",
+        "location": "I-215 SB TownCenter OnRamp between Sahara Avenue and I-515 SB to Lake Mead Dr",
+        "latitude": 36.119946,
+        "longitude": -115.325867,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "623_1_480",
+        "location": "I-215 SB TownCenter OffRamp between I-515 SB to Lake Mead Dr and Flamingo Road",
+        "latitude": 36.12133,
+        "longitude": -115.32872,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "624_1_483",
+        "location": "I-215 SB Sahara OnRamp between Flamingo Road and Tropicana Avenue",
+        "latitude": 36.14352,
+        "longitude": -115.338531,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "625_1_484",
+        "location": "I-215 SB Sahara OffRamp between Tropicana Avenue and Russell Road",
+        "latitude": 36.146378,
+        "longitude": -115.338646,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "626_1_486",
+        "location": "I-215 SB Charleston OnRamp between Russell Road and Sunset Road",
+        "latitude": 36.157593,
+        "longitude": -115.33902,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "627_1_489",
+        "location": "I-215 SB Charleston OffRamp between Sunset Road and Durango",
+        "latitude": 36.160206,
+        "longitude": -115.339088,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "628_1_491",
+        "location": "I-215 SB Far Hills OnRamp between Sunset Road and Durango",
+        "latitude": 36.176353,
+        "longitude": -115.340897,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "629_1_493",
+        "location": "I-215 SB Far Hills OffRamp between Sunset Road and Durango",
+        "latitude": 36.178471,
+        "longitude": -115.341881,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "63_2_18",
+        "location": "I-15 NB Tropicana Ave On-Ramp between Tropicana Avenue and I-15 NB",
+        "latitude": 36.102394,
+        "longitude": -115.179695,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "630_1_494",
+        "location": "I-215 SB Summerlin OnRamp between Sunset Road and Durango",
+        "latitude": 36.190025,
+        "longitude": -115.34433,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "631_1_496",
+        "location": "I-215 SB Summerlin OffRamp between Sunset Road and Durango",
+        "latitude": 36.192589,
+        "longitude": -115.344063,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "632_1_498",
+        "location": "I-215 SB Lake Mead OnRamp between Sunset Road and Durango",
+        "latitude": 36.204498,
+        "longitude": -115.342659,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "633_1_499",
+        "location": "I-215 SB Lake Mead OffRamp between Sunset Road and Durango",
+        "latitude": 36.20702,
+        "longitude": -115.341988,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "634_1_501",
+        "location": "I-215 SB Cheyenne OnRamp between Sunset Road and Durango",
+        "latitude": 36.21777,
+        "longitude": -115.330902,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "635_1_504",
+        "location": "I-215 SB Cheyenne OffRamp between Sunset Road and Durango",
+        "latitude": 36.219398,
+        "longitude": -115.329948,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "636_1_464",
+        "location": "I-215 NB Sunset OnRamp between Lake Mead Boulevard and Cheyenne Avenue",
+        "latitude": 36.071438,
+        "longitude": -115.28701,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "638_1_468",
+        "location": "I-215 NB Russell OnRamp between Alexander Road and Cheyenne Avenue",
+        "latitude": 36.086311,
+        "longitude": -115.287323,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "639_1_466",
+        "location": "I-215 NB Russel OffRamp between Cheyenne Avenue and Lake Mead Boulevard",
+        "latitude": 36.084305,
+        "longitude": -115.287323,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "640_1_472",
+        "location": "I-215 NB Tropicana OnRamp between Lake Mead Boulevard and I-515 SB College Off Ramp",
+        "latitude": 36.101032,
+        "longitude": -115.291985,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "641_1_470",
+        "location": "I-215 NB Tropicana OffRamp between I-515 SB College Off Ramp and I-515 SB College On Ramp",
+        "latitude": 36.099159,
+        "longitude": -115.290421,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "642_1_476",
+        "location": "I-215 NB Flamingo OnRamp between I-515 SB College On Ramp and Charleston Boulevard",
+        "latitude": 36.115776,
+        "longitude": -115.301399,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "643_1_474",
+        "location": "I-215 NB Flamingo OffRamp between Charleston Boulevard and Sahara Avenue",
+        "latitude": 36.114082,
+        "longitude": -115.299393,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "644_1_481",
+        "location": "I-215 NB TownCenter OnRamp between Sahara Avenue and I-515 SB to Lake Mead Dr",
+        "latitude": 36.123917,
+        "longitude": -115.327202,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "645_1_478",
+        "location": "I-215 NB TownCenter OffRamp between I-515 SB to Lake Mead Dr and Flamingo Road",
+        "latitude": 36.122242,
+        "longitude": -115.324127,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "646_1_485",
+        "location": "I-215 NB Sahara OnRamp between Flamingo Road and Tropicana Avenue",
+        "latitude": 36.145908,
+        "longitude": -115.33532,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "647_1_482",
+        "location": "I-215 NB Sahara OffRamp between Tropicana Avenue and Russell Road",
+        "latitude": 36.143188,
+        "longitude": -115.335144,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "648_1_488",
+        "location": "I-215 NB Charleston OnRamp between Russell Road and Sunset Road",
+        "latitude": 36.160183,
+        "longitude": -115.335823,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "649_1_487",
+        "location": "I-215 NB Charleston OffRamp between Sunset Road and Durango",
+        "latitude": 36.15773,
+        "longitude": -115.335823,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "65_1_19",
+        "location": "I-15 SB Tropicana Off-Ramp between I-15 SB and Tropicana Avenue",
+        "latitude": 36.104733,
+        "longitude": -115.181763,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "65_2_19",
+        "location": "I-15 SB Tropicana Off-Ramp between I-15 SB and Tropicana Avenue",
+        "latitude": 36.103378,
+        "longitude": -115.181946,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "650_1_492",
+        "location": "I-215 NB Far Hills OnRamp between Sunset Road and Durango",
+        "latitude": 36.179497,
+        "longitude": -115.338188,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "651_1_490",
+        "location": "I-215 NB Far Hills OffRamp between Sunset Road and Durango",
+        "latitude": 36.177086,
+        "longitude": -115.337296,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "652_1_495",
+        "location": "I-215 NB Summerlin OnRamp between Sunset Road and Durango",
+        "latitude": 36.192635,
+        "longitude": -115.340424,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "653_1_492",
+        "location": "I-215 NB Summerlin OffRamp between Sunset Road and Durango",
+        "latitude": 36.190247,
+        "longitude": -115.340576,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "654_1_500",
+        "location": "I-215 NB Lake Mead OnRamp between Sunset Road and Durango",
+        "latitude": 36.206306,
+        "longitude": -115.338524,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "655_1_497",
+        "location": "I-215 NB Lake Mead OffRamp between Sunset Road and Durango",
+        "latitude": 36.204075,
+        "longitude": -115.339241,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "656_1_503",
+        "location": "I-215 NB Cheyenne OnRamp between Sunset Road and Durango",
+        "latitude": 36.21933,
+        "longitude": -115.326324,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "657_1_502",
+        "location": "I-215 NB Cheyenne OffRamp between Sunset Road and Durango",
+        "latitude": 36.21777,
+        "longitude": -115.327126,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "676_1_25",
+        "location": "I-215 NB Jones OnRamp between Lake Mead Boulevard and Cheyenne Avenue",
+        "latitude": 36.273144,
+        "longitude": -115.223381,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "677_1_449",
+        "location": "I-215 NB Jones OffRamp between Cheyenne Avenue and Alexander Road",
+        "latitude": 36.273014,
+        "longitude": -115.226151,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "678_1_455",
+        "location": "I-215 NB Decatur OnRamp between Alexander Road and Cheyenne Avenue",
+        "latitude": 36.273251,
+        "longitude": -115.205276,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "679_1_453",
+        "location": "I-215 NB Decatur OffRamp between Cheyenne Avenue and Lake Mead Boulevard",
+        "latitude": 36.273178,
+        "longitude": -115.208206,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "681_1_459",
+        "location": "I-215 NB Aliante OffRamp between I-515 SB College Off Ramp and I-515 SB College On Ramp",
+        "latitude": 36.292114,
+        "longitude": -115.180321,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "682_1_451",
+        "location": "I-215 SB Jones OnRamp between I-515 SB College On Ramp and Charleston Boulevard",
+        "latitude": 36.277264,
+        "longitude": -115.226036,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "683_1_450",
+        "location": "I-215 SB Jones OffRamp between Charleston Boulevard and Sahara Avenue",
+        "latitude": 36.277302,
+        "longitude": -115.222565,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "684_1_454",
+        "location": "I-215 SB Decatur OnRamp between Sahara Avenue and I-515 SB to Lake Mead Dr",
+        "latitude": 36.277119,
+        "longitude": -115.207855,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "685_1_452",
+        "location": "I-215 SB Decatur OffRamp between I-515 SB to Lake Mead Dr and Flamingo Road",
+        "latitude": 36.277111,
+        "longitude": -115.204918,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "686_1_458",
+        "location": "I-215 SB Aliante OnRamp between Flamingo Road and Tropicana Avenue",
+        "latitude": 36.2897,
+        "longitude": -115.183464,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "688_2_519",
+        "location": "US-95 SB between Tropical and Clark County 215",
+        "latitude": 36.276299,
+        "longitude": -115.266197,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "689_1_522",
+        "location": "US-95 SB between Clark County 215 and Elkhorn",
+        "latitude": 36.2887,
+        "longitude": -115.277603,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "689_2_521",
+        "location": "US-95 SB between Clark County 215 and Elkhorn",
+        "latitude": 36.285099,
+        "longitude": -115.2743,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "689_3_520",
+        "location": "US-95 SB between Clark County 215 and Elkhorn",
+        "latitude": 36.2808,
+        "longitude": -115.270401,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "690_1_524",
+        "location": "US-95 SB between Elkhorn and Durango",
+        "latitude": 36.295898,
+        "longitude": -115.284103,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "690_2_523",
+        "location": "US-95 SB between Elkhorn and Durango",
+        "latitude": 36.2925,
+        "longitude": -115.280998,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "691_2_525",
+        "location": "US-95 SB between Durango and Grand Teton",
+        "latitude": 36.299099,
+        "longitude": -115.287003,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "692_1_516",
+        "location": "US-95 SB Ann Rd Off-Ramp between Tropical and Clark County 215",
+        "latitude": 36.2649,
+        "longitude": -115.255898,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "693_1_538",
+        "location": "I-15 NB between Centennial Parkway and Speedway Boulevard",
+        "latitude": 36.283272,
+        "longitude": -115.021881,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "694_1_538",
+        "location": "I-15 NB LV Blvd OnRamp between I-15 NB and 1.71 Miles south of Sloan Road",
+        "latitude": 36.311401,
+        "longitude": -114.949402,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "695_1_536",
+        "location": "I-15 NB LV Blvd OffRamp between 2.71 Miles south of Sloan Road and I-15 NB",
+        "latitude": 36.309502,
+        "longitude": -114.954399,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "696_2_539",
+        "location": "I-15 SB between N LV Hwy and Craig Rd",
+        "latitude": 36.283272,
+        "longitude": -115.021881,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "697_1_537",
+        "location": "I-15 SB LV Blvd OnRamp between I-15 NB and 3.71 Miles south of Sloan Road",
+        "latitude": 36.309898,
+        "longitude": -114.954903,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "698_1_539",
+        "location": "I-15 SB LV Blvd OffRamp between 2.71 Miles south of Sloan Road and I-15 NB",
+        "latitude": 36.311901,
+        "longitude": -114.949898,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "73_2_23",
+        "location": "I-15 NB Flamingo EB Off-Ramp between I-15 NB and Flamingo Road",
+        "latitude": 36.112103,
+        "longitude": -115.179489,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "74_1_22",
+        "location": "I-15 NB Flamingo On-Ramp between Flamingo Road and I-15 NB",
+        "latitude": 36.11607,
+        "longitude": -115.179489,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "81_2_24",
+        "location": "I-15 SB Flamingo On-Ramp between Flamingo Road and I-15 SB",
+        "latitude": 36.113003,
+        "longitude": -115.182426,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "86_1_28",
+        "location": "I-15 NB Sping Mtn EB Off-Ramp between I-15 NB and Spring Mountain Road",
+        "latitude": 36.124413,
+        "longitude": -115.178665,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "88_1_28",
+        "location": "I-15 NB Spring Mtn EB On-Ramp between Spring Mountain Road and I-15 NB",
+        "latitude": 36.125618,
+        "longitude": -115.179916,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "9_3_2",
+        "location": "CC-215 WB between I-15 SB to I-215 WB/EB Ramp and I-215 WB Decatur Off-Ramp",
+        "latitude": 36.06921,
+        "longitude": -115.203293,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "90_2_30",
+        "location": "I-15 NB Spring Mtn WB On-Ramp between Spring Mountain Road and I-15 NB",
+        "latitude": 36.12748,
+        "longitude": -115.178146,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "95_1_29",
+        "location": "I-15 SB Spring Mtn On-Ramp between Spring Mountain Road and I-15 SB",
+        "latitude": 36.125626,
+        "longitude": -115.18232,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "121_1_43",
+        "location": "I-15 SB MLK Blvd On-Ramp between Martin Luther King Boulevard and I-15 SB",
+        "latitude": 36.154499,
+        "longitude": -115.16256,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "212_3_363",
+        "location": "I-515 SB between I-515 SB Charleston Off-Ramp and I-515 SB Charleston On-Ramp",
+        "latitude": 36.144207,
+        "longitude": -115.091743,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "219_2_174",
+        "location": "I-515 NB between I-515 NB Boulder Hwy Off-Ramp and I-515 NB Charleston Off-Ramp",
+        "latitude": 36.123962,
+        "longitude": -115.083687,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "361_2_164",
+        "location": "I-515 SB between Dell Santos Drive and Viking Road",
+        "latitude": 36.086498,
+        "longitude": -115.060921,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "361_3_295",
+        "location": "I-515 SB between Dell Santos Drive and Viking Road",
+        "latitude": 36.084278,
+        "longitude": -115.05442,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "374_1_167",
+        "location": "I-515 NB between Boulder Highway and Viking Road",
+        "latitude": 36.091614,
+        "longitude": -115.070724,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "375_1_290",
+        "location": "I-515 NB between Viking Road and Dell Santos Drive",
+        "latitude": 36.085552,
+        "longitude": -115.051773,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "375_2_293",
+        "location": "I-515 NB between Viking Road and Dell Santos Drive",
+        "latitude": 36.088257,
+        "longitude": -115.059525,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "375_3_168",
+        "location": "I-515 NB between Viking Road and Dell Santos Drive",
+        "latitude": 36.089645,
+        "longitude": -115.066162,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "391_2_410",
+        "location": "I-15 SB between Smiley Road and Craig Road",
+        "latitude": 36.24572,
+        "longitude": -115.096901,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "391_3_252",
+        "location": "I-15 SB between Smiley Road and Craig Road",
+        "latitude": 36.242081,
+        "longitude": -115.101257,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "403_3_448",
+        "location": "I-15 NB between Centennial Parkway and Speedway Boulevard",
+        "latitude": 36.28743,
+        "longitude": -115.010963,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "575_1_448",
+        "location": "I-15 SB between N LV Hwy and Craig Rd",
+        "latitude": 36.289131,
+        "longitude": -115.012016,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "575_3_446",
+        "location": "I-15 SB between N LV Hwy and Craig Rd",
+        "latitude": 36.284855,
+        "longitude": -115.023399,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "95_2_29",
+        "location": "I-15 SB Spring Mtn On-Ramp between Spring Mountain Road and I-15 SB",
+        "latitude": 36.124588,
+        "longitude": -115.181709,
+        "set": "UNLV"
+    },
+    {
+        "detector_id": "2_1_268",
+        "location": "215 EB",
+        "latitude": 36.0670163,
+        "longitude": -115.2184818,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "2_2_267",
+        "location": "215 EB",
+        "latitude": 36.06729199,
+        "longitude": -115.2130287,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "26_1_97",
+        "location": "215 EB",
+        "latitude": 36.06334183,
+        "longitude": -115.1652356,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "26_2_98",
+        "location": "215 EB",
+        "latitude": 36.06275381,
+        "longitude": -115.150645,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "4_1_1",
+        "location": "215 EB",
+        "latitude": 36.06806787,
+        "longitude": -115.2048716,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "4_2_4",
+        "location": "215 EB",
+        "latitude": 36.06841781,
+        "longitude": -115.1995012,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "4_3_4",
+        "location": "215 EB",
+        "latitude": 36.06714143,
+        "longitude": -115.1932468,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "478_2_263",
+        "location": "215 EB",
+        "latitude": 36.05997447,
+        "longitude": -115.1435223,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "479_1_262",
+        "location": "215 EB",
+        "latitude": 36.05355175,
+        "longitude": -115.1380316,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "479_2_261",
+        "location": "215 EB",
+        "latitude": 36.04897548,
+        "longitude": -115.1354145,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "480_1_121",
+        "location": "215 EB",
+        "latitude": 36.03759543,
+        "longitude": -115.1339293,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "480_2_122",
+        "location": "215 EB",
+        "latitude": 36.02768464,
+        "longitude": -115.1302244,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "480_3_123",
+        "location": "215 EB",
+        "latitude": 36.024067,
+        "longitude": -115.12447,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "481_1_124",
+        "location": "215 EB",
+        "latitude": 36.023396,
+        "longitude": -115.113396,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "481_2_194",
+        "location": "215 EB",
+        "latitude": 36.023388,
+        "longitude": -115.10656,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "482_1_236",
+        "location": "215 EB",
+        "latitude": 36.02323,
+        "longitude": -115.096016,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "482_2_237",
+        "location": "215 EB",
+        "latitude": 36.02362512,
+        "longitude": -115.0886351,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "483_1_253",
+        "location": "215 EB",
+        "latitude": 36.02522019,
+        "longitude": -115.0781268,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "483_2_254",
+        "location": "215 EB",
+        "latitude": 36.02669377,
+        "longitude": -115.0663672,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "484_1_255",
+        "location": "215 EB",
+        "latitude": 36.02792944,
+        "longitude": -115.0569101,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "484_2_256",
+        "location": "215 EB",
+        "latitude": 36.02851811,
+        "longitude": -115.0511465,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "485_1_257",
+        "location": "215 EB",
+        "latitude": 36.02967135,
+        "longitude": -115.042486,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "485_2_258",
+        "location": "215 EB",
+        "latitude": 36.03082586,
+        "longitude": -115.0335141,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "486_1_259",
+        "location": "215 EB",
+        "latitude": 36.03215871,
+        "longitude": -115.0260151,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "486_2_260",
+        "location": "215 EB",
+        "latitude": 36.03268551,
+        "longitude": -115.0208272,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "5_1_6",
+        "location": "215 EB",
+        "latitude": 36.06513259,
+        "longitude": -115.1866373,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "505_1_274",
+        "location": "215 EB",
+        "latitude": 36.06598686,
+        "longitude": -115.2726817,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "505_2_273",
+        "location": "215 EB",
+        "latitude": 36.06595022,
+        "longitude": -115.267263,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "506_1_272",
+        "location": "215 EB",
+        "latitude": 36.06606773,
+        "longitude": -115.2546173,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "506_2_271",
+        "location": "215 EB",
+        "latitude": 36.06622729,
+        "longitude": -115.2479451,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "507_1_270",
+        "location": "215 EB",
+        "latitude": 36.06651418,
+        "longitude": -115.2346769,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "507_2_269",
+        "location": "215 EB",
+        "latitude": 36.06660574,
+        "longitude": -115.2301277,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "6_2_264",
+        "location": "215 EB",
+        "latitude": 36.06323184,
+        "longitude": -115.1773935,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "10_1_267",
+        "location": "215 WB",
+        "latitude": 36.06772548,
+        "longitude": -115.2130342,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "10_2_268",
+        "location": "215 WB",
+        "latitude": 36.06749059,
+        "longitude": -115.2184853,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "25_1_98",
+        "location": "215 WB",
+        "latitude": 36.06322291,
+        "longitude": -115.1504901,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "25_2_97",
+        "location": "215 WB",
+        "latitude": 36.06384537,
+        "longitude": -115.1652777,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "476_1_261",
+        "location": "215 WB",
+        "latitude": 36.04908056,
+        "longitude": -115.1349139,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "476_2_262",
+        "location": "215 WB",
+        "latitude": 36.05372069,
+        "longitude": -115.1375397,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "477_1_263",
+        "location": "215 WB",
+        "latitude": 36.06032778,
+        "longitude": -115.1430833,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "487_1_260",
+        "location": "215 WB",
+        "latitude": 36.03316,
+        "longitude": -115.02091,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "487_2_259",
+        "location": "215 WB",
+        "latitude": 36.032707,
+        "longitude": -115.02607,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "488_1_258",
+        "location": "215 WB",
+        "latitude": 36.031437,
+        "longitude": -115.03352,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "488_2_257",
+        "location": "215 WB",
+        "latitude": 36.030205,
+        "longitude": -115.04251,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "489_1_256",
+        "location": "215 WB",
+        "latitude": 36.02917,
+        "longitude": -115.05118,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "489_2_255",
+        "location": "215 WB",
+        "latitude": 36.028427,
+        "longitude": -115.05694,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "490_1_254",
+        "location": "215 WB",
+        "latitude": 36.02726,
+        "longitude": -115.06644,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "490_2_253",
+        "location": "215 WB",
+        "latitude": 36.025738,
+        "longitude": -115.07814,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "491_1_237",
+        "location": "215 WB",
+        "latitude": 36.024204,
+        "longitude": -115.088646,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "491_2_236",
+        "location": "215 WB",
+        "latitude": 36.0238116,
+        "longitude": -115.0959947,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "492_1_194",
+        "location": "215 WB",
+        "latitude": 36.02388723,
+        "longitude": -115.1065988,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "492_2_124",
+        "location": "215 WB",
+        "latitude": 36.02392266,
+        "longitude": -115.1134123,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "493_1_123",
+        "location": "215 WB",
+        "latitude": 36.02458681,
+        "longitude": -115.124225,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "493_2_122",
+        "location": "215 WB",
+        "latitude": 36.02793046,
+        "longitude": -115.1297574,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "493_3_121",
+        "location": "215 WB",
+        "latitude": 36.03761,
+        "longitude": -115.1332,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "502_1_269",
+        "location": "215 WB",
+        "latitude": 36.06713192,
+        "longitude": -115.2301259,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "502_2_270",
+        "location": "215 WB",
+        "latitude": 36.06697692,
+        "longitude": -115.2346955,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "503_1_271",
+        "location": "215 WB",
+        "latitude": 36.06669111,
+        "longitude": -115.2479548,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "503_2_272",
+        "location": "215 WB",
+        "latitude": 36.06656408,
+        "longitude": -115.2546549,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "504_1_273",
+        "location": "215 WB",
+        "latitude": 36.06642607,
+        "longitude": -115.2672625,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "504_2_274",
+        "location": "215 WB",
+        "latitude": 36.06644851,
+        "longitude": -115.2726767,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "7_1_264",
+        "location": "215 WB",
+        "latitude": 36.06371754,
+        "longitude": -115.1774036,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "8_1_7",
+        "location": "215 WB",
+        "latitude": 36.06459425,
+        "longitude": -115.1831058,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "8_2_5",
+        "location": "215 WB",
+        "latitude": 36.06616461,
+        "longitude": -115.1884096,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "9_1_3",
+        "location": "215 WB",
+        "latitude": 36.06754827,
+        "longitude": -115.1928653,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "494_1_266",
+        "location": "Airport Connector",
+        "latitude": 36.06617985,
+        "longitude": -115.1485825,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "495_1_266",
+        "location": "Airport Connector",
+        "latitude": 36.06602741,
+        "longitude": -115.1480372,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "496_1_266",
+        "location": "Airport Connector",
+        "latitude": 36.0660421,
+        "longitude": -115.148137,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "497_1_266",
+        "location": "Airport Connector",
+        "latitude": 36.06612203,
+        "longitude": -115.1483585,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "499_2_265",
+        "location": "Airport Connector",
+        "latitude": 36.07004042,
+        "longitude": -115.1470407,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "500_1_265",
+        "location": "Airport Connector",
+        "latitude": 36.069926,
+        "longitude": -115.146501,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "664_1_461",
+        "location": "CC-215 EB",
+        "latitude": 36.27519167,
+        "longitude": -115.2450218,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "664_2_449",
+        "location": "CC-215 EB",
+        "latitude": 36.27498611,
+        "longitude": -115.232213,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "665_1_25",
+        "location": "CC-215 EB",
+        "latitude": 36.27483337,
+        "longitude": -115.2200461,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "665_2_462",
+        "location": "CC-215 EB",
+        "latitude": 36.2738,
+        "longitude": -115.2158,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "665_3_453",
+        "location": "CC-215 EB",
+        "latitude": 36.27473333,
+        "longitude": -115.2114648,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "666_1_455",
+        "location": "CC-215 EB",
+        "latitude": 36.27528889,
+        "longitude": -115.2007233,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "666_2_457",
+        "location": "CC-215 EB",
+        "latitude": 36.27969167,
+        "longitude": -115.1924136,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "666_3_459",
+        "location": "CC-215 EB",
+        "latitude": 36.28678889,
+        "longitude": -115.1835009,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "591_1_464",
+        "location": "CC-215 NB",
+        "latitude": 36.0752,
+        "longitude": -115.2887,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "591_2_466",
+        "location": "CC-215 NB",
+        "latitude": 36.08005032,
+        "longitude": -115.2886162,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "592_1_468",
+        "location": "CC-215 NB",
+        "latitude": 36.09,
+        "longitude": -115.2885,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "592_2_470",
+        "location": "CC-215 NB",
+        "latitude": 36.0939,
+        "longitude": -115.2889,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "593_1_472",
+        "location": "CC-215 NB",
+        "latitude": 36.105,
+        "longitude": -115.2951,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "593_2_474",
+        "location": "CC-215 NB",
+        "latitude": 36.1111,
+        "longitude": -115.2979,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "594_1_476",
+        "location": "CC-215 NB",
+        "latitude": 36.11733262,
+        "longitude": -115.3062607,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "594_2_478",
+        "location": "CC-215 NB",
+        "latitude": 36.12028068,
+        "longitude": -115.3219928,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "595_1_481",
+        "location": "CC-215 NB",
+        "latitude": 36.12425186,
+        "longitude": -115.3300513,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "595_2_482",
+        "location": "CC-215 NB",
+        "latitude": 36.1397399,
+        "longitude": -115.336143,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "596_1_485",
+        "location": "CC-215 NB",
+        "latitude": 36.1496,
+        "longitude": -115.3366,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "596_2_487",
+        "location": "CC-215 NB",
+        "latitude": 36.15436111,
+        "longitude": -115.3367779,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "597_1_488",
+        "location": "CC-215 NB",
+        "latitude": 36.16355651,
+        "longitude": -115.3370968,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "597_2_490",
+        "location": "CC-215 NB",
+        "latitude": 36.17698649,
+        "longitude": -115.3388551,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "598_1_492",
+        "location": "CC-215 NB",
+        "latitude": 36.18484444,
+        "longitude": -115.3420633,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "599_1_495",
+        "location": "CC-215 NB",
+        "latitude": 36.19523056,
+        "longitude": -115.3417296,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "599_2_497",
+        "location": "CC-215 NB",
+        "latitude": 36.20155833,
+        "longitude": -115.3408667,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "600_1_500",
+        "location": "CC-215 NB",
+        "latitude": 36.21081111,
+        "longitude": -115.3364122,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "600_2_502",
+        "location": "CC-215 NB",
+        "latitude": 36.21631389,
+        "longitude": -115.3296687,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "601_1_503",
+        "location": "CC-215 NB",
+        "latitude": 36.22338056,
+        "longitude": -115.3254265,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "602_2_504",
+        "location": "CC-215 SB",
+        "latitude": 36.22413889,
+        "longitude": -115.3261002,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "603_1_501",
+        "location": "CC-215 SB",
+        "latitude": 36.21601111,
+        "longitude": -115.3309949,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "603_2_499",
+        "location": "CC-215 SB",
+        "latitude": 36.21036667,
+        "longitude": -115.3379704,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "604_1_498",
+        "location": "CC-215 SB",
+        "latitude": 36.20269167,
+        "longitude": -115.3414851,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "604_2_496",
+        "location": "CC-215 SB",
+        "latitude": 36.19679378,
+        "longitude": -115.3422201,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "605_1_494",
+        "location": "CC-215 SB",
+        "latitude": 36.191,
+        "longitude": -115.3429,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "605_2_493",
+        "location": "CC-215 SB",
+        "latitude": 36.18502778,
+        "longitude": -115.3429614,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "606_1_491",
+        "location": "CC-215 SB",
+        "latitude": 36.176225,
+        "longitude": -115.3392303,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "606_2_489",
+        "location": "CC-215 SB",
+        "latitude": 36.16480864,
+        "longitude": -115.3377982,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "607_1_486",
+        "location": "CC-215 SB",
+        "latitude": 36.15457408,
+        "longitude": -115.3374115,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "607_2_484",
+        "location": "CC-215 SB",
+        "latitude": 36.149475,
+        "longitude": -115.3371827,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "608_1_483",
+        "location": "CC-215 SB",
+        "latitude": 36.14048889,
+        "longitude": -115.3368989,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "608_2_480",
+        "location": "CC-215 SB",
+        "latitude": 36.12395278,
+        "longitude": -115.3306791,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "609_1_479",
+        "location": "CC-215 SB",
+        "latitude": 36.11997867,
+        "longitude": -115.3231516,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "609_2_477",
+        "location": "CC-215 SB",
+        "latitude": 36.1173,
+        "longitude": -115.3062,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "610_1_475",
+        "location": "CC-215 SB",
+        "latitude": 36.11133854,
+        "longitude": -115.2987009,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "610_2_473",
+        "location": "CC-215 SB",
+        "latitude": 36.10528056,
+        "longitude": -115.295733,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "611_1_471",
+        "location": "CC-215 SB",
+        "latitude": 36.09566111,
+        "longitude": -115.2904741,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "611_2_469",
+        "location": "CC-215 SB",
+        "latitude": 36.09035,
+        "longitude": -115.2891474,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "612_1_467",
+        "location": "CC-215 SB",
+        "latitude": 36.08026111,
+        "longitude": -115.289252,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "612_2_465",
+        "location": "CC-215 SB",
+        "latitude": 36.0742,
+        "longitude": -115.2898,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "673_1_451",
+        "location": "CC-215 WB",
+        "latitude": 36.275575,
+        "longitude": -115.2298009,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "673_2_460",
+        "location": "CC-215 WB",
+        "latitude": 36.27578056,
+        "longitude": -115.2449609,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "674_1_454",
+        "location": "CC-215 WB",
+        "latitude": 36.27542222,
+        "longitude": -115.2118092,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "674_2_463",
+        "location": "CC-215 WB",
+        "latitude": 36.2754,
+        "longitude": -115.2158388,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "674_3_450",
+        "location": "CC-215 WB",
+        "latitude": 36.27547962,
+        "longitude": -115.2197349,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "675_1_458",
+        "location": "CC-215 WB",
+        "latitude": 36.28678889,
+        "longitude": -115.18462,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "675_2_456",
+        "location": "CC-215 WB",
+        "latitude": 36.28008056,
+        "longitude": -115.1928898,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "675_3_452",
+        "location": "CC-215 WB",
+        "latitude": 36.27603,
+        "longitude": -115.2006333,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "710_2_740",
+        "location": "I-11 NB",
+        "latitude": 36.002298,
+        "longitude": -114.794797,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "707_4_740",
+        "location": "I-11 SB",
+        "latitude": 36.002062,
+        "longitude": -114.794754,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "110_1_41",
+        "location": "I-15 NB",
+        "latitude": 36.15035185,
+        "longitude": -115.1653275,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "112_2_44",
+        "location": "I-15 NB",
+        "latitude": 36.15673701,
+        "longitude": -115.1602384,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "113_2_45",
+        "location": "I-15 NB",
+        "latitude": 36.16054711,
+        "longitude": -115.1600272,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "122_2_48",
+        "location": "I-15 NB",
+        "latitude": 36.16656498,
+        "longitude": -115.1593364,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "124_2_49",
+        "location": "I-15 NB",
+        "latitude": 36.1708272,
+        "longitude": -115.1574156,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "137_1_80",
+        "location": "I-15 NB",
+        "latitude": 36.17509136,
+        "longitude": -115.1536994,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "138_1_53",
+        "location": "I-15 NB",
+        "latitude": 36.17831248,
+        "longitude": -115.1487747,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "146_2_238",
+        "location": "I-15 NB",
+        "latitude": 36.18819436,
+        "longitude": -115.1431851,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "148_2_58",
+        "location": "I-15 NB",
+        "latitude": 36.19484602,
+        "longitude": -115.1388363,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "149_2_240",
+        "location": "I-15 NB",
+        "latitude": 36.19895129,
+        "longitude": -115.1371799,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "160_1_241 ",
+        "location": "I-15 NB",
+        "latitude": 36.20308098,
+        "longitude": -115.1344072,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "160_2_242",
+        "location": "I-15 NB",
+        "latitude": 36.20679424,
+        "longitude": -115.1317133,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "161_2_241",
+        "location": "I-15 NB",
+        "latitude": 36.20308098,
+        "longitude": -115.1344072,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "32_1_142",
+        "location": "I-15 NB",
+        "latitude": 36.05117107,
+        "longitude": -115.1802266,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "34_1_94",
+        "location": "I-15 NB",
+        "latitude": 36.05569977,
+        "longitude": -115.1804147,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "34_2_90",
+        "location": "I-15 NB",
+        "latitude": 36.06065639,
+        "longitude": -115.1804043,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "354_1_79",
+        "location": "I-15 NB",
+        "latitude": 36.03580623,
+        "longitude": -115.18031,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "354_2_144",
+        "location": "I-15 NB",
+        "latitude": 36.04075287,
+        "longitude": -115.1801935,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "354_3_145",
+        "location": "I-15 NB",
+        "latitude": 36.04591258,
+        "longitude": -115.1804891,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "355_1_156",
+        "location": "I-15 NB",
+        "latitude": 36.02113089,
+        "longitude": -115.1802807,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "355_2_153",
+        "location": "I-15 NB",
+        "latitude": 36.0261007,
+        "longitude": -115.1804048,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "355_3_155",
+        "location": "I-15 NB",
+        "latitude": 36.03085027,
+        "longitude": -115.1804517,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "356_1_309",
+        "location": "I-15 NB",
+        "latitude": 36.003196,
+        "longitude": -115.180024,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "356_2_308",
+        "location": "I-15 NB",
+        "latitude": 36.00892,
+        "longitude": -115.17992,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "356_3_313",
+        "location": "I-15 NB",
+        "latitude": 36.015394,
+        "longitude": -115.180088,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "357_1_312",
+        "location": "I-15 NB",
+        "latitude": 35.98778,
+        "longitude": -115.18072,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "357_2_311",
+        "location": "I-15 NB",
+        "latitude": 35.993297,
+        "longitude": -115.1805,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "357_3_310",
+        "location": "I-15 NB",
+        "latitude": 35.998224,
+        "longitude": -115.180293,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "358_1_325",
+        "location": "I-15 NB",
+        "latitude": 35.97185101,
+        "longitude": -115.1810836,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "358_2_320",
+        "location": "I-15 NB",
+        "latitude": 35.976806,
+        "longitude": -115.180803,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "358_3_319",
+        "location": "I-15 NB",
+        "latitude": 35.982311,
+        "longitude": -115.180824,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "359_1_325",
+        "location": "I-15 NB",
+        "latitude": 35.9664238,
+        "longitude": -115.1813135,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "39_2_88",
+        "location": "I-15 NB",
+        "latitude": 36.06607991,
+        "longitude": -115.1804515,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "396_1_243",
+        "location": "I-15 NB",
+        "latitude": 36.21155503,
+        "longitude": -115.1283916,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "396_2_246",
+        "location": "I-15 NB",
+        "latitude": 36.21587828,
+        "longitude": -115.1249788,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "396_3_246",
+        "location": "I-15 NB",
+        "latitude": 36.219577,
+        "longitude": -115.1223722,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "397_1_247",
+        "location": "I-15 NB",
+        "latitude": 36.22396521,
+        "longitude": -115.1192843,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "398_1_249",
+        "location": "I-15 NB",
+        "latitude": 36.2342705,
+        "longitude": -115.1089671,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "398_2_251",
+        "location": "I-15 NB",
+        "latitude": 36.23797692,
+        "longitude": -115.1041449,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "403_3_534",
+        "location": "I-15 NB",
+        "latitude": 36.295939,
+        "longitude": -114.991402,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "437_1_328",
+        "location": "I-15 NB",
+        "latitude": 35.947927,
+        "longitude": -115.182234,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "437_2_327",
+        "location": "I-15 NB",
+        "latitude": 35.956156,
+        "longitude": -115.18141,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "438_1_331",
+        "location": "I-15 NB",
+        "latitude": 35.916016,
+        "longitude": -115.202995,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "438_2_330",
+        "location": "I-15 NB",
+        "latitude": 35.92525048,
+        "longitude": -115.1962065,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "438_3_329",
+        "location": "I-15 NB",
+        "latitude": 35.930272,
+        "longitude": -115.192852,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "439_1_334",
+        "location": "I-15 NB",
+        "latitude": 35.89037351,
+        "longitude": -115.2210331,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "439_2_333",
+        "location": "I-15 NB",
+        "latitude": 35.89834244,
+        "longitude": -115.2153875,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "439_3_332",
+        "location": "I-15 NB",
+        "latitude": 35.90709478,
+        "longitude": -115.2092327,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "440_1_335",
+        "location": "I-15 NB",
+        "latitude": 35.88306,
+        "longitude": -115.22864,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "441_1_338",
+        "location": "I-15 NB",
+        "latitude": 35.85868424,
+        "longitude": -115.2565318,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "441_2_337",
+        "location": "I-15 NB",
+        "latitude": 35.868214,
+        "longitude": -115.245636,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "441_3_336",
+        "location": "I-15 NB",
+        "latitude": 35.87595522,
+        "longitude": -115.2367825,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "442_1_341",
+        "location": "I-15 NB",
+        "latitude": 35.832462,
+        "longitude": -115.28672,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "442_2_340",
+        "location": "I-15 NB",
+        "latitude": 35.84119274,
+        "longitude": -115.2766316,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "442_3_339",
+        "location": "I-15 NB",
+        "latitude": 35.850117,
+        "longitude": -115.26643,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "443_1_344",
+        "location": "I-15 NB",
+        "latitude": 35.80191093,
+        "longitude": -115.3124134,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "443_2_343",
+        "location": "I-15 NB",
+        "latitude": 35.812904,
+        "longitude": -115.304375,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "443_3_342",
+        "location": "I-15 NB",
+        "latitude": 35.8236301,
+        "longitude": -115.2963318,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "444_1_100",
+        "location": "I-15 NB",
+        "latitude": 35.78372784,
+        "longitude": -115.3259357,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "444_3_345",
+        "location": "I-15 NB",
+        "latitude": 35.79288,
+        "longitude": -115.31906,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "445_1_348",
+        "location": "I-15 NB",
+        "latitude": 35.74745,
+        "longitude": -115.35243,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "445_2_347",
+        "location": "I-15 NB",
+        "latitude": 35.75846785,
+        "longitude": -115.3442947,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "445_3_346",
+        "location": "I-15 NB",
+        "latitude": 35.769537,
+        "longitude": -115.336282,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "446_1_350",
+        "location": "I-15 NB",
+        "latitude": 35.71500894,
+        "longitude": -115.3648235,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "446_2_78",
+        "location": "I-15 NB",
+        "latitude": 35.72717,
+        "longitude": -115.3606,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "446_3_349",
+        "location": "I-15 NB",
+        "latitude": 35.73508653,
+        "longitude": -115.3577546,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "447_1_352",
+        "location": "I-15 NB",
+        "latitude": 35.6847,
+        "longitude": -115.375534,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "447_2_351",
+        "location": "I-15 NB",
+        "latitude": 35.69582604,
+        "longitude": -115.3715259,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "447_3_77",
+        "location": "I-15 NB",
+        "latitude": 35.70479,
+        "longitude": -115.36849,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "448_1_355",
+        "location": "I-15 NB",
+        "latitude": 35.65855093,
+        "longitude": -115.3802518,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "448_2_354",
+        "location": "I-15 NB",
+        "latitude": 35.66594,
+        "longitude": -115.378975,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "448_3_353",
+        "location": "I-15 NB",
+        "latitude": 35.67358726,
+        "longitude": -115.3774943,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "449_1_358",
+        "location": "I-15 NB",
+        "latitude": 35.631138,
+        "longitude": -115.38485,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "449_2_357",
+        "location": "I-15 NB",
+        "latitude": 35.64038301,
+        "longitude": -115.3833446,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "449_3_356",
+        "location": "I-15 NB",
+        "latitude": 35.649635,
+        "longitude": -115.38174,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "450_1_99",
+        "location": "I-15 NB",
+        "latitude": 35.61556389,
+        "longitude": -115.3877,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "450_2_359",
+        "location": "I-15 NB",
+        "latitude": 35.62113534,
+        "longitude": -115.3865751,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "451_1_99",
+        "location": "I-15 NB",
+        "latitude": 35.6096866,
+        "longitude": -115.3900209,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "48_2_83",
+        "location": "I-15 NB",
+        "latitude": 36.07156879,
+        "longitude": -115.1803533,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "49_1_82",
+        "location": "I-15 NB",
+        "latitude": 36.07760749,
+        "longitude": -115.1803722,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "49_2_12",
+        "location": "I-15 NB",
+        "latitude": 36.08342347,
+        "longitude": -115.1804156,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "49_3_15",
+        "location": "I-15 NB",
+        "latitude": 36.08834036,
+        "longitude": -115.1801468,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "58_2_17",
+        "location": "I-15 NB",
+        "latitude": 36.09319589,
+        "longitude": -115.1802484,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "59_1_18",
+        "location": "I-15 NB",
+        "latitude": 36.09944848,
+        "longitude": -115.1798922,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "59_2_18",
+        "location": "I-15 NB",
+        "latitude": 36.1024417,
+        "longitude": -115.1805269,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "70_2_21",
+        "location": "I-15 NB",
+        "latitude": 36.10675426,
+        "longitude": -115.1802937,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "71_2_23",
+        "location": "I-15 NB",
+        "latitude": 36.11168423,
+        "longitude": -115.1801807,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "72_1_22",
+        "location": "I-15 NB",
+        "latitude": 36.11648559,
+        "longitude": -115.1803673,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "72_2_28",
+        "location": "I-15 NB",
+        "latitude": 36.12181672,
+        "longitude": -115.1803009,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "89_1_28",
+        "location": "I-15 NB",
+        "latitude": 36.12548955,
+        "longitude": -115.1802888,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "89_2_30",
+        "location": "I-15 NB",
+        "latitude": 36.12813176,
+        "longitude": -115.1802587,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "97_1_33",
+        "location": "I-15 NB",
+        "latitude": 36.13408762,
+        "longitude": -115.1792211,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "97_2_33",
+        "location": "I-15 NB",
+        "latitude": 36.13886948,
+        "longitude": -115.1754287,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "97_3_38",
+        "location": "I-15 NB",
+        "latitude": 36.14113388,
+        "longitude": -115.1734249,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "99_1_35",
+        "location": "I-15 NB",
+        "latitude": 36.14549734,
+        "longitude": -115.1696018,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "522_1_17",
+        "location": "I-15 NB Access Road",
+        "latitude": 36.0931943,
+        "longitude": -115.1802258,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "522_2_15",
+        "location": "I-15 NB Access Road",
+        "latitude": 36.08833844,
+        "longitude": -115.1801143,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "523_1_12",
+        "location": "I-15 NB Access Road",
+        "latitude": 36.08375057,
+        "longitude": -115.1799649,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "523_2_84",
+        "location": "I-15 NB Access Road",
+        "latitude": 36.07760529,
+        "longitude": -115.1803595,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "524_1_8",
+        "location": "I-15 NB Access Road",
+        "latitude": 36.07156667,
+        "longitude": -115.1803353,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "524_3_90",
+        "location": "I-15 NB Access Road",
+        "latitude": 36.06065639,
+        "longitude": -115.180391,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "525_1_93",
+        "location": "I-15 NB Access Road",
+        "latitude": 36.05569673,
+        "longitude": -115.1803959,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "525_2_142",
+        "location": "I-15 NB Access Road",
+        "latitude": 36.051169,
+        "longitude": -115.1802102,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "525_3_145",
+        "location": "I-15 NB Access Road",
+        "latitude": 36.04754272,
+        "longitude": -115.1800249,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "526_1_144",
+        "location": "I-15 NB Access Road",
+        "latitude": 36.04075317,
+        "longitude": -115.1801771,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "526_2_79",
+        "location": "I-15 NB Access Road",
+        "latitude": 36.03582184,
+        "longitude": -115.1802351,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "102_1_40",
+        "location": "I-15 SB",
+        "latitude": 36.14692085,
+        "longitude": -115.1690266,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "102_2_37",
+        "location": "I-15 SB",
+        "latitude": 36.14230374,
+        "longitude": -115.1731137,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "111_1_42",
+        "location": "I-15 SB",
+        "latitude": 36.1510992,
+        "longitude": -115.1653722,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "117_1_46",
+        "location": "I-15 SB",
+        "latitude": 36.15984434,
+        "longitude": -115.1605412,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "117_3_43",
+        "location": "I-15 SB",
+        "latitude": 36.15471037,
+        "longitude": -115.1621509,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "123_2_50",
+        "location": "I-15 SB",
+        "latitude": 36.16567516,
+        "longitude": -115.1601987,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "132_1_80",
+        "location": "I-15 SB",
+        "latitude": 36.17583044,
+        "longitude": -115.1535063,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "136_2_47",
+        "location": "I-15 SB",
+        "latitude": 36.17179194,
+        "longitude": -115.1573974,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "142_2_54",
+        "location": "I-15 SB",
+        "latitude": 36.17852346,
+        "longitude": -115.1494228,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "147_2_56",
+        "location": "I-15 SB",
+        "latitude": 36.18823908,
+        "longitude": -115.1434838,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "155_1_240",
+        "location": "I-15 SB",
+        "latitude": 36.19901337,
+        "longitude": -115.1374126,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "155_2_239",
+        "location": "I-15 SB",
+        "latitude": 36.19731847,
+        "longitude": -115.1384885,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "156_2_57",
+        "location": "I-15 SB",
+        "latitude": 36.19502138,
+        "longitude": -115.1394073,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "161_1_242",
+        "location": "I-15 SB",
+        "latitude": 36.20708696,
+        "longitude": -115.1322908,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "17_2_141",
+        "location": "I-15 SB",
+        "latitude": 36.05241096,
+        "longitude": -115.1812445,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "348_1_149",
+        "location": "I-15 SB",
+        "latitude": 36.04687625,
+        "longitude": -115.1810861,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "348_2_151",
+        "location": "I-15 SB",
+        "latitude": 36.04160699,
+        "longitude": -115.1811055,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "348_3_150",
+        "location": "I-15 SB",
+        "latitude": 36.03610453,
+        "longitude": -115.1811119,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "349_1_154",
+        "location": "I-15 SB",
+        "latitude": 36.03033061,
+        "longitude": -115.181113,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "349_3_152",
+        "location": "I-15 SB",
+        "latitude": 36.0252025,
+        "longitude": -115.1810443,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "350_1_158",
+        "location": "I-15 SB",
+        "latitude": 36.01864305,
+        "longitude": -115.1808412,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "350_2_159",
+        "location": "I-15 SB",
+        "latitude": 36.01399147,
+        "longitude": -115.1807131,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "350_3_314",
+        "location": "I-15 SB",
+        "latitude": 36.008916,
+        "longitude": -115.18074,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "351_1_315",
+        "location": "I-15 SB",
+        "latitude": 36.00317,
+        "longitude": -115.181,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "351_2_316",
+        "location": "I-15 SB",
+        "latitude": 35.99824,
+        "longitude": -115.181031,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "351_3_317",
+        "location": "I-15 SB",
+        "latitude": 35.993299,
+        "longitude": -115.181144,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "352_1_318",
+        "location": "I-15 SB",
+        "latitude": 35.98777,
+        "longitude": -115.18133,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "352_2_321",
+        "location": "I-15 SB",
+        "latitude": 35.982035,
+        "longitude": -115.181502,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "352_3_322",
+        "location": "I-15 SB",
+        "latitude": 35.976233,
+        "longitude": -115.1817,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "353_1_323",
+        "location": "I-15 SB",
+        "latitude": 35.971817,
+        "longitude": -115.181783,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "353_2_324",
+        "location": "I-15 SB",
+        "latitude": 35.96725,
+        "longitude": -115.1821333,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "388_1_245",
+        "location": "I-15 SB",
+        "latitude": 36.21940876,
+        "longitude": -115.1231265,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "388_2_244",
+        "location": "I-15 SB",
+        "latitude": 36.21532011,
+        "longitude": -115.1260695,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "388_3_243",
+        "location": "I-15 SB",
+        "latitude": 36.21166068,
+        "longitude": -115.1286707,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "389_1_248 ",
+        "location": "I-15 SB",
+        "latitude": 36.22998914,
+        "longitude": -115.1150318,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "389_2_247",
+        "location": "I-15 SB",
+        "latitude": 36.22405963,
+        "longitude": -115.1195122,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "390_1_252",
+        "location": "I-15 SB",
+        "latitude": 36.24148615,
+        "longitude": -115.1006826,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "390_2_250",
+        "location": "I-15 SB",
+        "latitude": 36.23810665,
+        "longitude": -115.1048641,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "390_3_249",
+        "location": "I-15 SB",
+        "latitude": 36.23441602,
+        "longitude": -115.1091409,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "397_2_248",
+        "location": "I-15 SB",
+        "latitude": 36.22998914,
+        "longitude": -115.1150318,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "40_1_9",
+        "location": "I-15 SB",
+        "latitude": 36.06629697,
+        "longitude": -115.1810298,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "41_1_95",
+        "location": "I-15 SB",
+        "latitude": 36.06174831,
+        "longitude": -115.1810966,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "41_2_140",
+        "location": "I-15 SB",
+        "latitude": 36.05735152,
+        "longitude": -115.1810731,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "422_1_326",
+        "location": "I-15 SB",
+        "latitude": 35.95399,
+        "longitude": -115.1824,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "422_2_328",
+        "location": "I-15 SB",
+        "latitude": 35.94801354,
+        "longitude": -115.1830455,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "423_1_329",
+        "location": "I-15 SB",
+        "latitude": 35.93053587,
+        "longitude": -115.1934074,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "423_2_330",
+        "location": "I-15 SB",
+        "latitude": 35.9256,
+        "longitude": -115.19695,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "423_3_331",
+        "location": "I-15 SB",
+        "latitude": 35.91626991,
+        "longitude": -115.2033819,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "424_1_332",
+        "location": "I-15 SB",
+        "latitude": 35.90735,
+        "longitude": -115.20973,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "424_2_333",
+        "location": "I-15 SB",
+        "latitude": 35.89857311,
+        "longitude": -115.2158996,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "424_3_334",
+        "location": "I-15 SB",
+        "latitude": 35.890648,
+        "longitude": -115.22152,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "425_1_335",
+        "location": "I-15 SB",
+        "latitude": 35.88333054,
+        "longitude": -115.2290002,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "426_1_336",
+        "location": "I-15 SB",
+        "latitude": 35.876347,
+        "longitude": -115.237274,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "426_2_337",
+        "location": "I-15 SB",
+        "latitude": 35.86853262,
+        "longitude": -115.2459812,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "426_3_338",
+        "location": "I-15 SB",
+        "latitude": 35.85904,
+        "longitude": -115.257,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "427_1_339",
+        "location": "I-15 SB",
+        "latitude": 35.85041606,
+        "longitude": -115.2668309,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "427_2_340",
+        "location": "I-15 SB",
+        "latitude": 35.841587,
+        "longitude": -115.2771,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "427_3_341",
+        "location": "I-15 SB",
+        "latitude": 35.83276695,
+        "longitude": -115.2870806,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "428_1_342",
+        "location": "I-15 SB",
+        "latitude": 35.824,
+        "longitude": -115.29697,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "428_2_343",
+        "location": "I-15 SB",
+        "latitude": 35.81312324,
+        "longitude": -115.3048398,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "428_3_344",
+        "location": "I-15 SB",
+        "latitude": 35.802162,
+        "longitude": -115.312905,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "429_1_345",
+        "location": "I-15 SB",
+        "latitude": 35.7931481,
+        "longitude": -115.3194946,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "429_3_100",
+        "location": "I-15 SB",
+        "latitude": 35.783911,
+        "longitude": -115.326174,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "430_1_346",
+        "location": "I-15 SB",
+        "latitude": 35.76974868,
+        "longitude": -115.336719,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "430_2_347",
+        "location": "I-15 SB",
+        "latitude": 35.758682,
+        "longitude": -115.34485,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "430_3_348",
+        "location": "I-15 SB",
+        "latitude": 35.74761947,
+        "longitude": -115.3529352,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "431_1_349",
+        "location": "I-15 SB",
+        "latitude": 35.735214,
+        "longitude": -115.35853,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "431_2_78",
+        "location": "I-15 SB",
+        "latitude": 35.72725363,
+        "longitude": -115.3611265,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "431_3_350",
+        "location": "I-15 SB",
+        "latitude": 35.71513,
+        "longitude": -115.365395,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "432_1_77",
+        "location": "I-15 SB",
+        "latitude": 35.7048966,
+        "longitude": -115.3690353,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "432_2_351",
+        "location": "I-15 SB",
+        "latitude": 35.69597,
+        "longitude": -115.3722,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "432_3_352",
+        "location": "I-15 SB",
+        "latitude": 35.68478663,
+        "longitude": -115.3760652,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "433_1_353",
+        "location": "I-15 SB",
+        "latitude": 35.673664,
+        "longitude": -115.37835,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "433_2_354",
+        "location": "I-15 SB",
+        "latitude": 35.66598248,
+        "longitude": -115.3795033,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "433_3_355",
+        "location": "I-15 SB",
+        "latitude": 35.658607,
+        "longitude": -115.380806,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "434_1_356",
+        "location": "I-15 SB",
+        "latitude": 35.64967226,
+        "longitude": -115.3823381,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "434_2_357",
+        "location": "I-15 SB",
+        "latitude": 35.64043889,
+        "longitude": -115.38389,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "434_3_358",
+        "location": "I-15 SB",
+        "latitude": 35.63120395,
+        "longitude": -115.3854155,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "435_1_359",
+        "location": "I-15 SB",
+        "latitude": 35.62118,
+        "longitude": -115.38717,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "435_1_99",
+        "location": "I-15 SB",
+        "latitude": 35.61546111,
+        "longitude": -115.3880944,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "436_1_99",
+        "location": "I-15 SB",
+        "latitude": 35.60900162,
+        "longitude": -115.390755,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "56_1_14",
+        "location": "I-15 SB",
+        "latitude": 36.08844954,
+        "longitude": -115.1810319,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "57_1_13",
+        "location": "I-15 SB",
+        "latitude": 36.08339481,
+        "longitude": -115.1809936,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "57_2_11",
+        "location": "I-15 SB",
+        "latitude": 36.07720938,
+        "longitude": -115.1809255,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "57_3_10",
+        "location": "I-15 SB",
+        "latitude": 36.07245628,
+        "longitude": -115.1810302,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "575_1_537",
+        "location": "I-15 SB",
+        "latitude": 36.309898,
+        "longitude": -114.954903,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "64_1_19",
+        "location": "I-15 SB",
+        "latitude": 36.10332335,
+        "longitude": -115.1809782,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "69_1_52",
+        "location": "I-15 SB",
+        "latitude": 36.09934623,
+        "longitude": -115.1809991,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "69_2_16",
+        "location": "I-15 SB",
+        "latitude": 36.09437038,
+        "longitude": -115.1811585,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "76_2_26",
+        "location": "I-15 SB",
+        "latitude": 36.11706605,
+        "longitude": -115.1809622,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "77_2_24",
+        "location": "I-15 SB",
+        "latitude": 36.112188,
+        "longitude": -115.1809348,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "78_2_20",
+        "location": "I-15 SB",
+        "latitude": 36.10672438,
+        "longitude": -115.180814,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "91_1_31",
+        "location": "I-15 SB",
+        "latitude": 36.12932089,
+        "longitude": -115.1809201,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "91_2_29",
+        "location": "I-15 SB",
+        "latitude": 36.12447436,
+        "longitude": -115.1809419,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "92_2_27",
+        "location": "I-15 SB",
+        "latitude": 36.12071376,
+        "longitude": -115.1809951,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "98_2_34",
+        "location": "I-15 SB",
+        "latitude": 36.13865729,
+        "longitude": -115.1764126,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "98_3_32",
+        "location": "I-15 SB",
+        "latitude": 36.13409272,
+        "longitude": -115.1795734,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "527_2_146",
+        "location": "I-15 SB Access Road",
+        "latitude": 36.0441426,
+        "longitude": -115.1811998,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "527_3_141",
+        "location": "I-15 SB Access Road",
+        "latitude": 36.05241,
+        "longitude": -115.1812633,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "528_1_96",
+        "location": "I-15 SB Access Road",
+        "latitude": 36.05735042,
+        "longitude": -115.1810811,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "528_2_87",
+        "location": "I-15 SB Access Road",
+        "latitude": 36.06629554,
+        "longitude": -115.1810463,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "528_3_76",
+        "location": "I-15 SB Access Road",
+        "latitude": 36.07245757,
+        "longitude": -115.1810452,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "529_1_81",
+        "location": "I-15 SB Access Road",
+        "latitude": 36.07753889,
+        "longitude": -115.1810086,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "529_1_81",
+        "location": "I-15 SB Access Road",
+        "latitude": 36.07753889,
+        "longitude": -115.1810086,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "529_1_81",
+        "location": "I-15 SB Access Road",
+        "latitude": 36.07753889,
+        "longitude": -115.1810086,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "529_2_13",
+        "location": "I-15 SB Access Road",
+        "latitude": 36.08339511,
+        "longitude": -115.1810106,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "529_3_14",
+        "location": "I-15 SB Access Road",
+        "latitude": 36.08844836,
+        "longitude": -115.1810443,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "530_1_16",
+        "location": "I-15 SB Access Road",
+        "latitude": 36.09436682,
+        "longitude": -115.181181,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "11_1_2",
+        "location": "Ramp Detectors",
+        "latitude": 36.06847607,
+        "longitude": -115.2049107,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "114_2_44",
+        "location": "Ramp Detectors",
+        "latitude": 36.15705247,
+        "longitude": -115.1599368,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "115_1_45",
+        "location": "Ramp Detectors",
+        "latitude": 36.15918058,
+        "longitude": -115.159975,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "116_2_45",
+        "location": "Ramp Detectors",
+        "latitude": 36.16054315,
+        "longitude": -115.1600279,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "118_1_46",
+        "location": "Ramp Detectors",
+        "latitude": 36.16157074,
+        "longitude": -115.1606614,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "127_1_201",
+        "location": "Ramp Detectors",
+        "latitude": 36.17545821,
+        "longitude": -115.1611706,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "129_2_49",
+        "location": "Ramp Detectors",
+        "latitude": 36.17177034,
+        "longitude": -115.1566333,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "134_1_80",
+        "location": "Ramp Detectors",
+        "latitude": 36.17562637,
+        "longitude": -115.1543162,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "135_1_80",
+        "location": "Ramp Detectors",
+        "latitude": 36.1754821,
+        "longitude": -115.1541437,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "139_2_53",
+        "location": "Ramp Detectors",
+        "latitude": 36.17831202,
+        "longitude": -115.1487747,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "143_2_55",
+        "location": "Ramp Detectors",
+        "latitude": 36.18261349,
+        "longitude": -115.1443575,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "150_2_58",
+        "location": "Ramp Detectors",
+        "latitude": 36.19484546,
+        "longitude": -115.138835,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "159_2_57",
+        "location": "Ramp Detectors",
+        "latitude": 36.19475163,
+        "longitude": -115.139803,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "169_2_197",
+        "location": "Ramp Detectors",
+        "latitude": 36.17496762,
+        "longitude": -115.1778263,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "169_3_197",
+        "location": "Ramp Detectors",
+        "latitude": 36.17528667,
+        "longitude": -115.1725632,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "171_1_196",
+        "location": "Ramp Detectors",
+        "latitude": 36.17508266,
+        "longitude": -115.1612301,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "171_2_47",
+        "location": "Ramp Detectors",
+        "latitude": 36.17181414,
+        "longitude": -115.1574935,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "175_1_51",
+        "location": "Ramp Detectors",
+        "latitude": 36.17433544,
+        "longitude": -115.1562421,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "180_2_75",
+        "location": "Ramp Detectors",
+        "latitude": 36.17479837,
+        "longitude": -115.1502877,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "180_3_51",
+        "location": "Ramp Detectors",
+        "latitude": 36.17379305,
+        "longitude": -115.1559738,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "182_1_75",
+        "location": "Ramp Detectors",
+        "latitude": 36.17491785,
+        "longitude": -115.1533501,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "184_1_80",
+        "location": "Ramp Detectors",
+        "latitude": 36.17498822,
+        "longitude": -115.1555254,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "193_1_71",
+        "location": "Ramp Detectors",
+        "latitude": 36.17508298,
+        "longitude": -115.1432875,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "195_1_71",
+        "location": "Ramp Detectors",
+        "latitude": 36.17407626,
+        "longitude": -115.1405537,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "197_2_69",
+        "location": "Ramp Detectors",
+        "latitude": 36.17346111,
+        "longitude": -115.1361111,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "205_1_66",
+        "location": "Ramp Detectors",
+        "latitude": 36.167725,
+        "longitude": -115.1183167,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "208_1_63",
+        "location": "Ramp Detectors",
+        "latitude": 36.16813999,
+        "longitude": -115.1132584,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "29_2_5",
+        "location": "Ramp Detectors",
+        "latitude": 36.06616549,
+        "longitude": -115.1884092,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "3_2_1",
+        "location": "Ramp Detectors",
+        "latitude": 36.06806781,
+        "longitude": -115.2048714,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "31_1_7",
+        "location": "Ramp Detectors",
+        "latitude": 36.06447552,
+        "longitude": -115.1824441,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "347_1_69",
+        "location": "Ramp Detectors",
+        "latitude": 36.17216187,
+        "longitude": -115.1352084,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "467_2_246",
+        "location": "Ramp Detectors",
+        "latitude": 36.21587833,
+        "longitude": -115.1249782,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "468_2_245",
+        "location": "Ramp Detectors",
+        "latitude": 36.21940944,
+        "longitude": -115.123127,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "469_2_251",
+        "location": "Ramp Detectors",
+        "latitude": 36.23797645,
+        "longitude": -115.1041444,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "474_1_211",
+        "location": "Ramp Detectors",
+        "latitude": 36.17302069,
+        "longitude": -115.2044067,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "535_1_157",
+        "location": "Ramp Detectors",
+        "latitude": 36.01864392,
+        "longitude": -115.1808695,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "79_2_26",
+        "location": "Ramp Detectors",
+        "latitude": 36.11694552,
+        "longitude": -115.1812451,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "80_2_24",
+        "location": "Ramp Detectors",
+        "latitude": 36.11354122,
+        "longitude": -115.181079,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "93_1_31",
+        "location": "Ramp Detectors",
+        "latitude": 36.12931825,
+        "longitude": -115.1809191,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "163_1_72",
+        "location": "US-95 NB",
+        "latitude": 36.17576464,
+        "longitude": -115.1719412,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "167_1_201",
+        "location": "US-95 NB",
+        "latitude": 36.17545842,
+        "longitude": -115.1611708,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "167_2_201",
+        "location": "US-95 NB",
+        "latitude": 36.17620747,
+        "longitude": -115.1671917,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "179_2_75",
+        "location": "US-95 NB",
+        "latitude": 36.17479883,
+        "longitude": -115.1502875,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "181_1_80",
+        "location": "US-95 NB",
+        "latitude": 36.17460284,
+        "longitude": -115.1554918,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "191_1_73",
+        "location": "US-95 NB",
+        "latitude": 36.1757125,
+        "longitude": -115.1464613,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "198_1_70",
+        "location": "US-95 NB",
+        "latitude": 36.17435913,
+        "longitude": -115.1404449,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "200_1_39",
+        "location": "US-95 NB",
+        "latitude": 36.17559664,
+        "longitude": -115.1441011,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "203_1_65",
+        "location": "US-95 NB",
+        "latitude": 36.16798658,
+        "longitude": -115.1185507,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "203_2_67",
+        "location": "US-95 NB",
+        "latitude": 36.16828059,
+        "longitude": -115.1245877,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "203_3_68",
+        "location": "US-95 NB",
+        "latitude": 36.17046864,
+        "longitude": -115.1301034,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "203_4_69",
+        "location": "US-95 NB",
+        "latitude": 36.17273578,
+        "longitude": -115.1350829,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "207_1_63",
+        "location": "US-95 NB",
+        "latitude": 36.16791775,
+        "longitude": -115.1073968,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "207_2_63",
+        "location": "US-95 NB",
+        "latitude": 36.16809041,
+        "longitude": -115.1153175,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "211_1_275",
+        "location": "US-95 NB",
+        "latitude": 36.16141081,
+        "longitude": -115.0917283,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "211_2_61",
+        "location": "US-95 NB",
+        "latitude": 36.16571229,
+        "longitude": -115.0954099,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "211_3_61",
+        "location": "US-95 NB",
+        "latitude": 36.16766381,
+        "longitude": -115.10191,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "215_1_278",
+        "location": "US-95 NB",
+        "latitude": 36.13762069,
+        "longitude": -115.0903539,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "215_2_278",
+        "location": "US-95 NB",
+        "latitude": 36.14436382,
+        "longitude": -115.0909984,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "215_3_277",
+        "location": "US-95 NB",
+        "latitude": 36.15073611,
+        "longitude": -115.0911472,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "215_4_275",
+        "location": "US-95 NB",
+        "latitude": 36.15657599,
+        "longitude": -115.0913187,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "219_1_284",
+        "location": "US-95 NB",
+        "latitude": 36.11550091,
+        "longitude": -115.082509,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "219_2_282",
+        "location": "US-95 NB",
+        "latitude": 36.12316064,
+        "longitude": -115.0837677,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "219_3_281",
+        "location": "US-95 NB",
+        "latitude": 36.12608988,
+        "longitude": -115.08609,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "219_4_280",
+        "location": "US-95 NB",
+        "latitude": 36.13144111,
+        "longitude": -115.0892033,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "222_1_287",
+        "location": "US-95 NB",
+        "latitude": 36.10356502,
+        "longitude": -115.0820275,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "222_2_285",
+        "location": "US-95 NB",
+        "latitude": 36.11021555,
+        "longitude": -115.0821225,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "326_1_72",
+        "location": "US-95 NB",
+        "latitude": 36.17552114,
+        "longitude": -115.1781693,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "326_2_195",
+        "location": "US-95 NB",
+        "latitude": 36.17566469,
+        "longitude": -115.1838261,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "328_1_195",
+        "location": "US-95 NB",
+        "latitude": 36.17655741,
+        "longitude": -115.188283,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "328_2_202",
+        "location": "US-95 NB",
+        "latitude": 36.17625844,
+        "longitude": -115.1941347,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "335_2_207",
+        "location": "US-95 NB",
+        "latitude": 36.17429255,
+        "longitude": -115.1997582,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "339_2_203",
+        "location": "US-95 NB",
+        "latitude": 36.17384752,
+        "longitude": -115.2067607,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "344_1_203",
+        "location": "US-95 NB",
+        "latitude": 36.17414033,
+        "longitude": -115.211196,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "374_1_289",
+        "location": "US-95 NB",
+        "latitude": 36.0902547,
+        "longitude": -115.0698127,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "374_2_289",
+        "location": "US-95 NB",
+        "latitude": 36.09324054,
+        "longitude": -115.0746862,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "374_3_288",
+        "location": "US-95 NB",
+        "latitude": 36.09654323,
+        "longitude": -115.0789837,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "375_1_291",
+        "location": "US-95 NB",
+        "latitude": 36.08520781,
+        "longitude": -115.0530123,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "375_2_290",
+        "location": "US-95 NB",
+        "latitude": 36.08751055,
+        "longitude": -115.0583097,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "375_3_290",
+        "location": "US-95 NB",
+        "latitude": 36.08833661,
+        "longitude": -115.064354,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "376_1_294",
+        "location": "US-95 NB",
+        "latitude": 36.07552253,
+        "longitude": -115.0387855,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "376_2_294",
+        "location": "US-95 NB",
+        "latitude": 36.07920855,
+        "longitude": -115.0420742,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "376_3_292",
+        "location": "US-95 NB",
+        "latitude": 36.08297691,
+        "longitude": -115.0487606,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "377_1_296",
+        "location": "US-95 NB",
+        "latitude": 36.06573607,
+        "longitude": -115.0327951,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "377_2_296",
+        "location": "US-95 NB",
+        "latitude": 36.07195916,
+        "longitude": -115.0364853,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "378_1_302",
+        "location": "US-95 NB",
+        "latitude": 36.04873032,
+        "longitude": -115.0233161,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "378_2_301",
+        "location": "US-95 NB",
+        "latitude": 36.05443978,
+        "longitude": -115.0261787,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "378_3_299",
+        "location": "US-95 NB",
+        "latitude": 36.0602408,
+        "longitude": -115.0293364,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "378_4_298",
+        "location": "US-95 NB",
+        "latitude": 36.06315822,
+        "longitude": -115.0312496,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "379_2_303",
+        "location": "US-95 NB",
+        "latitude": 36.04202719,
+        "longitude": -115.0211345,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "380_1_306",
+        "location": "US-95 NB",
+        "latitude": 36.03501016,
+        "longitude": -115.0156203,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "381_3_307",
+        "location": "US-95 NB",
+        "latitude": 36.0298539,
+        "longitude": -115.0099723,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "383_1_377",
+        "location": "US-95 NB",
+        "latitude": 36.009102,
+        "longitude": -114.9879,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "383_2_375",
+        "location": "US-95 NB",
+        "latitude": 36.0144,
+        "longitude": -114.991302,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "383_3_374",
+        "location": "US-95 NB",
+        "latitude": 36.018101,
+        "longitude": -114.996101,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "413_1_208",
+        "location": "US-95 NB",
+        "latitude": 36.17436489,
+        "longitude": -115.2160855,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "413_2_208",
+        "location": "US-95 NB",
+        "latitude": 36.1743548,
+        "longitude": -115.2213229,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "413_3_204",
+        "location": "US-95 NB",
+        "latitude": 36.17441208,
+        "longitude": -115.2267714,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "414_1_209",
+        "location": "US-95 NB",
+        "latitude": 36.17407927,
+        "longitude": -115.2319294,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "414_2_209",
+        "location": "US-95 NB",
+        "latitude": 36.17394119,
+        "longitude": -115.2372024,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "414_3_223",
+        "location": "US-95 NB",
+        "latitude": 36.17547025,
+        "longitude": -115.2418598,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "415_1_223",
+        "location": "US-95 NB",
+        "latitude": 36.17918246,
+        "longitude": -115.2440837,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "415_2_214",
+        "location": "US-95 NB",
+        "latitude": 36.1830524,
+        "longitude": -115.24407,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "415_3_215",
+        "location": "US-95 NB",
+        "latitude": 36.18813493,
+        "longitude": -115.2441446,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "416_1_215",
+        "location": "US-95 NB",
+        "latitude": 36.19279593,
+        "longitude": -115.2442131,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "416_2_224",
+        "location": "US-95 NB",
+        "latitude": 36.20269774,
+        "longitude": -115.2441705,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "416_3_216",
+        "location": "US-95 NB",
+        "latitude": 36.20707712,
+        "longitude": -115.2445104,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "417_1_216",
+        "location": "US-95 NB",
+        "latitude": 36.21185864,
+        "longitude": -115.2456725,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "417_2_230",
+        "location": "US-95 NB",
+        "latitude": 36.21661009,
+        "longitude": -115.2464943,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "417_3_230",
+        "location": "US-95 NB",
+        "latitude": 36.22141598,
+        "longitude": -115.2465337,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "418_1_225",
+        "location": "US-95 NB",
+        "latitude": 36.22600702,
+        "longitude": -115.2466515,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "418_2_225",
+        "location": "US-95 NB",
+        "latitude": 36.22962373,
+        "longitude": -115.2465929,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "418_3_234",
+        "location": "US-95 NB",
+        "latitude": 36.23359417,
+        "longitude": -115.2466395,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "419_1_234",
+        "location": "US-95 NB",
+        "latitude": 36.23862114,
+        "longitude": -115.2465363,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "419_2_217",
+        "location": "US-95 NB",
+        "latitude": 36.24343728,
+        "longitude": -115.2464876,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "419_3_217",
+        "location": "US-95 NB",
+        "latitude": 36.24836745,
+        "longitude": -115.2464216,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "420_1_231",
+        "location": "US-95 NB",
+        "latitude": 36.25311968,
+        "longitude": -115.2463504,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "420_2_231",
+        "location": "US-95 NB",
+        "latitude": 36.25769666,
+        "longitude": -115.2481719,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "420_3_160",
+        "location": "US-95 NB",
+        "latitude": 36.2619256,
+        "longitude": -115.2521637,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "711_5_732",
+        "location": "US-95 NB",
+        "latitude": 35.9333,
+        "longitude": -114.8398,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "162_1_197",
+        "location": "US-95 SB",
+        "latitude": 36.17496783,
+        "longitude": -115.1778263,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "162_2_210",
+        "location": "US-95 SB",
+        "latitude": 36.17528679,
+        "longitude": -115.1725632,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "166_1_210",
+        "location": "US-95 SB",
+        "latitude": 36.17577796,
+        "longitude": -115.1671777,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "168_2_196",
+        "location": "US-95 SB",
+        "latitude": 36.17508266,
+        "longitude": -115.1612307,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "172_1_51",
+        "location": "US-95 SB",
+        "latitude": 36.17433553,
+        "longitude": -115.1562422,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "190_1_74",
+        "location": "US-95 SB",
+        "latitude": 36.17477323,
+        "longitude": -115.14879,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "192_2_74",
+        "location": "US-95 SB",
+        "latitude": 36.17530124,
+        "longitude": -115.1466328,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "194_1_71",
+        "location": "US-95 SB",
+        "latitude": 36.17508708,
+        "longitude": -115.1432875,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "194_2_71",
+        "location": "US-95 SB",
+        "latitude": 36.1740767,
+        "longitude": -115.1405542,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "202_1_69",
+        "location": "US-95 SB",
+        "latitude": 36.17245139,
+        "longitude": -115.135266,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "202_2_68",
+        "location": "US-95 SB",
+        "latitude": 36.16996927,
+        "longitude": -115.1302561,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "202_3_67",
+        "location": "US-95 SB",
+        "latitude": 36.16785232,
+        "longitude": -115.1246666,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "202_4_66",
+        "location": "US-95 SB",
+        "latitude": 36.1677317,
+        "longitude": -115.1183153,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "204_1_64",
+        "location": "US-95 SB",
+        "latitude": 36.16778529,
+        "longitude": -115.1135379,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "204_2_62",
+        "location": "US-95 SB",
+        "latitude": 36.16751389,
+        "longitude": -115.1081917,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "210_1_62",
+        "location": "US-95 SB",
+        "latitude": 36.16730581,
+        "longitude": -115.1019849,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "210_2_59",
+        "location": "US-95 SB",
+        "latitude": 36.16542961,
+        "longitude": -115.0956729,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "210_3_59",
+        "location": "US-95 SB",
+        "latitude": 36.16158864,
+        "longitude": -115.0923189,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "212_1_276",
+        "location": "US-95 SB",
+        "latitude": 36.15528784,
+        "longitude": -115.0917442,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "212_2_277",
+        "location": "US-95 SB",
+        "latitude": 36.15004541,
+        "longitude": -115.0916905,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "212_3_279",
+        "location": "US-95 SB",
+        "latitude": 36.14554586,
+        "longitude": -115.0915184,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "212_4_279",
+        "location": "US-95 SB",
+        "latitude": 36.1401365,
+        "longitude": -115.0913197,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "218_1_280",
+        "location": "US-95 SB",
+        "latitude": 36.13422107,
+        "longitude": -115.0903047,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "218_2_281",
+        "location": "US-95 SB",
+        "latitude": 36.1298799,
+        "longitude": -115.0892472,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "218_3_282",
+        "location": "US-95 SB",
+        "latitude": 36.1238979,
+        "longitude": -115.0848448,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "218_4_282",
+        "location": "US-95 SB",
+        "latitude": 36.11631413,
+        "longitude": -115.0831077,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "220_1_283",
+        "location": "US-95 SB",
+        "latitude": 36.11064977,
+        "longitude": -115.0826988,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "220_2_287",
+        "location": "US-95 SB",
+        "latitude": 36.10268889,
+        "longitude": -115.0824833,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "327_1_205",
+        "location": "US-95 SB",
+        "latitude": 36.1759785,
+        "longitude": -115.1890694,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "327_2_205",
+        "location": "US-95 SB",
+        "latitude": 36.17495096,
+        "longitude": -115.1832827,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "329_2_198",
+        "location": "US-95 SB",
+        "latitude": 36.1756915,
+        "longitude": -115.1938159,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "334_2_211",
+        "location": "US-95 SB",
+        "latitude": 36.17380209,
+        "longitude": -115.1994988,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "337_2_211",
+        "location": "US-95 SB",
+        "latitude": 36.1730219,
+        "longitude": -115.2044075,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "343_1_199",
+        "location": "US-95 SB",
+        "latitude": 36.17349137,
+        "longitude": -115.2103855,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "360_1_288",
+        "location": "US-95 SB",
+        "latitude": 36.09820771,
+        "longitude": -115.0810296,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "360_2_289",
+        "location": "US-95 SB",
+        "latitude": 36.09367571,
+        "longitude": -115.07612,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "360_3_289",
+        "location": "US-95 SB",
+        "latitude": 36.09073779,
+        "longitude": -115.0713363,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "361_1_290",
+        "location": "US-95 SB",
+        "latitude": 36.08821071,
+        "longitude": -115.0658986,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "361_2_290",
+        "location": "US-95 SB",
+        "latitude": 36.08743905,
+        "longitude": -115.0597319,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "361_3_292",
+        "location": "US-95 SB",
+        "latitude": 36.08539392,
+        "longitude": -115.0542941,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "362_1_292",
+        "location": "US-95 SB",
+        "latitude": 36.08329744,
+        "longitude": -115.0501812,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "362_2_293",
+        "location": "US-95 SB",
+        "latitude": 36.0813279,
+        "longitude": -115.0464197,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "362_3_295",
+        "location": "US-95 SB",
+        "latitude": 36.07495996,
+        "longitude": -115.0389206,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "363_1_297",
+        "location": "US-95 SB",
+        "latitude": 36.06753455,
+        "longitude": -115.0344568,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "363_2_297",
+        "location": "US-95 SB",
+        "latitude": 36.06409648,
+        "longitude": -115.0322979,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "364_1_300",
+        "location": "US-95 SB",
+        "latitude": 36.06099411,
+        "longitude": -115.0304527,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "364_2_301",
+        "location": "US-95 SB",
+        "latitude": 36.05543511,
+        "longitude": -115.0271618,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "364_3_302",
+        "location": "US-95 SB",
+        "latitude": 36.05021244,
+        "longitude": -115.0246681,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "365_2_304",
+        "location": "US-95 SB",
+        "latitude": 36.04048037,
+        "longitude": -115.0211152,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "365_3_305",
+        "location": "US-95 SB",
+        "latitude": 36.03478964,
+        "longitude": -115.0160411,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "366_1_307",
+        "location": "US-95 SB",
+        "latitude": 36.0313151,
+        "longitude": -115.0122902,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "370_1_386",
+        "location": "US-95 SB",
+        "latitude": 36.009102,
+        "longitude": -114.9879,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "404_1_200",
+        "location": "US-95 SB",
+        "latitude": 36.17379284,
+        "longitude": -115.2257786,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "404_2_212",
+        "location": "US-95 SB",
+        "latitude": 36.17375292,
+        "longitude": -115.2208585,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "404_3_212",
+        "location": "US-95 SB",
+        "latitude": 36.17365451,
+        "longitude": -115.216063,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "405_1_213",
+        "location": "US-95 SB",
+        "latitude": 36.17472656,
+        "longitude": -115.2422778,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "405_2_206",
+        "location": "US-95 SB",
+        "latitude": 36.17324638,
+        "longitude": -115.2376942,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "405_3_206",
+        "location": "US-95 SB",
+        "latitude": 36.17347422,
+        "longitude": -115.2318627,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "406_1_219",
+        "location": "US-95 SB",
+        "latitude": 36.19397256,
+        "longitude": -115.2448763,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "406_2_232",
+        "location": "US-95 SB",
+        "latitude": 36.18897123,
+        "longitude": -115.2448348,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "406_3_232",
+        "location": "US-95 SB",
+        "latitude": 36.18321296,
+        "longitude": -115.2447435,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "406_4_218",
+        "location": "US-95 SB",
+        "latitude": 36.17806127,
+        "longitude": -115.244479,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "407_1_226",
+        "location": "US-95 SB",
+        "latitude": 36.2070305,
+        "longitude": -115.2451336,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "407_2_226",
+        "location": "US-95 SB",
+        "latitude": 36.20268771,
+        "longitude": -115.2448202,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "407_3_233",
+        "location": "US-95 SB",
+        "latitude": 36.19742076,
+        "longitude": -115.2447516,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "408_1_227",
+        "location": "US-95 SB",
+        "latitude": 36.22116932,
+        "longitude": -115.2471412,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "408_2_220",
+        "location": "US-95 SB",
+        "latitude": 36.21505547,
+        "longitude": -115.2468885,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "408_3_226",
+        "location": "US-95 SB",
+        "latitude": 36.21176979,
+        "longitude": -115.2463185,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "409_1_221",
+        "location": "US-95 SB",
+        "latitude": 36.23360895,
+        "longitude": -115.2471936,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "409_2_221",
+        "location": "US-95 SB",
+        "latitude": 36.22978427,
+        "longitude": -115.2471912,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "409_3_221",
+        "location": "US-95 SB",
+        "latitude": 36.22600934,
+        "longitude": -115.2470978,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "410_1_235",
+        "location": "US-95 SB",
+        "latitude": 36.24838416,
+        "longitude": -115.2469843,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "410_2_235",
+        "location": "US-95 SB",
+        "latitude": 36.24458907,
+        "longitude": -115.247144,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "410_3_228",
+        "location": "US-95 SB",
+        "latitude": 36.23864695,
+        "longitude": -115.2471132,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "411_1_229",
+        "location": "US-95 SB",
+        "latitude": 36.26154574,
+        "longitude": -115.2527254,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "411_2_222",
+        "location": "US-95 SB",
+        "latitude": 36.25739602,
+        "longitude": -115.2489585,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "411_3_222",
+        "location": "US-95 SB",
+        "latitude": 36.25304904,
+        "longitude": -115.2470121,
+        "set": "Bugatti"
+    },
+    {
+        "detector_id": "706_1_732",
+        "location": "US-95 SB",
+        "latitude": 35.9333,
+        "longitude": -114.8398,
+        "set": "Bugatti"
+    }
+]
