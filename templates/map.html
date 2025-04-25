@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Bellagio Map & Graph</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Leaflet CSS & JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+            color: #333;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        #map {
+            width: 100%;
+            height: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+        #coords {
+            font-size: 1.2em;
+            margin: 10px 0 20px 0;
+            padding: 10px;
+            background: #e9ecef;
+            border-left: 5px solid #007bff;
+            border-radius: 5px;
+            width: fit-content;
+        }
+        #chartContainer {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        #downloadBtn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            font-size: 1em;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #downloadBtn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    🚗 Bellagio Hotel Live Tracker
+</header>
+
+<main>
+    <div id="map"></div>
+    <div id="coords">Lat: 36.1126, Lon: -115.1767</div>
+
+    <div id="chartContainer">
+        <canvas id="liveChart" height="200"></canvas>
+    </div>
+
+    <button id="downloadBtn">Download Lat/Lon Log</button>
+</main>
+
+<script>
+// Initialize Map
+var map = L.map('map').setView([36.1126, -115.1767], 15);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
+var marker = L.marker([36.1126, -115.1767]).addTo(map);
+var coordsDiv = document.getElementById("coords");
+
+// Initialize Chart
+var ctx = document.getElementById('liveChart').getContext('2d');
+var chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: [],
+        datasets: [{
+            label: 'Latitude',
+            data: [],
+            fill: true,
+            backgroundColor: 'rgba(0, 123, 255, 0.1)',
+            borderColor: 'rgba(0, 123, 255, 1)',
+            borderWidth: 2,
+            pointRadius: 3,
+            pointHoverRadius: 6,
+            tension: 0.3
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: { duration: 500 },
+        scales: {
+            x: {
+                title: { display: true, text: 'Time (hh:mm:ss)' },
+                grid: { color: '#ddd' }
+            },
+            y: {
+                title: { display: true, text: 'Latitude' },
+                suggestedMin: 36.10,
+                suggestedMax: 36.13,
+                grid: { color: '#eee' }
+            }
+        },
+        plugins: {
+            legend: { display: true, position: 'top' },
+            tooltip: {
+                enabled: true,
+                backgroundColor: '#007bff',
+                titleColor: 'white',
+                bodyColor: 'white'
+            }
+        }
+    }
+});
+
+// Store position log
+var positionLog = [];
+
+// Update function
+function updateData() {
+    fetch('/data')
+        .then(response => response.json())
+        .then(data => {
+            var newLat = parseFloat(data.lat.toFixed(6));
+            var newLon = parseFloat(data.lon.toFixed(6));
+
+            marker.setLatLng([newLat, newLon]);
+            map.setView([newLat, newLon]);
+            coordsDiv.innerHTML = `Lat: ${newLat}, Lon: ${newLon}`;
+
+            var now = new Date();
+            var timestamp = now.toLocaleTimeString();
+
+            // Add to chart
+            chart.data.labels.push(timestamp);
+            chart.data.datasets[0].data.push(newLat);
+
+            if (chart.data.labels.length > 20) {
+                chart.data.labels.shift();
+                chart.data.datasets[0].data.shift();
+            }
+
+            chart.update();
+
+            // Add to position log
+            positionLog.push({
+                time: timestamp,
+                lat: newLat,
+                lon: newLon
+            });
+        });
+}
+
+// Update every second
+setInterval(updateData, 1000);
+
+// Download function
+document.getElementById('downloadBtn').addEventListener('click', function() {
+    var csv = 'Time,Latitude,Longitude\n';
+    positionLog.forEach(function(row) {
+        csv += `${row.time},${row.lat},${row.lon}\n`;
+    });
+
+    var blob = new Blob([csv], { type: 'text/csv' });
+    var url = window.URL.createObjectURL(blob);
+
+    var a = document.createElement('a');
+    a.setAttribute('hidden', '');
+    a.setAttribute('href', url);
+    a.setAttribute('download', 'position_log.csv');
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+});
+</script>
+
+</body>
+</html>
