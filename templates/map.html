@@ -31,8 +31,8 @@
             line-height: 1.4;
         }
         .leaflet-popup-content-wrapper {
-            max-height: 400px; /* 📏 Limit popup height */
-            overflow-y: auto; /* 📜 Enable vertical scroll inside popup */
+            max-height: 400px;
+            overflow-y: auto;
         }
         canvas {
             margin-top: 5px;
@@ -54,11 +54,23 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // Initialize Variables
-var markers = {};        // Markers by stationId
-var markerMetadata = {}; // {detectorId: {lat, lon, locationText}}
-var liveData = {};       // Current live detector data
-var historyData = {};    // {stationId: {laneId: [ {timestamp, speed, vehicles, occupancy}, ... ]}}
-var laneCharts = {};     // {laneId: ChartObject}
+var markers = {};        
+var markerMetadata = {}; 
+var liveData = {};       
+var historyData = {};    
+var laneCharts = {};     
+var TIME_STEP_MINUTES = 0.5; 
+var SENSOR_INFO_MINUTES_BACK = 5;
+
+// Load config from server
+fetch('/config')
+.then(response => response.json())
+.then(config => {
+    TIME_STEP_MINUTES = config.time_step_minutes;
+    SENSOR_INFO_MINUTES_BACK = config.sensor_info_minutes_back;
+    console.log("Loaded TIME_STEP_MINUTES:", TIME_STEP_MINUTES);
+    console.log("Loaded SENSOR_INFO_MINUTES_BACK:", SENSOR_INFO_MINUTES_BACK);
+});
 
 // Connect Socket.IO
 var socket = io();
@@ -87,7 +99,6 @@ fetch('/metadata')
             locationText: sensor.location
         };
 
-        // Bind popupopen once per marker
         circle.on('popupopen', function() {
             drawMiniGraphs(sensor.detector_id);
         });
@@ -101,7 +112,6 @@ socket.on('new_data', function(responseData) {
     updateMarkers();
     console.log("Received live data at", responseData.timestamp);
 
-    // ✅ Update graphs if popup is open
     var openPopup = map._popup;
     if (openPopup) {
         var content = openPopup.getContent();
@@ -133,7 +143,6 @@ function saveHistoryData(timestamp, data) {
             occupancy: det.vehicleOccupancy
         });
 
-        // Only keep last 10 points
         if (historyData[stationId][laneId].length > 10) {
             historyData[stationId][laneId].shift();
         }
@@ -166,7 +175,7 @@ function updateMarkers() {
                     Speed: <b>${det.vehicleSpeed ?? 'N/A'}</b> mph<br>
                     Vehicles: <b>${det.vehicleCount ?? 'N/A'}</b><br>
                     Occupancy: <b>${det.vehicleOccupancy ?? 'N/A'}</b><br>
-                    <div style="font-size:12px;margin-top:5px;color:gray;">Speed Trend - Last 5 Minutes</div>
+                    <div id="title_${det.detectorId}" style="font-size:12px;margin-top:5px;color:gray;">Speed Trend</div>
                     <canvas id="chart_${det.detectorId}" width="160" height="80"></canvas><br>
                 `;
             });
@@ -188,7 +197,8 @@ function drawMiniGraphs(stationId) {
 
     for (var laneId in historyData[stationId]) {
         var ctx = document.getElementById(`chart_${laneId}`);
-        if (!ctx) continue;
+        var titleDiv = document.getElementById(`title_${laneId}`);
+        if (!ctx || !titleDiv) continue;
 
         var laneHistory = historyData[stationId][laneId];
         if (laneHistory.length < 2) {
@@ -199,13 +209,15 @@ function drawMiniGraphs(stationId) {
         var speedPoints = laneHistory.map(p => p.speed);
         var labels = laneHistory.map((_, idx) => idx + 1);
 
+        const numPoints = laneHistory.length;
+        const timeSpanMinutes = (TIME_STEP_MINUTES * numPoints).toFixed(1);
+        titleDiv.innerHTML = `Speed Trend - Last ${timeSpanMinutes} Minutes (Showing up to ${SENSOR_INFO_MINUTES_BACK} min)`;
+
         if (laneCharts[laneId]) {
-            // Update existing chart
             laneCharts[laneId].data.labels = labels;
             laneCharts[laneId].data.datasets[0].data = speedPoints;
             laneCharts[laneId].update();
         } else {
-            // Create new chart
             laneCharts[laneId] = new Chart(ctx, {
                 type: 'line',
                 data: {
@@ -226,7 +238,24 @@ function drawMiniGraphs(stationId) {
                         y: { display: true }
                     },
                     plugins: {
-                        legend: { display: false }
+                        legend: { display: false },
+                        tooltip: {
+                            backgroundColor: '#333',
+                            titleColor: '#fff',
+                            bodyColor: '#fff',
+                            titleFont: { size: 12 },
+                            bodyFont: { size: 12 },
+                            callbacks: {
+                                title: function(context) {
+                                    var pointIndex = context[0].dataIndex + 1;
+                                    var minutesAgo = (TIME_STEP_MINUTES * (pointIndex)).toFixed(1);
+                                    return `Time: ${minutesAgo} min ago`;
+                                },
+                                label: function(context) {
+                                    return `Speed: ${context.parsed.y} mph`;
+                                }
+                            }
+                        }
                     }
                 }
             });
