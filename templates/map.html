@@ -30,6 +30,10 @@
             font-size: 14px;
             line-height: 1.4;
         }
+        .leaflet-popup-content-wrapper {
+            max-height: 400px; /* 📏 Limit popup height */
+            overflow-y: auto; /* 📜 Enable vertical scroll inside popup */
+        }
         canvas {
             margin-top: 5px;
             margin-bottom: 10px;
@@ -54,18 +58,19 @@ var markers = {};        // Markers by stationId
 var markerMetadata = {}; // {detectorId: {lat, lon, locationText}}
 var liveData = {};       // Current live detector data
 var historyData = {};    // {stationId: {laneId: [ {timestamp, speed, vehicles, occupancy}, ... ]}}
+var laneCharts = {};     // {laneId: ChartObject}
 
 // Connect Socket.IO
 var socket = io();
 
-// Load Metadata
+// Load Metadata and create markers
 fetch('/metadata')
 .then(response => response.json())
 .then(metadata => {
     metadata.forEach(sensor => {
         var circle = L.circleMarker([sensor.latitude, sensor.longitude], {
             radius: 6,
-            fillColor: "#a0a0a0", // grey if no data yet
+            fillColor: "#a0a0a0",
             color: "#808080",
             weight: 1,
             opacity: 1,
@@ -81,6 +86,11 @@ fetch('/metadata')
             lon: sensor.longitude,
             locationText: sensor.location
         };
+
+        // Bind popupopen once per marker
+        circle.on('popupopen', function() {
+            drawMiniGraphs(sensor.detector_id);
+        });
     });
 });
 
@@ -90,6 +100,17 @@ socket.on('new_data', function(responseData) {
     saveHistoryData(responseData.timestamp, responseData.data);
     updateMarkers();
     console.log("Received live data at", responseData.timestamp);
+
+    // ✅ Update graphs if popup is open
+    var openPopup = map._popup;
+    if (openPopup) {
+        var content = openPopup.getContent();
+        var match = content.match(/<b>Station:<\/b> (.*?) /);
+        if (match && match[1]) {
+            var stationId = match[1];
+            drawMiniGraphs(stationId);
+        }
+    }
 });
 
 // Save Historical Data
@@ -112,7 +133,7 @@ function saveHistoryData(timestamp, data) {
             occupancy: det.vehicleOccupancy
         });
 
-        // Only keep the last 10 points
+        // Only keep last 10 points
         if (historyData[stationId][laneId].length > 10) {
             historyData[stationId][laneId].shift();
         }
@@ -126,7 +147,11 @@ function updateMarkers() {
         var meta = markerMetadata[stationId];
         var stationDetectors = liveData.filter(d => d.stationId === stationId);
 
-        var popupContent = `<b>Station:</b> ${stationId}<br><b>Lat, Lon:</b> ${meta.lat.toFixed(5)}, ${meta.lon.toFixed(5)}<br><b>Location:</b> ${meta.locationText}<br><br>`;
+        var liveIcon = stationDetectors.length > 0
+            ? "<span style='color:green;font-size:16px;'>🟢 Live</span>"
+            : "<span style='color:gray;font-size:16px;'>⚪ No Data</span>";
+
+        var popupContent = `<b>Station:</b> ${stationId} ${liveIcon}<br><b>Lat, Lon:</b> ${meta.lat.toFixed(5)}, ${meta.lon.toFixed(5)}<br><b>Location:</b> ${meta.locationText}<br><br>`;
 
         if (stationDetectors.length > 0) {
             marker.setStyle({
@@ -142,7 +167,7 @@ function updateMarkers() {
                     Vehicles: <b>${det.vehicleCount ?? 'N/A'}</b><br>
                     Occupancy: <b>${det.vehicleOccupancy ?? 'N/A'}</b><br>
                     <div style="font-size:12px;margin-top:5px;color:gray;">Speed Trend - Last 5 Minutes</div>
-                    <canvas id="chart_${det.detectorId}" width="200" height="100"></canvas><br>
+                    <canvas id="chart_${det.detectorId}" width="160" height="80"></canvas><br>
                 `;
             });
         } else {
@@ -154,15 +179,10 @@ function updateMarkers() {
         }
 
         marker.bindPopup(popupContent);
-
-        // When popup opens, draw charts
-        marker.on('popupopen', function() {
-            drawMiniGraphs(stationId);
-        });
     }
 }
 
-// Draw Mini-Graphs
+// Draw or Update Mini-Graphs
 function drawMiniGraphs(stationId) {
     if (!historyData[stationId]) return;
 
@@ -171,33 +191,46 @@ function drawMiniGraphs(stationId) {
         if (!ctx) continue;
 
         var laneHistory = historyData[stationId][laneId];
+        if (laneHistory.length < 2) {
+            ctx.parentNode.innerHTML = "<div style='font-size:12px;color:gray;'>Collecting data... please wait</div>";
+            continue;
+        }
+
         var speedPoints = laneHistory.map(p => p.speed);
         var labels = laneHistory.map((_, idx) => idx + 1);
 
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: labels,
-                datasets: [{
-                    label: 'Speed (mph)',
-                    data: speedPoints,
-                    fill: false,
-                    borderColor: 'blue',
-                    tension: 0.2
-                }]
-            },
-            options: {
-                responsive: false,
-                maintainAspectRatio: false,
-                scales: {
-                    x: { display: false },
-                    y: { display: true }
+        if (laneCharts[laneId]) {
+            // Update existing chart
+            laneCharts[laneId].data.labels = labels;
+            laneCharts[laneId].data.datasets[0].data = speedPoints;
+            laneCharts[laneId].update();
+        } else {
+            // Create new chart
+            laneCharts[laneId] = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Speed (mph)',
+                        data: speedPoints,
+                        fill: false,
+                        borderColor: 'blue',
+                        tension: 0.2
+                    }]
                 },
-                plugins: {
-                    legend: { display: false }
+                options: {
+                    responsive: false,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: { display: false },
+                        y: { display: true }
+                    },
+                    plugins: {
+                        legend: { display: false }
+                    }
                 }
-            }
-        });
+            });
+        }
     }
 }
 </script>
