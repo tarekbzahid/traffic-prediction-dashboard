@@ -1,1 +1,6 @@
-flask
+Flask
+flask-socketio
+zeep
+pytz
+python-socketio
+eventlet

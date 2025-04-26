@@ -1,33 +1,36 @@
 from flask import Flask, render_template, jsonify
-from flask_socketio import SocketIO, emit
+from flask_socketio import SocketIO
 from zeep import Client, Settings
-from zeep.exceptions import Fault
-import os
-import time
-import threading
 import json
-from datetime import datetime
+import threading
+import time
 import pytz
+from datetime import datetime
 
+# ----------------------------
+# 📍 Load Configuration
+# ----------------------------
+with open("config.json") as f:
+    CONFIG = json.load(f)
+
+TIME_STEP_MINUTES = CONFIG.get("time_step_minutes", 0.5)  # fallback to 0.5 if missing
+
+# ----------------------------
+# 📍 Flask App
+# ----------------------------
 app = Flask(__name__)
 socketio = SocketIO(app, cors_allowed_origins="*")
-
-# ----------------------------
-# 📍 Configuration
-# ----------------------------
 
 local_timezone = pytz.timezone("America/Los_Angeles")
 wsdl_url = "https://colondexsrv.its.nv.gov/tmddws/TmddWS.svc?singleWsdl"
 metadata_path = "data/sensor_metadata.json"
-
-TIME_STEP_MINUTES = 0.5  # 🚀 Every 30 seconds
 
 latest_live_data = {
     "timestamp": None,
     "data": []
 }
 
-# SOAP Authentication
+# SOAP Settings
 auth_params = {
     "user-id": "UNLV_TRC_RTIS",
     "password": "+r@^~Tr&lt;R?|$"
@@ -60,9 +63,7 @@ soap_parameters = {
 # ----------------------------
 # 📍 Fetch Live Data
 # ----------------------------
-
 def fetch_live_data():
-    """Background thread to fetch live data from SOAP."""
     global latest_live_data
 
     settings = Settings(strict=False, xml_huge_tree=True)
@@ -98,7 +99,7 @@ def fetch_live_data():
                 }
                 print(f"Fetched {len(data)} detectors at {latest_live_data['timestamp']}")
                 socketio.emit('new_data', latest_live_data)
-        except Fault as e:
+        except Exception as e:
             print(f"SOAP request failed: {e}")
 
         time.sleep(TIME_STEP_MINUTES * 60)
@@ -106,7 +107,6 @@ def fetch_live_data():
 # ----------------------------
 # 📍 Flask Routes
 # ----------------------------
-
 @app.route("/")
 def map_page():
     return render_template("map.html")
@@ -117,10 +117,13 @@ def metadata():
         sensor_metadata = json.load(f)
     return jsonify(sensor_metadata)
 
+@app.route("/config")
+def config():
+    return jsonify(CONFIG)
+
 # ----------------------------
 # 📍 Main
 # ----------------------------
-
 if __name__ == "__main__":
     fetch_thread = threading.Thread(target=fetch_live_data)
     fetch_thread.daemon = True
