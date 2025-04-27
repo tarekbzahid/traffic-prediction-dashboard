@@ -26,6 +26,18 @@
             width: 100%;
             height: 100vh;
         }
+        .leaflet-popup-content {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        .leaflet-popup-content-wrapper {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        canvas {
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
         #spinner {
             position: absolute;
             top: 50%;
@@ -54,18 +66,10 @@
             color: #333;
             box-shadow: 0 0 4px rgba(0,0,0,0.2);
             z-index: 998;
-        }
-        .leaflet-popup-content {
-            font-size: 14px;
             line-height: 1.4;
-        }
-        .leaflet-popup-content-wrapper {
-            max-height: 400px;
+            max-width: 250px;
+            max-height: 100px;
             overflow-y: auto;
-        }
-        canvas {
-            margin-top: 5px;
-            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -92,6 +96,18 @@ var TIME_STEP_MINUTES = 0.5;
 var SENSOR_INFO_MINUTES_BACK = 5;
 var spinner = document.getElementById('spinner');
 var lastUpdatedDiv = document.getElementById('last-updated');
+var statusHistory = [];
+
+function setStatus(message) {
+    const now = new Date();
+    const timeString = now.toLocaleTimeString();
+    const fullMessage = `[${timeString}] ${message}`;
+    statusHistory.unshift(fullMessage);
+    if (statusHistory.length > 3) {
+        statusHistory.pop();
+    }
+    lastUpdatedDiv.innerHTML = statusHistory.join('<br>');
+}
 
 // Load config
 fetch('/config')
@@ -99,10 +115,15 @@ fetch('/config')
 .then(config => {
     TIME_STEP_MINUTES = config.time_step_minutes;
     SENSOR_INFO_MINUTES_BACK = config.sensor_info_minutes_back;
+    setStatus("Loaded Config");
 });
 
 // Connect to Socket.IO
 var socket = io();
+
+socket.on('connect', function() {
+    setStatus("Connected to WebSocket");
+});
 
 // Load sensor metadata
 fetch('/metadata')
@@ -132,29 +153,34 @@ fetch('/metadata')
             drawMiniGraphs(sensor.detector_id);
         });
     });
+
+    setStatus("Loaded Metadata");
 });
 
 // Handle live data
 socket.on('new_data', function(responseData) {
     liveData = responseData.data;
     saveHistoryData(responseData.timestamp, responseData.data);
-    updateMarkers();
-
-    // Update last updated timestamp
-    if (responseData.timestamp) {
-        lastUpdatedDiv.innerText = `Last Update: ${responseData.timestamp}`;
-    }
-
-    // Hide spinner
-    spinner.style.display = 'none';
 
     var openPopup = map._popup;
+    var popupStationId = null;
+
     if (openPopup) {
         var content = openPopup.getContent();
         var match = content.match(/<b>Station:<\/b> (.*?) /);
         if (match && match[1]) {
-            drawMiniGraphs(match[1]);
+            popupStationId = match[1];
         }
+    }
+
+    updateMarkers(popupStationId);
+
+    setStatus("Received Live Data");
+
+    spinner.style.display = 'none';
+
+    if (popupStationId) {
+        drawMiniGraphs(popupStationId);
     }
 });
 
@@ -179,8 +205,10 @@ function saveHistoryData(timestamp, data) {
     });
 }
 
-function updateMarkers() {
+function updateMarkers(skipStationId = null) {
     for (var stationId in markers) {
+        if (stationId === skipStationId) continue;
+
         var marker = markers[stationId];
         var meta = markerMetadata[stationId];
         var stationDetectors = liveData.filter(d => d.stationId === stationId);
