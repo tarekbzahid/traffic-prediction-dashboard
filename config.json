@@ -1,6 +1,6 @@
 {
-    "time_step_minutes": 0.5,
-    "sensor_info_minutes_back": 5,
+    "time_step_minutes": 1,
+    "sensor_info_minutes_back": 10,
     
     "description": {
         "time_step_minutes": "Interval between two data collection points (in minutes).",
