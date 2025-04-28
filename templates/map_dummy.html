@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Las Vegas Traffic Dashboard (Analytics Style)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Leaflet CSS and JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      height: 100%;
+      overflow-x: hidden;
+      background: #f9f9f9;
+    }
+    header {
+      background: #1f2937;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    #map {
+      width: 100%;
+      height: calc(100vh - 60px);
+    }
+
+    /* Overlay panel */
+    .overlay {
+      position: fixed;
+      top: 60px;
+      right: 0;
+      width: 500px;
+      height: calc(100vh - 60px);
+      background: white;
+      box-shadow: -4px 0 20px rgba(0,0,0,0.1);
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+      z-index: 1001;
+      padding: 30px 20px;
+      overflow-y: auto;
+    }
+    .overlay.active {
+      transform: translateX(0);
+    }
+    .overlay h2 {
+      margin-top: 0;
+      font-size: 22px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .close-btn {
+      background: none;
+      border: none;
+      font-size: 26px;
+      color: #999;
+      float: right;
+      cursor: pointer;
+      margin-top: -10px;
+    }
+    #overlayChart {
+      width: 100%;
+      height: 300px;
+      margin-top: 20px;
+    }
+    .info-block {
+      margin-bottom: 20px;
+      font-size: 16px;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  Las Vegas Traffic Dashboard
+</header>
+
+<div id="map"></div>
+
+<!-- Prediction Overlay -->
+<div class="overlay" id="predictionOverlay">
+  <button class="close-btn" onclick="closeOverlay()">×</button>
+  <h2 id="overlayTitle">Sensor Details</h2>
+
+  <div class="info-block" id="liveSpeed">Live Speed: -- mph</div>
+  <div class="info-block" id="liveVehicles">Live Flow: -- vehicles</div>
+
+  <canvas id="overlayChart"></canvas>
+</div>
+
+<script>
+// Initialize Map
+var map = L.map('map').setView([36.1699, -115.1398], 11);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19
+}).addTo(map);
+
+// Dummy markers
+var sensors = [
+  {lat: 36.17, lon: -115.14, name: "Sensor A"},
+  {lat: 36.18, lon: -115.13, name: "Sensor B"},
+  {lat: 36.16, lon: -115.12, name: "Sensor C"},
+];
+
+sensors.forEach((sensor, idx) => {
+  const marker = L.marker([sensor.lat, sensor.lon]).addTo(map);
+  marker.bindPopup(`
+    <b>${sensor.name}</b><br>
+    Speed: ${60 + idx * 5} mph<br>
+    Vehicles: ${100 + idx * 20}<br><br>
+    <button onclick="showOverlay('${sensor.name}', ${60 + idx * 5}, ${100 + idx * 20})">Show Prediction</button>
+  `);
+});
+
+// Show overlay
+function showOverlay(sensorName, speed, vehicles) {
+  document.getElementById('overlayTitle').innerText = sensorName + ' - Future Prediction';
+  document.getElementById('liveSpeed').innerText = `Live Speed: ${speed} mph`;
+  document.getElementById('liveVehicles').innerText = `Live Flow: ${vehicles} vehicles`;
+  document.getElementById('predictionOverlay').classList.add('active');
+
+  // Update Chart
+  var ctx = document.getElementById('overlayChart').getContext('2d');
+  if (window.overlayChartObj) {
+    window.overlayChartObj.destroy();
+  }
+  window.overlayChartObj = new Chart(ctx, {
+    data: {
+      labels: ['Now', '+15 min', '+30 min', '+45 min', '+60 min'],
+      datasets: [
+        {
+          type: 'bar',
+          label: 'Speed',
+          data: [
+            speed,
+            speed - 2 + Math.random()*4,
+            speed - 1 + Math.random()*5,
+            speed + Math.random()*3,
+            speed - 2 + Math.random()*4
+          ],
+          backgroundColor: '#4285F4',
+          borderRadius: 4,
+          barThickness: 30
+        },
+        {
+          type: 'line',
+          label: 'Trend',
+          data: [
+            speed,
+            speed - 1,
+            speed,
+            speed + 1,
+            speed + 2
+          ],
+          borderColor: '#888',
+          borderDash: [5,5],
+          backgroundColor: 'transparent',
+          tension: 0.3,
+          pointRadius: 0
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        y: {
+          beginAtZero: false,
+          grid: {
+            color: '#eee'
+          }
+        },
+        x: {
+          grid: {
+            color: '#fff'
+          }
+        }
+      },
+      plugins: {
+        legend: {
+          display: false
+        },
+        tooltip: {
+          backgroundColor: '#333',
+          titleColor: '#fff',
+          bodyColor: '#fff',
+          borderColor: '#4285F4',
+          borderWidth: 1
+        }
+      }
+    }
+  });
+}
+
+// Close overlay
+function closeOverlay() {
+  document.getElementById('predictionOverlay').classList.remove('active');
+}
+</script>
+
+</body>
+</html>
