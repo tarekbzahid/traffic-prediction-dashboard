@@ -20,71 +20,42 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f2f2f2;
+            background-color: #000;
         }
         #map {
             width: 100%;
             height: 100vh;
         }
+        .leaflet-popup-content-wrapper {
+            background: black;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border: 1px solid white;
+        }
+        .leaflet-popup-tip {
+            background: black;
+        }
         .leaflet-popup-content {
             font-size: 14px;
             line-height: 1.4;
         }
-        .leaflet-popup-content-wrapper {
-            max-height: 400px;
-            overflow-y: auto;
-        }
         canvas {
             margin-top: 5px;
             margin-bottom: 10px;
-        }
-        #spinner {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            margin: -25px 0 0 -25px;
-            width: 50px;
-            height: 50px;
-            border: 6px solid #ccc;
-            border-top: 6px solid #007bff;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            z-index: 999;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        #last-updated {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: white;
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-size: 12px;
-            color: #333;
-            box-shadow: 0 0 4px rgba(0,0,0,0.2);
-            z-index: 998;
-            line-height: 1.4;
-            max-width: 250px;
-            max-height: 100px;
-            overflow-y: auto;
         }
     </style>
 </head>
 
 <body>
 
-<div id="spinner"></div>
-<div id="last-updated">Waiting for data...</div>
 <div id="map"></div>
 
 <script>
 var map = L.map('map').setView([36.1699, -115.1398], 11);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
+// Minimalist gray basemap
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    maxZoom: 19
 }).addTo(map);
 
 var markers = {};
@@ -94,20 +65,6 @@ var historyData = {};
 var laneCharts = {};
 var TIME_STEP_MINUTES = 0.5;
 var SENSOR_INFO_MINUTES_BACK = 5;
-var spinner = document.getElementById('spinner');
-var lastUpdatedDiv = document.getElementById('last-updated');
-var statusHistory = [];
-
-function setStatus(message) {
-    const now = new Date();
-    const timeString = now.toLocaleTimeString();
-    const fullMessage = `[${timeString}] ${message}`;
-    statusHistory.unshift(fullMessage);
-    if (statusHistory.length > 3) {
-        statusHistory.pop();
-    }
-    lastUpdatedDiv.innerHTML = statusHistory.join('<br>');
-}
 
 // Load config
 fetch('/config')
@@ -115,28 +72,23 @@ fetch('/config')
 .then(config => {
     TIME_STEP_MINUTES = config.time_step_minutes;
     SENSOR_INFO_MINUTES_BACK = config.sensor_info_minutes_back;
-    setStatus("Loaded Config");
 });
 
 // Connect to Socket.IO
 var socket = io();
 
-socket.on('connect', function() {
-    setStatus("Connected to WebSocket");
-});
-
-// Load sensor metadata
+// Load Metadata
 fetch('/metadata')
 .then(response => response.json())
 .then(metadata => {
     metadata.forEach(sensor => {
         var circle = L.circleMarker([sensor.latitude, sensor.longitude], {
-            radius: 6,
-            fillColor: "#a0a0a0",
-            color: "#808080",
+            radius: 5,
+            fillColor: "white",
+            color: "white",
             weight: 1,
             opacity: 1,
-            fillOpacity: 0.8
+            fillOpacity: 1
         })
         .addTo(map)
         .bindPopup('Waiting for live data...');
@@ -153,34 +105,20 @@ fetch('/metadata')
             drawMiniGraphs(sensor.detector_id);
         });
     });
-
-    setStatus("Loaded Metadata");
 });
 
 // Handle live data
 socket.on('new_data', function(responseData) {
     liveData = responseData.data;
     saveHistoryData(responseData.timestamp, responseData.data);
-
+    updateMarkers();
     var openPopup = map._popup;
-    var popupStationId = null;
-
     if (openPopup) {
         var content = openPopup.getContent();
         var match = content.match(/<b>Station:<\/b> (.*?) /);
         if (match && match[1]) {
-            popupStationId = match[1];
+            drawMiniGraphs(match[1]);
         }
-    }
-
-    updateMarkers(popupStationId);
-
-    setStatus("Received Live Data");
-
-    spinner.style.display = 'none';
-
-    if (popupStationId) {
-        drawMiniGraphs(popupStationId);
     }
 });
 
@@ -205,61 +143,24 @@ function saveHistoryData(timestamp, data) {
     });
 }
 
-function updateMarkers(skipStationId = null) {
+function updateMarkers() {
     for (var stationId in markers) {
-        if (stationId === skipStationId) continue;
-
         var marker = markers[stationId];
         var meta = markerMetadata[stationId];
         var stationDetectors = liveData.filter(d => d.stationId === stationId);
 
         var liveIcon = stationDetectors.length > 0
-            ? "<span style='color:green;font-size:16px;'>🟢 Live</span>"
+            ? "<span style='color:lime;font-size:16px;'>🟢 Live</span>"
             : "<span style='color:gray;font-size:16px;'>⚪ No Data</span>";
 
-        let popupContent = `<b>Station:</b> ${stationId} ${liveIcon}<br>
-            <b>Lat, Lon:</b> ${meta.lat.toFixed(5)}, ${meta.lon.toFixed(5)}<br>
-            <b>Location:</b> ${meta.locationText}<br><br>`;
+        var popupContent = `<b>Station:</b> ${stationId} ${liveIcon}<br><b>Lat, Lon:</b> ${meta.lat.toFixed(5)}, ${meta.lon.toFixed(5)}<br><b>Location:</b> ${meta.locationText}<br><br>`;
 
         if (stationDetectors.length > 0) {
             marker.setStyle({
-                fillColor: "#007bff",
-                color: "#0056b3"
+                fillColor: "white",
+                color: "white"
             });
 
-            // ---------------------
-            // Aggregated Values
-            // ---------------------
-            let totalSpeed = 0, totalVehicles = 0, totalOccupancy = 0;
-            let validSpeedCount = 0, validOccCount = 0;
-
-            stationDetectors.forEach(det => {
-                if (det.vehicleSpeed !== null && !isNaN(det.vehicleSpeed)) {
-                    totalSpeed += det.vehicleSpeed;
-                    validSpeedCount++;
-                }
-                if (det.vehicleOccupancy !== null && !isNaN(det.vehicleOccupancy)) {
-                    totalOccupancy += det.vehicleOccupancy;
-                    validOccCount++;
-                }
-                if (det.vehicleCount !== null && !isNaN(det.vehicleCount)) {
-                    totalVehicles += det.vehicleCount;
-                }
-            });
-
-            const avgSpeed = validSpeedCount > 0 ? (totalSpeed / validSpeedCount).toFixed(1) : 'N/A';
-            const avgOcc = validOccCount > 0 ? (totalOccupancy / validOccCount).toFixed(1) : 'N/A';
-
-            popupContent += `
-                <b>Aggregated:</b><br>
-                Average Speed: <b>${avgSpeed}</b> mph<br>
-                Total Vehicles: <b>${totalVehicles}</b><br>
-                Average Occupancy: <b>${avgOcc}</b><br><br>
-            `;
-
-            // ---------------------
-            // Per-Lane Details
-            // ---------------------
             stationDetectors.forEach(det => {
                 var laneNum = det.detectorId.split("_").pop();
                 popupContent += `
@@ -271,11 +172,10 @@ function updateMarkers(skipStationId = null) {
                     <canvas id="chart_${det.detectorId}" width="160" height="80"></canvas><br>
                 `;
             });
-
         } else {
             marker.setStyle({
-                fillColor: "#a0a0a0",
-                color: "#808080"
+                fillColor: "white",
+                color: "white"
             });
             popupContent += `<i>No live data available.</i>`;
         }
@@ -294,7 +194,7 @@ function drawMiniGraphs(stationId) {
 
         var laneHistory = historyData[stationId][laneId];
         if (laneHistory.length < 2) {
-            ctx.parentNode.innerHTML = "<div style='font-size:12px;color:gray;'>Speed trend unavailable: waiting for at least 2 data points.</div>";
+            ctx.parentNode.innerHTML = "<div style='font-size:12px;color:gray;'>Collecting data... please wait</div>";
             continue;
         }
 
@@ -305,7 +205,13 @@ function drawMiniGraphs(stationId) {
 
         if (laneCharts[laneId]) {
             laneCharts[laneId].data.labels = labels;
-            laneCharts[laneId].data.datasets[0].data = speedPoints;
+            laneCharts[laneId].data.datasets = [{
+                label: '',
+                data: speedPoints,
+                fill: false,
+                borderColor: 'white',
+                tension: 0.2
+            }];
             laneCharts[laneId].update();
         } else {
             laneCharts[laneId] = new Chart(ctx, {
@@ -316,7 +222,7 @@ function drawMiniGraphs(stationId) {
                         label: '',
                         data: speedPoints,
                         fill: false,
-                        borderColor: 'blue',
+                        borderColor: 'white',
                         tension: 0.2
                     }]
                 },
@@ -324,14 +230,20 @@ function drawMiniGraphs(stationId) {
                     responsive: false,
                     maintainAspectRatio: false,
                     scales: {
-                        x: { display: false },
-                        y: { display: true }
+                        x: {
+                            ticks: { color: 'white' },
+                            grid: { color: '#555' }
+                        },
+                        y: {
+                            ticks: { color: 'white' },
+                            grid: { color: '#555' }
+                        }
                     },
                     plugins: {
                         legend: { display: false },
                         tooltip: {
                             displayColors: false,
-                            backgroundColor: '#333',
+                            backgroundColor: '#000',
                             titleColor: '#fff',
                             bodyColor: '#fff',
                             titleFont: { size: 12 },
@@ -353,7 +265,6 @@ function drawMiniGraphs(stationId) {
         }
     }
 }
-
 </script>
 
 </body>
