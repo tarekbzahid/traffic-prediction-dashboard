@@ -1,360 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Las Vegas Traffic Live Map</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Leaflet CSS and JS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
-    <!-- Socket.IO Client -->
-    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
-
-    <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f2f2f2;
-        }
-        #map {
-            width: 100%;
-            height: 100vh;
-        }
-        .leaflet-popup-content {
-            font-size: 14px;
-            line-height: 1.4;
-        }
-        .leaflet-popup-content-wrapper {
-            max-height: 400px;
-            overflow-y: auto;
-        }
-        canvas {
-            margin-top: 5px;
-            margin-bottom: 10px;
-        }
-        #spinner {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            margin: -25px 0 0 -25px;
-            width: 50px;
-            height: 50px;
-            border: 6px solid #ccc;
-            border-top: 6px solid #007bff;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            z-index: 999;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        #last-updated {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: white;
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-size: 12px;
-            color: #333;
-            box-shadow: 0 0 4px rgba(0,0,0,0.2);
-            z-index: 998;
-            line-height: 1.4;
-            max-width: 250px;
-            max-height: 100px;
-            overflow-y: auto;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Las Vegas Traffic Live Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f2f2f2;
+    }
+    #map {
+      width: 100%;
+      height: 100vh;
+    }
+    .leaflet-popup-content-wrapper {
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    .leaflet-popup-content {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    canvas {
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+    #spinner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -25px 0 0 -25px;
+      width: 50px;
+      height: 50px;
+      border: 6px solid #ccc;
+      border-top: 6px solid #007bff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      z-index: 999;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    #last-updated {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: white;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      color: #333;
+      box-shadow: 0 0 4px rgba(0,0,0,0.2);
+      z-index: 998;
+      line-height: 1.4;
+      max-width: 250px;
+      max-height: 100px;
+      overflow-y: auto;
+    }
+  </style>
 </head>
 
 <body>
-
-<div id="spinner"></div>
-<div id="last-updated">Waiting for data...</div>
-<div id="map"></div>
+  <div id="spinner"></div>
+  <div id="last-updated">Waiting for data...</div>
+  <div id="map"></div>
 
 <script>
 var map = L.map('map').setView([36.1699, -115.1398], 11);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-}).addTo(map);
-
-var markers = {};
-var markerMetadata = {};
-var liveData = {};
-var historyData = {};
-var laneCharts = {};
-var TIME_STEP_MINUTES = 0.5;
-var SENSOR_INFO_MINUTES_BACK = 5;
+var markers = {}, markerMetadata = {}, liveData = {}, historyData = {}, laneCharts = {};
+var stationHistoryData = {}, stationCharts = {};
+var TIME_STEP_MINUTES = 0.5, SENSOR_INFO_MINUTES_BACK = 5;
 var spinner = document.getElementById('spinner');
 var lastUpdatedDiv = document.getElementById('last-updated');
 var statusHistory = [];
 
 function setStatus(message) {
-    const now = new Date();
-    const timeString = now.toLocaleTimeString();
-    const fullMessage = `[${timeString}] ${message}`;
-    statusHistory.unshift(fullMessage);
-    if (statusHistory.length > 3) {
-        statusHistory.pop();
-    }
-    lastUpdatedDiv.innerHTML = statusHistory.join('<br>');
+  const now = new Date();
+  const timeString = now.toLocaleTimeString();
+  const fullMessage = `[${timeString}] ${message}`;
+  statusHistory.unshift(fullMessage);
+  if (statusHistory.length > 3) statusHistory.pop();
+  lastUpdatedDiv.innerHTML = statusHistory.join('<br>');
 }
 
-// Load config
-fetch('/config')
-.then(response => response.json())
-.then(config => {
-    TIME_STEP_MINUTES = config.time_step_minutes;
-    SENSOR_INFO_MINUTES_BACK = config.sensor_info_minutes_back;
-    setStatus("Loaded Config");
+fetch('/config').then(r => r.json()).then(cfg => {
+  TIME_STEP_MINUTES = cfg.time_step_minutes;
+  SENSOR_INFO_MINUTES_BACK = cfg.sensor_info_minutes_back;
+  setStatus("Loaded Config");
 });
 
-// Connect to Socket.IO
 var socket = io();
+socket.on('connect', () => setStatus("Connected to WebSocket"));
 
-socket.on('connect', function() {
-    setStatus("Connected to WebSocket");
+fetch('/metadata').then(r => r.json()).then(metadata => {
+  metadata.forEach(sensor => {
+    var circle = L.circleMarker([sensor.latitude, sensor.longitude], {
+      radius: 6, fillColor: "#a0a0a0", color: "#808080", weight: 1, opacity: 1, fillOpacity: 0.8
+    }).addTo(map).bindPopup('Waiting for live data...');
+    markers[sensor.detector_id] = circle;
+    markerMetadata[sensor.detector_id] = {
+      lat: sensor.latitude,
+      lon: sensor.longitude,
+      locationText: sensor.location
+    };
+    circle.on('popupopen', () => drawMiniGraphs(sensor.detector_id));
+  });
+  setStatus("Loaded Metadata");
 });
 
-// Load sensor metadata
-fetch('/metadata')
-.then(response => response.json())
-.then(metadata => {
-    metadata.forEach(sensor => {
-        var circle = L.circleMarker([sensor.latitude, sensor.longitude], {
-            radius: 6,
-            fillColor: "#a0a0a0",
-            color: "#808080",
-            weight: 1,
-            opacity: 1,
-            fillOpacity: 0.8
-        })
-        .addTo(map)
-        .bindPopup('Waiting for live data...');
-
-        markers[sensor.detector_id] = circle;
-
-        markerMetadata[sensor.detector_id] = {
-            lat: sensor.latitude,
-            lon: sensor.longitude,
-            locationText: sensor.location
-        };
-
-        circle.on('popupopen', function() {
-            drawMiniGraphs(sensor.detector_id);
-        });
-    });
-
-    setStatus("Loaded Metadata");
-});
-
-// Handle live data
 socket.on('new_data', function(responseData) {
-    liveData = responseData.data;
-    saveHistoryData(responseData.timestamp, responseData.data);
-
-    var openPopup = map._popup;
-    var popupStationId = null;
-
-    if (openPopup) {
-        var content = openPopup.getContent();
-        var match = content.match(/<b>Station:<\/b> (.*?) /);
-        if (match && match[1]) {
-            popupStationId = match[1];
-        }
-    }
-
-    updateMarkers(popupStationId);
-
-    setStatus("Received Live Data");
-
-    spinner.style.display = 'none';
-
-    if (popupStationId) {
-        drawMiniGraphs(popupStationId);
-    }
+  liveData = responseData.data;
+  saveHistoryData(responseData.timestamp, responseData.data);
+  const openPopup = map._popup;
+  let popupStationId = null;
+  if (openPopup) {
+    const content = openPopup.getContent();
+    const match = content.match(/<b>Station:<\/b> (.*?) /);
+    if (match && match[1]) popupStationId = match[1];
+  }
+  updateMarkers(popupStationId);
+  setStatus("Received Live Data");
+  spinner.style.display = 'none';
+  if (popupStationId) drawMiniGraphs(popupStationId);
 });
 
 function saveHistoryData(timestamp, data) {
-    data.forEach(det => {
-        var stationId = det.stationId;
-        var laneId = det.detectorId;
+  data.forEach(det => {
+    const stationId = det.stationId;
+    const laneId = det.detectorId;
+    if (!historyData[stationId]) historyData[stationId] = {};
+    if (!historyData[stationId][laneId]) historyData[stationId][laneId] = [];
 
-        if (!historyData[stationId]) historyData[stationId] = {};
-        if (!historyData[stationId][laneId]) historyData[stationId][laneId] = [];
-
-        historyData[stationId][laneId].push({
-            timestamp: timestamp,
-            speed: det.vehicleSpeed,
-            vehicles: det.vehicleCount,
-            occupancy: det.vehicleOccupancy
-        });
-
-        if (historyData[stationId][laneId].length > 10) {
-            historyData[stationId][laneId].shift();
-        }
+    historyData[stationId][laneId].push({
+      timestamp: timestamp,
+      speed: det.vehicleSpeed,
+      vehicles: det.vehicleCount,
+      occupancy: det.vehicleOccupancy
     });
+
+    if (historyData[stationId][laneId].length > 10)
+      historyData[stationId][laneId].shift();
+  });
+
+  // FIX: compute live average using current data
+  const groupedByStation = {};
+  data.forEach(det => {
+    if (!groupedByStation[det.stationId]) groupedByStation[det.stationId] = [];
+    if (det.vehicleSpeed !== null && !isNaN(det.vehicleSpeed)) {
+      groupedByStation[det.stationId].push(det.vehicleSpeed);
+    }
+  });
+
+  for (var stationId in groupedByStation) {
+    const speeds = groupedByStation[stationId];
+    if (speeds.length > 0) {
+      const avg = speeds.reduce((a, b) => a + b, 0) / speeds.length;
+      if (!stationHistoryData[stationId]) stationHistoryData[stationId] = [];
+      stationHistoryData[stationId].push(avg);
+      if (stationHistoryData[stationId].length > 10) stationHistoryData[stationId].shift();
+    }
+  }
 }
 
 function updateMarkers(skipStationId = null) {
-    for (var stationId in markers) {
-        if (stationId === skipStationId) continue;
+  for (var stationId in markers) {
+    if (stationId === skipStationId) continue;
 
-        var marker = markers[stationId];
-        var meta = markerMetadata[stationId];
-        var stationDetectors = liveData.filter(d => d.stationId === stationId);
+    const marker = markers[stationId];
+    const meta = markerMetadata[stationId];
+    const stationDetectors = liveData.filter(d => d.stationId === stationId);
 
-        var liveIcon = stationDetectors.length > 0
-            ? "<span style='color:green;font-size:16px;'>🟢 Live</span>"
-            : "<span style='color:gray;font-size:16px;'>⚪ No Data</span>";
+    const liveIcon = stationDetectors.length > 0
+      ? "<span style='color:green;font-size:16px;'>🟢 Live</span>"
+      : "<span style='color:gray;font-size:16px;'>⚪ No Data</span>";
 
-        let popupContent = `<b>Station:</b> ${stationId} ${liveIcon}<br>
-            <b>Lat, Lon:</b> ${meta.lat.toFixed(5)}, ${meta.lon.toFixed(5)}<br>
-            <b>Location:</b> ${meta.locationText}<br><br>`;
+    let popupContent = `<b>Station:</b> ${stationId} ${liveIcon}<br>
+      <b>Lat, Lon:</b> ${meta.lat.toFixed(5)}, ${meta.lon.toFixed(5)}<br>
+      <b>Location:</b> ${meta.locationText}<br><br>`;
 
-        if (stationDetectors.length > 0) {
-            marker.setStyle({
-                fillColor: "#007bff",
-                color: "#0056b3"
-            });
+    if (stationDetectors.length > 0) {
+      marker.setStyle({ fillColor: "#007bff", color: "#0056b3" });
 
-            // ---------------------
-            // Aggregated Values
-            // ---------------------
-            let totalSpeed = 0, totalVehicles = 0, totalOccupancy = 0;
-            let validSpeedCount = 0, validOccCount = 0;
+      let totalSpeed = 0, totalVehicles = 0, totalOcc = 0, validCount = 0;
 
-            stationDetectors.forEach(det => {
-                if (det.vehicleSpeed !== null && !isNaN(det.vehicleSpeed)) {
-                    totalSpeed += det.vehicleSpeed;
-                    validSpeedCount++;
-                }
-                if (det.vehicleOccupancy !== null && !isNaN(det.vehicleOccupancy)) {
-                    totalOccupancy += det.vehicleOccupancy;
-                    validOccCount++;
-                }
-                if (det.vehicleCount !== null && !isNaN(det.vehicleCount)) {
-                    totalVehicles += det.vehicleCount;
-                }
-            });
-
-            const avgSpeed = validSpeedCount > 0 ? (totalSpeed / validSpeedCount).toFixed(1) : 'N/A';
-            const avgOcc = validOccCount > 0 ? (totalOccupancy / validOccCount).toFixed(1) : 'N/A';
-
-            popupContent += `
-                <b>Aggregated:</b><br>
-                Average Speed: <b>${avgSpeed}</b> mph<br>
-                Total Vehicles: <b>${totalVehicles}</b><br>
-                Average Occupancy: <b>${avgOcc}</b><br><br>
-            `;
-
-            // ---------------------
-            // Per-Lane Details
-            // ---------------------
-            stationDetectors.forEach(det => {
-                var laneNum = det.detectorId.split("_").pop();
-                popupContent += `
-                    <b>Lane ${laneNum}</b><br>
-                    Speed: <b>${det.vehicleSpeed ?? 'N/A'}</b> mph<br>
-                    Vehicles: <b>${det.vehicleCount ?? 'N/A'}</b><br>
-                    Occupancy: <b>${det.vehicleOccupancy ?? 'N/A'}</b><br>
-                    <div id="title_${det.detectorId}" style="font-size:12px;margin-top:5px;color:gray;">Speed Trend</div>
-                    <canvas id="chart_${det.detectorId}" width="160" height="80"></canvas><br>
-                `;
-            });
-
-        } else {
-            marker.setStyle({
-                fillColor: "#a0a0a0",
-                color: "#808080"
-            });
-            popupContent += `<i>No live data available.</i>`;
+      stationDetectors.forEach(det => {
+        if (!isNaN(det.vehicleSpeed)) {
+          totalSpeed += det.vehicleSpeed;
+          validCount++;
         }
+        if (!isNaN(det.vehicleOccupancy)) totalOcc += det.vehicleOccupancy;
+        if (!isNaN(det.vehicleCount)) totalVehicles += det.vehicleCount;
+      });
 
-        marker.bindPopup(popupContent);
+      const avgSpeed = validCount ? (totalSpeed / validCount).toFixed(1) : 'N/A';
+      const avgOcc = validCount ? (totalOcc / validCount).toFixed(1) : 'N/A';
+
+      popupContent += `<b>Aggregated:</b><br>
+        Average Speed: <b>${avgSpeed}</b> mph<br>
+        Total Vehicles: <b>${totalVehicles}</b><br>
+        Average Occupancy: <b>${avgOcc}</b><br><br>
+        <div style="font-size:12px;">Avg Speed Trend</div>
+        <canvas id="chart_station_${stationId}" width="160" height="80"></canvas><br>`;
+
+      stationDetectors.forEach(det => {
+        var laneNum = det.detectorId.split("_").pop();
+        popupContent += `<b>Lane ${laneNum}</b><br>
+          Speed: <b>${det.vehicleSpeed ?? 'N/A'}</b> mph<br>
+          Vehicles: <b>${det.vehicleCount ?? 'N/A'}</b><br>
+          Occupancy: <b>${det.vehicleOccupancy ?? 'N/A'}</b><br>
+          <div id="title_${det.detectorId}" style="font-size:12px;margin-top:5px;color:gray;">Speed Trend</div>
+          <canvas id="chart_${det.detectorId}" width="160" height="80"></canvas><br>`;
+      });
+
+    } else {
+      marker.setStyle({ fillColor: "#a0a0a0", color: "#808080" });
+      popupContent += `<i>No live data available.</i>`;
     }
+
+    marker.bindPopup(popupContent);
+  }
 }
 
 function drawMiniGraphs(stationId) {
-    if (!historyData[stationId]) return;
+  if (!historyData[stationId]) return;
 
-    for (var laneId in historyData[stationId]) {
-        var ctx = document.getElementById(`chart_${laneId}`);
-        var titleDiv = document.getElementById(`title_${laneId}`);
-        if (!ctx || !titleDiv) continue;
-
-        var laneHistory = historyData[stationId][laneId];
-        if (laneHistory.length < 2) {
-            ctx.parentNode.innerHTML = "<div style='font-size:12px;color:gray;'>Speed trend unavailable: waiting for at least 2 data points.</div>";
-            continue;
+  const canvas = document.getElementById(`chart_station_${stationId}`);
+  if (canvas && stationHistoryData[stationId]) {
+    if (stationCharts[stationId]) stationCharts[stationId].destroy();
+    stationCharts[stationId] = new Chart(canvas, {
+      type: 'line',
+      data: {
+        labels: stationHistoryData[stationId].map((_, i) => i + 1),
+        datasets: [{
+          data: stationHistoryData[stationId],
+          borderColor: 'green',
+          fill: false,
+          tension: 0.2
+        }]
+      },
+    options: {
+      responsive: false,
+      maintainAspectRatio: false,
+      scales: {
+        x: { display: false },
+        y: { display: true }
+      },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+        displayColors: false,
+        backgroundColor: '#333',
+        titleColor: '#fff',
+        bodyColor: '#fff',
+        callbacks: {
+          title: function(context) {
+            var idx = context[0].dataIndex + 1;
+            var minutesAgo = (TIME_STEP_MINUTES * (stationHistoryData[stationId].length - idx)).toFixed(1);
+            return `Time: ${minutesAgo} min ago`;
+          },
+          label: function(context) {
+            return `Speed: ${context.parsed.y} mph`;
+          }
         }
-
-        var speedPoints = laneHistory.map(p => p.speed);
-        var labels = laneHistory.map((_, idx) => idx + 1);
-        var timeSpanMinutes = (TIME_STEP_MINUTES * laneHistory.length).toFixed(1);
-        titleDiv.innerHTML = `Speed Trend - Last ${timeSpanMinutes} Minutes (Showing up to ${SENSOR_INFO_MINUTES_BACK} min)`;
-
-        if (laneCharts[laneId]) {
-            laneCharts[laneId].data.labels = labels;
-            laneCharts[laneId].data.datasets[0].data = speedPoints;
-            laneCharts[laneId].update();
-        } else {
-            laneCharts[laneId] = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: labels,
-                    datasets: [{
-                        label: '',
-                        data: speedPoints,
-                        fill: false,
-                        borderColor: 'blue',
-                        tension: 0.2
-                    }]
-                },
-                options: {
-                    responsive: false,
-                    maintainAspectRatio: false,
-                    scales: {
-                        x: { display: false },
-                        y: { display: true }
-                    },
-                    plugins: {
-                        legend: { display: false },
-                        tooltip: {
-                            displayColors: false,
-                            backgroundColor: '#333',
-                            titleColor: '#fff',
-                            bodyColor: '#fff',
-                            titleFont: { size: 12 },
-                            bodyFont: { size: 12 },
-                            callbacks: {
-                                title: function(context) {
-                                    var pointIndex = context[0].dataIndex + 1;
-                                    var minutesAgo = (TIME_STEP_MINUTES * (laneHistory.length - pointIndex)).toFixed(1);
-                                    return `Time: ${minutesAgo} min ago`;
-                                },
-                                label: function(context) {
-                                    return `Speed: ${context.parsed.y} mph`;
-                                }
-                            }
-                        }
-                    }
-                }
-            });
         }
+      }
     }
+    });
+  }
+
+  for (var laneId in historyData[stationId]) {
+    var ctx = document.getElementById(`chart_${laneId}`);
+    var titleDiv = document.getElementById(`title_${laneId}`);
+    if (!ctx || !titleDiv) continue;
+
+    var hist = historyData[stationId][laneId];
+    if (hist.length < 2) {
+      ctx.parentNode.innerHTML = "<div style='font-size:12px;color:gray;'>Speed trend unavailable: waiting for at least 2 data points.</div>";
+      continue;
+    }
+
+    var speedPoints = hist.map(p => p.speed);
+    var labels = hist.map((_, i) => i + 1);
+    var timeSpan = (TIME_STEP_MINUTES * hist.length).toFixed(1);
+    titleDiv.innerHTML = `Speed Trend - Last ${timeSpan} Minutes (Up to ${SENSOR_INFO_MINUTES_BACK} min)`;
+
+    if (laneCharts[laneId]) laneCharts[laneId].destroy();
+
+    laneCharts[laneId] = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: '',
+          data: speedPoints,
+          fill: false,
+          borderColor: 'blue',
+          tension: 0.2
+        }]
+      },
+      options: {
+        responsive: false,
+        maintainAspectRatio: false,
+        scales: {
+          x: { display: false },
+          y: { display: true }
+        },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            displayColors: false,
+            backgroundColor: '#333',
+            titleColor: '#fff',
+            bodyColor: '#fff',
+            callbacks: {
+              title: (ctx) => {
+                const idx = ctx[0].dataIndex + 1;
+                const ago = (TIME_STEP_MINUTES * (hist.length - idx)).toFixed(1);
+                return `Time: ${ago} min ago`;
+              },
+              label: (ctx) => `Speed: ${ctx.parsed.y} mph`
+            }
+          }
+        }
+      }
+    });
+  }
 }
-
 </script>
-
 </body>
 </html>
