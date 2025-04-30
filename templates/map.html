@@ -247,15 +247,33 @@ function drawMiniGraphs(stationId) {
           tension: 0.2
         }]
       },
-      options: {
-        responsive: false,
-        maintainAspectRatio: false,
-        scales: {
-          x: { display: false },
-          y: { display: true }
-        },
-        plugins: { legend: { display: false } }
+    options: {
+      responsive: false,
+      maintainAspectRatio: false,
+      scales: {
+        x: { display: false },
+        y: { display: true }
+      },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+        displayColors: false,
+        backgroundColor: '#333',
+        titleColor: '#fff',
+        bodyColor: '#fff',
+        callbacks: {
+          title: function(context) {
+            var idx = context[0].dataIndex + 1;
+            var minutesAgo = (TIME_STEP_MINUTES * (stationHistoryData[stationId].length - idx)).toFixed(1);
+            return `Time: ${minutesAgo} min ago`;
+          },
+          label: function(context) {
+            return `Speed: ${context.parsed.y} mph`;
+          }
+        }
+        }
       }
+    }
     });
   }
 
