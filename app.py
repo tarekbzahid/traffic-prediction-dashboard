@@ -1,3 +1,7 @@
+
+import eventlet
+eventlet.monkey_patch()
+
 from flask import Flask, render_template, jsonify
 from flask_socketio import SocketIO
 from zeep import Client, Settings
@@ -6,6 +10,8 @@ import threading
 import time
 import pytz
 from datetime import datetime
+
+
 
 # ----------------------------
 # 📍 Load Configuration
@@ -99,6 +105,8 @@ def fetch_live_data():
                 }
                 print(f"Fetched {len(data)} detectors at {latest_live_data['timestamp']}")
                 socketio.emit('new_data', latest_live_data)
+                print("✅ Emitted new_data to frontend")
+
         except Exception as e:
             print(f"SOAP request failed: {e}")
 
@@ -125,8 +133,5 @@ def config():
 # 📍 Main
 # ----------------------------
 if __name__ == "__main__":
-    fetch_thread = threading.Thread(target=fetch_live_data)
-    fetch_thread.daemon = True
-    fetch_thread.start()
-
-    socketio.run(app, debug=True)
+    socketio.start_background_task(fetch_live_data)
+    socketio.run(app, host="127.0.0.1", port=5000, debug=True)
