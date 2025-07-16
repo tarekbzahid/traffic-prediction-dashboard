@@ -1,15 +1,14 @@
 import eventlet
 eventlet.monkey_patch()
 
+import os
 from flask import Flask, render_template, jsonify
 from flask_socketio import SocketIO
 from zeep import Client, Settings
 import json
-import threading
-import time
 import pytz
 from datetime import datetime
-import os
+import time
 
 # ----------------------------
 # 📍 Load Configuration
@@ -23,7 +22,7 @@ TIME_STEP_MINUTES = CONFIG.get("time_step_minutes", 0.5)  # fallback to 0.5 if m
 # 📍 Flask App
 # ----------------------------
 app = Flask(__name__)
-socketio = SocketIO(app, cors_allowed_origins="*", async_mode="eventlet")
+socketio = SocketIO(app, cors_allowed_origins="*")
 
 local_timezone = pytz.timezone("America/Los_Angeles")
 wsdl_url = "https://colondexsrv.its.nv.gov/tmddws/TmddWS.svc?singleWsdl"
@@ -103,6 +102,8 @@ def fetch_live_data():
                 }
                 print(f"Fetched {len(data)} detectors at {latest_live_data['timestamp']}")
                 socketio.emit('new_data', latest_live_data)
+                print("✅ Emitted new_data to frontend")
+
         except Exception as e:
             print(f"SOAP request failed: {e}")
 
@@ -126,12 +127,8 @@ def config():
     return jsonify(CONFIG)
 
 # ----------------------------
-# 📍 Main (Render-ready)
+# 📍 Main
 # ----------------------------
 if __name__ == "__main__":
-    fetch_thread = threading.Thread(target=fetch_live_data)
-    fetch_thread.daemon = True
-    fetch_thread.start()
-
-    port = int(os.environ.get("PORT", 5000))  # Use Render's port env var
-    socketio.run(app, host="0.0.0.0", port=port)
+    socketio.start_background_task(fetch_live_data)
+    socketio.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
