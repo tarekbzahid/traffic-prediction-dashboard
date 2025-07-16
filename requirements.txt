@@ -1,8 +1,6 @@
-#pip install --user -r requirements.txt
-
 Flask
 flask-socketio
 zeep
 pytz
-python-socketio
 eventlet
+gunicorn

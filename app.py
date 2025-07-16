@@ -6,6 +6,7 @@ import threading
 import time
 import pytz
 from datetime import datetime
+import os
 
 # ----------------------------
 # 📍 Load Configuration
@@ -19,7 +20,7 @@ TIME_STEP_MINUTES = CONFIG.get("time_step_minutes", 0.5)  # fallback to 0.5 if m
 # 📍 Flask App
 # ----------------------------
 app = Flask(__name__)
-socketio = SocketIO(app, cors_allowed_origins="*")
+socketio = SocketIO(app, cors_allowed_origins="*", async_mode="eventlet")
 
 local_timezone = pytz.timezone("America/Los_Angeles")
 wsdl_url = "https://colondexsrv.its.nv.gov/tmddws/TmddWS.svc?singleWsdl"
@@ -122,11 +123,12 @@ def config():
     return jsonify(CONFIG)
 
 # ----------------------------
-# 📍 Main
+# 📍 Main (Render-ready)
 # ----------------------------
 if __name__ == "__main__":
     fetch_thread = threading.Thread(target=fetch_live_data)
     fetch_thread.daemon = True
     fetch_thread.start()
 
-    socketio.run(app, debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Use Render's port env var
+    socketio.run(app, host="0.0.0.0", port=port)
