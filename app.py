@@ -1,18 +1,14 @@
-
 import os
 import eventlet
-eventlet.monkey_patch()
+eventlet.monkey_patch()  # ✅ Required for eventlet to work
 
 from flask import Flask, render_template, jsonify
 from flask_socketio import SocketIO
 from zeep import Client, Settings
 import json
-import threading
-import time
 import pytz
 from datetime import datetime
-
-
+import time
 
 # ----------------------------
 # 📍 Load Configuration
@@ -20,7 +16,7 @@ from datetime import datetime
 with open("config.json") as f:
     CONFIG = json.load(f)
 
-TIME_STEP_MINUTES = CONFIG.get("time_step_minutes", 0.5)  # fallback to 0.5 if missing
+TIME_STEP_MINUTES = CONFIG.get("time_step_minutes", 0.5)
 
 # ----------------------------
 # 📍 Flask App
@@ -32,10 +28,7 @@ local_timezone = pytz.timezone("America/Los_Angeles")
 wsdl_url = "https://colondexsrv.its.nv.gov/tmddws/TmddWS.svc?singleWsdl"
 metadata_path = "data/sensor_metadata.json"
 
-latest_live_data = {
-    "timestamp": None,
-    "data": []
-}
+latest_live_data = {"timestamp": None, "data": []}
 
 # SOAP Settings
 auth_params = {
@@ -77,7 +70,7 @@ def fetch_live_data():
     try:
         client = Client(wsdl=wsdl_url, settings=settings)
     except Exception as e:
-        print(f"Failed to connect to SOAP service: {e}")
+        print(f"❌ Failed to connect to SOAP service: {e}")
         return
 
     while True:
@@ -89,9 +82,7 @@ def fetch_live_data():
                     detector_list = getattr(item, 'detector-list', None)
                     if not detector_list:
                         continue
-
-                    detector_details = getattr(detector_list, 'detector-data-detail', [])
-                    for detector in detector_details:
+                    for detector in getattr(detector_list, 'detector-data-detail', []):
                         data.append({
                             "stationId": getattr(detector, "station-id", None),
                             "detectorId": getattr(detector, "detector-id", None),
@@ -104,12 +95,11 @@ def fetch_live_data():
                     "timestamp": datetime.now(local_timezone).strftime('%Y-%m-%d %H:%M:%S'),
                     "data": data
                 }
-                print(f"Fetched {len(data)} detectors at {latest_live_data['timestamp']}")
+                print(f"✅ Fetched {len(data)} detectors at {latest_live_data['timestamp']}")
                 socketio.emit('new_data', latest_live_data)
                 print("✅ Emitted new_data to frontend")
-
         except Exception as e:
-            print(f"SOAP request failed: {e}")
+            print(f"❌ SOAP request failed: {e}")
 
         time.sleep(TIME_STEP_MINUTES * 60)
 
@@ -131,10 +121,8 @@ def config():
     return jsonify(CONFIG)
 
 # ----------------------------
-# 📍 Main
+# 📍 Main for Render
 # ----------------------------
-socketio.start_background_task(fetch_live_data)
-
 if __name__ == "__main__":
-   
+    socketio.start_background_task(fetch_live_data)
     socketio.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
