@@ -1,3 +1,4 @@
+
 import eventlet
 eventlet.monkey_patch()
 
@@ -5,10 +6,12 @@ from flask import Flask, render_template, jsonify
 from flask_socketio import SocketIO
 from zeep import Client, Settings
 import json
+import threading
 import time
 import pytz
 from datetime import datetime
-import os
+
+
 
 # ----------------------------
 # 📍 Load Configuration
@@ -16,7 +19,7 @@ import os
 with open("config.json") as f:
     CONFIG = json.load(f)
 
-TIME_STEP_MINUTES = CONFIG.get("time_step_minutes", 0.5)
+TIME_STEP_MINUTES = CONFIG.get("time_step_minutes", 0.5)  # fallback to 0.5 if missing
 
 # ----------------------------
 # 📍 Flask App
@@ -68,8 +71,8 @@ soap_parameters = {
 # ----------------------------
 def fetch_live_data():
     global latest_live_data
-    settings = Settings(strict=False, xml_huge_tree=True)
 
+    settings = Settings(strict=False, xml_huge_tree=True)
     try:
         client = Client(wsdl=wsdl_url, settings=settings)
     except Exception as e:
@@ -103,6 +106,7 @@ def fetch_live_data():
                 print(f"Fetched {len(data)} detectors at {latest_live_data['timestamp']}")
                 socketio.emit('new_data', latest_live_data)
                 print("✅ Emitted new_data to frontend")
+
         except Exception as e:
             print(f"SOAP request failed: {e}")
 
@@ -126,8 +130,8 @@ def config():
     return jsonify(CONFIG)
 
 # ----------------------------
-# 📍 Main (Render-compatible)
+# 📍 Main
 # ----------------------------
 if __name__ == "__main__":
     socketio.start_background_task(fetch_live_data)
-    socketio.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+    socketio.run(app, host="127.0.0.1", port=5000, debug=True)
