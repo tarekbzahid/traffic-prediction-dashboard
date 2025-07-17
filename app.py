@@ -1,4 +1,5 @@
 
+import os
 import eventlet
 eventlet.monkey_patch()
 
@@ -132,6 +133,8 @@ def config():
 # ----------------------------
 # 📍 Main
 # ----------------------------
+socketio.start_background_task(fetch_live_data)
+
 if __name__ == "__main__":
-    socketio.start_background_task(fetch_live_data)
+   
     socketio.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
