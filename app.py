@@ -67,17 +67,27 @@ soap_parameters = {
 # 📍 Fetch Live Data
 # ----------------------------
 def fetch_live_data():
+    """Continuously fetch live traffic data and emit it via Socket.IO."""
     global latest_live_data
 
     settings = Settings(strict=False, xml_huge_tree=True)
-    try:
-        client = Client(wsdl=wsdl_url, settings=settings)
-    except Exception as e:
-        print(f"❌ Failed to connect to SOAP service: {e}")
-        return
+    client = None
 
     while True:
         try:
+            # Lazily initialize or reinitialize the SOAP client if needed.
+            if client is None:
+                try:
+                    client = Client(wsdl=wsdl_url, settings=settings)
+                    print("✅ SOAP client initialized")
+                except Exception as e:
+                    print(f"❌ Failed to connect to SOAP service: {e}")
+                    client = None
+                    # Sleep before retrying connection
+                    time.sleep(TIME_STEP_MINUTES * 60)
+                    continue
+
+            # Fetch live detector data via SOAP
             response = client.service.dlDetectorDataRequest(**soap_parameters)
             if response:
                 data = []
@@ -101,14 +111,18 @@ def fetch_live_data():
                 print(f"✅ Fetched {len(data)} detectors at {latest_live_data['timestamp']}")
                 socketio.emit('new_data', latest_live_data)
                 print("✅ Emitted new_data to frontend")
+            else:
+                print("⚠️ SOAP response was empty")
+
         except Exception as e:
             print(f"❌ SOAP request failed: {e}")
+            # Reset client so we attempt to reconnect on the next iteration
+            client = None
 
-        # time.sleep is patched by eventlet, so it cooperates with the event loop
+        # Sleep between polling intervals (cooperatively, thanks to eventlet.monkey_patch)
         time.sleep(TIME_STEP_MINUTES * 60)
 
 # Start the background task after fetch_live_data is defined.
-# This call will execute whenever the module is imported, including when Gunicorn imports app:app:contentReference[oaicite:0]{index=0}.
 socketio.start_background_task(fetch_live_data)
 
 # ----------------------------
@@ -120,18 +134,20 @@ def map_page():
 
 @app.route("/metadata")
 def metadata():
+    """Serve sensor metadata."""
     with open(metadata_path) as f:
         sensor_metadata = json.load(f)
     return jsonify(sensor_metadata)
 
 @app.route("/config")
 def config():
+    """Serve configuration values."""
     return jsonify(CONFIG)
 
 # ----------------------------
 # 📍 Main
 # ----------------------------
 if __name__ == "__main__":
-    # When running locally (python app.py), this will start the server.
-    # Under Gunicorn, this block is not executed, but the background task is already running.
+    # When running locally, this will start the server.
+    # Under Gunicorn on Render, this block is not executed, but the background task has already started.
     socketio.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
