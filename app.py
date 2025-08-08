@@ -1,6 +1,6 @@
 import os
 import eventlet
-eventlet.monkey_patch()  # ✅ Required for eventlet to work
+eventlet.monkey_patch()  # Required for eventlet
 
 from flask import Flask, render_template, jsonify
 from flask_socketio import SocketIO
@@ -24,6 +24,17 @@ TIME_STEP_MINUTES = CONFIG.get("time_step_minutes", 0.5)
 app = Flask(__name__)
 socketio = SocketIO(app, cors_allowed_origins="*")
 
+# ----------------------------
+# 📍 Start background data fetch when the app receives its first request
+# ----------------------------
+@app.before_first_request
+def start_live_data_task():
+    """Start the live data fetch task once on the first incoming request."""
+    socketio.start_background_task(fetch_live_data)
+
+# ----------------------------
+# 📍 Other configuration
+# ----------------------------
 local_timezone = pytz.timezone("America/Los_Angeles")
 wsdl_url = "https://colondexsrv.its.nv.gov/tmddws/TmddWS.svc?singleWsdl"
 metadata_path = "data/sensor_metadata.json"
@@ -33,7 +44,7 @@ latest_live_data = {"timestamp": None, "data": []}
 # SOAP Settings
 auth_params = {
     "user-id": "UNLV_TRC_RTIS",
-    "password": "+r@^~Tr&lt;R?|$"
+    "password": "+r@^~Tr<R?|$"
 }
 organization_info = {
     "organization-id": "unlv.edu",
@@ -101,6 +112,7 @@ def fetch_live_data():
         except Exception as e:
             print(f"❌ SOAP request failed: {e}")
 
+        # Use time.sleep (eventlet monkey patched) to pause between cycles
         time.sleep(TIME_STEP_MINUTES * 60)
 
 # ----------------------------
@@ -121,8 +133,9 @@ def config():
     return jsonify(CONFIG)
 
 # ----------------------------
-# 📍 Main for Render
+# 📍 Main
 # ----------------------------
 if __name__ == "__main__":
+    # For local development, start the background task explicitly
     socketio.start_background_task(fetch_live_data)
     socketio.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
