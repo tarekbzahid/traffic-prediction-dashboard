@@ -24,10 +24,6 @@ TIME_STEP_MINUTES = CONFIG.get("time_step_minutes", 0.5)
 app = Flask(__name__)
 socketio = SocketIO(app, cors_allowed_origins="*")
 
-# Immediately start the background task when the module is imported.
-# This runs whether the app is launched via gunicorn or directly with python.
-socketio.start_background_task(fetch_live_data)
-
 # ----------------------------
 # 📍 Other configuration
 # ----------------------------
@@ -108,8 +104,12 @@ def fetch_live_data():
         except Exception as e:
             print(f"❌ SOAP request failed: {e}")
 
-        # Because of eventlet.monkey_patch(), time.sleep yields cooperatively
+        # time.sleep is patched by eventlet, so it cooperates with the event loop
         time.sleep(TIME_STEP_MINUTES * 60)
+
+# Start the background task after fetch_live_data is defined.
+# This call will execute whenever the module is imported, including when Gunicorn imports app:app:contentReference[oaicite:0]{index=0}.
+socketio.start_background_task(fetch_live_data)
 
 # ----------------------------
 # 📍 Flask Routes
@@ -132,5 +132,6 @@ def config():
 # 📍 Main
 # ----------------------------
 if __name__ == "__main__":
-    # Running locally: background task already started, so just run the server
+    # When running locally (python app.py), this will start the server.
+    # Under Gunicorn, this block is not executed, but the background task is already running.
     socketio.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
