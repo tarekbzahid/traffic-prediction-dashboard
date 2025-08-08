@@ -1,6 +1,6 @@
 import os
 import eventlet
-eventlet.monkey_patch()  # Required for eventlet
+eventlet.monkey_patch()  # ✅ Required for eventlet to work
 
 from flask import Flask, render_template, jsonify
 from flask_socketio import SocketIO
@@ -24,13 +24,9 @@ TIME_STEP_MINUTES = CONFIG.get("time_step_minutes", 0.5)
 app = Flask(__name__)
 socketio = SocketIO(app, cors_allowed_origins="*")
 
-# ----------------------------
-# 📍 Start background data fetch when the app receives its first request
-# ----------------------------
-@app.before_first_request
-def start_live_data_task():
-    """Start the live data fetch task once on the first incoming request."""
-    socketio.start_background_task(fetch_live_data)
+# Immediately start the background task when the module is imported.
+# This runs whether the app is launched via gunicorn or directly with python.
+socketio.start_background_task(fetch_live_data)
 
 # ----------------------------
 # 📍 Other configuration
@@ -112,7 +108,7 @@ def fetch_live_data():
         except Exception as e:
             print(f"❌ SOAP request failed: {e}")
 
-        # Use time.sleep (eventlet monkey patched) to pause between cycles
+        # Because of eventlet.monkey_patch(), time.sleep yields cooperatively
         time.sleep(TIME_STEP_MINUTES * 60)
 
 # ----------------------------
@@ -136,6 +132,5 @@ def config():
 # 📍 Main
 # ----------------------------
 if __name__ == "__main__":
-    # For local development, start the background task explicitly
-    socketio.start_background_task(fetch_live_data)
+    # Running locally: background task already started, so just run the server
     socketio.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
